@@ -23,40 +23,6 @@
   <![endif]-->
 </head>
 <body>
-<!-- 弹出窗 -->
-<div class="md-modal md-effect-7" id="modal-7">
-    <div class="md-content">
-        <div class="modal-header">
-            <button class="md-close close">&times;</button>
-            <h4 class="modal-title">商品大类</h4>
-        </div>
-        <div class="modal-body">
-            <form role="form">
-                <div class="form-group">
-                    <label for="exampleInputEmail1">分类名称</label>
-                    <input type="text" class="form-control" id="exampleAutocompleteSimple" placeholder="大分类的名称" value="日用百货"></div>
-                <div class="form-group">
-                    <label for="exampleTextarea">分类说明</label>
-                    <textarea class="form-control" id="exampleTextarea" rows="2">日用百货类目、这里只能放日用百货的分类。</textarea>
-                </div>
-                <p><label for="exampleTextarea">分类状态</label></p>
-                <div class="btn-group" data-toggle="buttons">
-                  <label class="btn btn-primary active">
-                  <input type="radio" name="options" id="option1"> 不显示
-                  </label>
-                  <label class="btn btn-primary">
-                  <input type="radio" name="options" id="option2"> 显示
-                  </label>
-                </div>
-            </form>
-        </div>
-        <div class="modal-footer">
-            <a href="" class="btn btn-primary"><i class="fa fa-save"></i>  保存/更新</a>
-        </div>
-    </div>
-</div>
-<div class="md-overlay"></div>
-
   <div id="theme-wrapper">
     <header class="navbar" id="header-navbar">
       <div class="container">
@@ -425,7 +391,7 @@
                 <div class="col-lg-12">
                   <div class="main-box clearfix">
                     <header class="main-box-header clearfix">
-                      <h2 class="pull-left">今日订单</h2>
+                      <h2 class="pull-left">商品列表</h2>
                       <div class="filter-block pull-right">
                         <div class="form-group pull-left">
                             <select class="form-control">
@@ -455,8 +421,8 @@
                         </div>
                         <div class="form-group pull-left">
                             <select class="form-control">
-                                <option>显示</option>
-                                <option>不显示</option>
+                                <option>已上架</option>
+                                <option>待上架</option>
                             </select>
                         </div>
                         <div class="form-group pull-left">
@@ -473,20 +439,23 @@
                         <table class="table table-hover">
                           <thead>
                             <tr>
-                              <th>
-                                  <span>订单号</span>
+                              <th width="80px;">
+                                  <span><div class="checkbox-nice checkbox-inline"><input type="checkbox" id="checkbox-inl-0"><label for="checkbox-inl-0">全选</label></div></span>
+                              </th>
+                              <th width="35%">
+                                  <span>商品</span>
                               </th>
                               <th>
-                                  <span>下单时间</span>
+                                  <span>销量</span>
                               </th>
                               <th>
-                                  <span>用户</span>
+                                  <span>库存</span>
                               </th>
                               <th class="text-center">
                                 <span>状态</span>
                               </th>
-                              <th class="text-right">
-                                <span>总价</span>
+                              <th class="text-center">
+                                <span>价格</span>
                               </th>
                               <th>&nbsp;</th>
                             </tr>
@@ -494,111 +463,208 @@
                           <tbody>
                             <tr>
                               <td>
-                                <a href="#">TC201606298002</a>
+                                <div class="checkbox-nice checkbox-inline"><input type="checkbox" id="checkbox-inl-1"><label for="checkbox-inl-1"></label></div>
                               </td>
-                              <td>2016/06/08</td>
                               <td>
-                                华东先生
+
+                                    <img src="img/samples/shop01.jpg" height="50" width="50" alt="">
+                                <a href="">奶油饼干</a></td>
+                              <td>
+                                2000
+                              </td>
+                              <td>
+                                200
                               </td>
                               <td class="text-center">
-                                <span class="label label-success">已付款</span>
+                                <span class="label label-success">已上架</span>
                               </td>
-                              <td class="text-right">￥ 825.50</td>
-                              <td class="text-center" style="width: 15%;">
-                                <a href="#" class="table-link">
-                                  <span class="fa-stack">
-                                    <i class="fa fa-square fa-stack-2x"></i>
-                                    <i class="fa fa-search-plus fa-stack-1x fa-inverse"></i>
-                                  </span>
-                                </a>
+                              <td class="text-center">￥ 825.50</td>
+                              <td style="width: 15%;">
+                                  <a href="#" class="table-link">
+                                      <span class="fa-stack"> <i class="fa fa-square fa-stack-2x"></i> <i class="fa fa-copy fa-stack-1x fa-inverse"></i>
+                                      </span>
+                                  </a>
+                                  <a href="shop-added-edit.html" class="table-link">
+                                      <span class="fa-stack">
+                                          <i class="fa fa-square fa-stack-2x"></i>
+                                          <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
+                                      </span>
+                                  </a>
+                                  <a href="#" class="table-link danger">
+                                      <span class="fa-stack">
+                                          <i class="fa fa-square fa-stack-2x"></i>
+                                          <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
+                                      </span>
+                                  </a>
                               </td>
                             </tr>
                             <tr>
                               <td>
-                                <a href="#">TC201606295832</a>
+                                <div class="checkbox-nice checkbox-inline"><input type="checkbox" id="checkbox-inl-5"><label for="checkbox-inl-5"></label></div>
                               </td>
-                              <td>2013/08/08</td>
                               <td>
-                                嗨皮先生
+                                <img src="img/samples/shop01.jpg" height="50" width="50" alt="">
+                              <a href="">奶油饼干</a></td>
+                              <td>
+                                2129
+                              </td>
+                              <td>
+                                2000
                               </td>
                               <td class="text-center">
-                                <span class="label label-warning">已取消</span>
+                                <span class="label label-warning">待上架</span>
                               </td>
-                              <td class="text-right">￥ 923.93</td>
-                              <td class="text-center" style="width: 15%;">
-                                <a href="#" class="table-link">
-                                  <span class="fa-stack">
-                                    <i class="fa fa-square fa-stack-2x"></i>
-                                    <i class="fa fa-search-plus fa-stack-1x fa-inverse"></i>
-                                  </span>
-                                </a>
+                              <td class="text-center">￥ 923.93</td>
+                              <td style="width: 15%;">
+                                  <a href="#" class="table-link">
+                                      <span class="fa-stack"> <i class="fa fa-square fa-stack-2x"></i> <i class="fa fa-copy fa-stack-1x fa-inverse"></i>
+                                      </span>
+                                  </a>
+                                  <a href="shop-added-edit.html" class="table-link">
+                                      <span class="fa-stack">
+                                          <i class="fa fa-square fa-stack-2x"></i>
+                                          <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
+                                      </span>
+                                  </a>
+                                  <a href="#" class="table-link danger">
+                                      <span class="fa-stack">
+                                          <i class="fa fa-square fa-stack-2x"></i>
+                                          <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
+                                      </span>
+                                  </a>
                               </td>
                             </tr>
                             <tr>
                               <td>
-                                <a href="#">TC201606292547</a>
+                                <div class="checkbox-nice checkbox-inline"><input type="checkbox" id="checkbox-inl-2"><label for="checkbox-inl-2"></label></div>
                               </td>
-                              <td>2013/08/08</td>
                               <td>
-                                李迪
+                                <img src="img/samples/shop01.jpg" height="50" width="50" alt="">
+                              <a href="">奶油饼干</a></td>
+                              <td>
+                                23913
+                              </td>
+                              <td>
+                                2000
                               </td>
                               <td class="text-center">
-                                <span class="label label-info">待付款</span>
+                                <span class="label label-success">已上架</span>
                               </td>
-                              <td class="text-right">￥ 1.625.50</td>
-                              <td class="text-center" style="width: 15%;">
-                                <a href="#" class="table-link">
-                                  <span class="fa-stack">
-                                    <i class="fa fa-square fa-stack-2x"></i>
-                                    <i class="fa fa-search-plus fa-stack-1x fa-inverse"></i>
-                                  </span>
-                                </a>
+                              <td class="text-center">￥ 1.625.50</td>
+                              <td style="width: 15%;">
+                                  <a href="#" class="table-link">
+                                      <span class="fa-stack"> <i class="fa fa-square fa-stack-2x"></i> <i class="fa fa-copy fa-stack-1x fa-inverse"></i>
+                                      </span>
+                                  </a>
+                                  <a href="shop-added-edit.html" class="table-link">
+                                      <span class="fa-stack">
+                                          <i class="fa fa-square fa-stack-2x"></i>
+                                          <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
+                                      </span>
+                                  </a>
+                                  <a href="#" class="table-link danger">
+                                      <span class="fa-stack">
+                                          <i class="fa fa-square fa-stack-2x"></i>
+                                          <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
+                                      </span>
+                                  </a>
                               </td>
                             </tr>
                             <tr>
                               <td>
-                                <a href="#">TC201606299274</a>
+                                <div class="checkbox-nice checkbox-inline"><input type="checkbox" id="checkbox-inl-3"><label for="checkbox-inl-3"></label></div>
                               </td>
-                              <td>2013/08/08</td>
                               <td>
-                                张莎
+                                <img src="img/samples/shop01.jpg" height="50" width="50" alt="">
+                              <a href="">奶油饼干</a></td>
+                              <td>
+                                823
+                              </td>
+                              <td>
+                                2000
                               </td>
                               <td class="text-center">
-                                <span class="label label-danger">付款失败</span>
+                                <span class="label label-success">已上架</span>
                               </td>
-                              <td class="text-right">￥ 35.34</td>
-                              <td class="text-center" style="width: 15%;">
-                                <a href="#" class="table-link">
-                                  <span class="fa-stack">
-                                    <i class="fa fa-square fa-stack-2x"></i>
-                                    <i class="fa fa-search-plus fa-stack-1x fa-inverse"></i>
-                                  </span>
-                                </a>
+                              <td class="text-center">￥ 35.34</td>
+                              <td style="width: 15%;">
+                                  <a href="#" class="table-link">
+                                      <span class="fa-stack"> <i class="fa fa-square fa-stack-2x"></i> <i class="fa fa-copy fa-stack-1x fa-inverse"></i>
+                                      </span>
+                                  </a>
+                                  <a href="shop-added-edit.html" class="table-link">
+                                      <span class="fa-stack">
+                                          <i class="fa fa-square fa-stack-2x"></i>
+                                          <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
+                                      </span>
+                                  </a>
+                                  <a href="#" class="table-link danger">
+                                      <span class="fa-stack">
+                                          <i class="fa fa-square fa-stack-2x"></i>
+                                          <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
+                                      </span>
+                                  </a>
                               </td>
                             </tr>
                             <tr>
                               <td>
-                                <a href="#">TC201606298463</a>
+                                <div class="checkbox-nice checkbox-inline"><input type="checkbox" id="checkbox-inl-4"><label for="checkbox-inl-4"></label></div>
                               </td>
-                              <td>2013/08/08</td>
                               <td>
-                                胡娜
+                                <img src="img/samples/shop01.jpg" height="50" width="50" alt="">
+                              <a href="">奶油饼干</a></td>
+                              <td>
+                                2913
+                              </td>
+                              <td>
+                                2000
                               </td>
                               <td class="text-center">
-                                <span class="label label-success">已付款</span>
+                                <span class="label label-success">已上架</span>
                               </td>
-                              <td class="text-right">￥ 34.199.99</td>
-                              <td class="text-center" style="width: 15%;">
-                                <a href="#" class="table-link">
-                                  <span class="fa-stack">
-                                    <i class="fa fa-square fa-stack-2x"></i>
-                                    <i class="fa fa-search-plus fa-stack-1x fa-inverse"></i>
-                                  </span>
-                                </a>
+                              <td class="text-center">￥ 34.199.99</td>
+                              <td style="width: 15%;">
+                                  <a href="#" class="table-link">
+                                      <span class="fa-stack"> <i class="fa fa-square fa-stack-2x"></i> <i class="fa fa-copy fa-stack-1x fa-inverse"></i>
+                                      </span>
+                                  </a>
+                                  <a href="shop-added-edit.html" class="table-link">
+                                      <span class="fa-stack">
+                                          <i class="fa fa-square fa-stack-2x"></i>
+                                          <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
+                                      </span>
+                                  </a>
+                                  <a href="#" class="table-link danger">
+                                      <span class="fa-stack">
+                                          <i class="fa fa-square fa-stack-2x"></i>
+                                          <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
+                                      </span>
+                                  </a>
                               </td>
                             </tr>
                           </tbody>
                         </table>
+                      </div>
+                      <div class="clearfix">
+                            <div class="pull-left">
+                                <a href="#" class="btn btn-danger">
+                                    <i class="fa fa-trash-o"></i>
+                                    删除
+                                </a>
+                                <a href="#" class="btn btn-primary">
+                                    <i class="fa fa-level-down"></i>
+                                    下架
+                                </a>
+                            </div>
+                            <ul class="pagination pull-right">
+                                <li><a href="#"><i class="fa fa-chevron-left"></i></a></li>
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
+                            </ul>
                       </div>
                     </div>
                   </div>

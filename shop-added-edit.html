@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <title>同转商城总部后台</title>
+
+     <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css"/>
+
+    <script src="js/demo-rtl.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/libs/font-awesome.css"/>
+    <link rel="stylesheet" type="text/css" href="css/libs/nanoscroller.css"/>
+
+    <link rel="stylesheet" type="text/css" href="css/compiled/theme_styles.css"/>
+
+  <link rel="stylesheet" type="text/css" href="css/libs/dropzone.css">
+  <link rel="stylesheet" type="text/css" href="css/libs/magnific-popup.css">
+
+  <link rel="stylesheet" type="text/css" href="css/libs/bootstrap-datetimepicker.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/libs/nifty-component.css"/>
+  <link type="image/x-icon" href="favicon.png" rel="shortcut icon"/>
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.js"></script>
+  <script src="js/respond.min.js"></script>
+  <![endif]-->
+  <style>
+  .dz-error-message{
+    display: none !important;
+  }
+  </style>
+</head>
+<body>
+<!-- 弹出窗 -->
+<div class="md-modal md-effect-7" id="modal-7">
+    <div class="md-content">
+        <div class="modal-header">
+            <button class="md-close close">&times;</button>
+            <h4 class="modal-title">商品大类</h4>
+        </div>
+        <div class="modal-body">
+            <form role="form">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">分类名称</label>
+                    <input type="text" class="form-control" id="exampleAutocompleteSimple" placeholder="大分类的名称" value="日用百货"></div>
+                <div class="form-group">
+                    <label for="exampleTextarea">分类说明</label>
+                    <textarea class="form-control" id="exampleTextarea" rows="2">日用百货类目、这里只能放日用百货的分类。</textarea>
+                </div>
+                <p><label for="exampleTextarea">分类状态</label></p>
+                <div class="btn-group" data-toggle="buttons">
+                  <label class="btn btn-primary active">
+                  <input type="radio" name="options" id="option1"> 不显示
+                  </label>
+                  <label class="btn btn-primary">
+                  <input type="radio" name="options" id="option2"> 显示
+                  </label>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <a href="" class="btn btn-primary"><i class="fa fa-save"></i>  保存/更新</a>
+        </div>
+    </div>
+</div>
+<div class="md-overlay"></div>
+
+  <div id="theme-wrapper">
+    <header class="navbar" id="header-navbar">
+      <div class="container">
+        <a href="index.html" id="logo" class="navbar-brand">
+          <img src="img/logo.png" alt="" class="normal-logo logo-white"/>
+          <img src="img/logo-black.png" alt="" class="normal-logo logo-black"/>
+          <img src="img/logo-small.png" alt="" class="small-logo hidden-xs hidden-sm hidden"/>
+        </a>
+        <div class="clearfix">
+          <button class="navbar-toggle" data-target=".navbar-ex1-collapse" data-toggle="collapse" type="button">
+            <span class="sr-only">导航触发</span>
+            <span class="fa fa-bars"></span>
+          </button>
+          <div class="nav-no-collapse navbar-left pull-left hidden-sm hidden-xs">
+            <ul class="nav navbar-nav pull-left">
+              <li>
+                <a class="btn" id="make-small-nav"> <i class="fa fa-bars"></i>
+                </a>
+              </li>
+              <li><a style="font-size: 1.3em;">总部后台管理系统</a></li>
+            </ul>
+          </div>
+          <div class="nav-no-collapse pull-right" id="header-nav">
+            <ul class="nav navbar-nav pull-right">
+              <li class="mobile-search">
+                <a class="btn"> <i class="fa fa-search"></i>
+                </a>
+                <div class="drowdown-search">
+                  <form role="search">
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="搜索...">
+                      <i class="fa fa-search nav-search-icon"></i>
+                    </div>
+                  </form>
+                </div>
+              </li>
+              <li class="dropdown hidden-xs">
+                <a class="btn dropdown-toggle" data-toggle="dropdown">
+                  <i class="fa fa-warning"></i>
+                  <span class="count">4</span>
+                </a>
+                <ul class="dropdown-menu notifications-list">
+                  <li class="pointer">
+                    <div class="pointer-inner">
+                      <div class="arrow"></div>
+                    </div>
+                  </li>
+                  <li class="item-header">你有4条新信息</li>
+                  <li class="item">
+                    <a href="#">
+                      <i class="fa fa-comment"></i>
+                      <span class="content">商品不错，下次我还买...</span>
+                      <span class="time">
+                        <i class="fa fa-clock-o"></i>
+                        13 分钟.
+                      </span>
+                    </a>
+                  </li>
+                  <li class="item">
+                    <a href="#">
+                      <i class="fa fa-plus"></i>
+                      <span class="content">新增5个区域合作商</span>
+                      <span class="time">
+                        <i class="fa fa-clock-o"></i>
+                        13 分钟.
+                      </span>
+                    </a>
+                  </li>
+                  <li class="item">
+                    <a href="#">
+                      <i class="fa fa-shopping-cart"></i>
+                      <span class="content">你有5个商品新增购物到购物车</span>
+                      <span class="time">
+                        <i class="fa fa-clock-o"></i>
+                        13 分钟.
+                      </span>
+                    </a>
+                  </li>
+                  <li class="item">
+                    <a href="#">
+                      <i class="fa fa-eye"></i>
+                      <span class="content">你有10个新的商品订单等待处理</span>
+                      <span class="time">
+                        <i class="fa fa-clock-o"></i>
+                        13 分钟.
+                      </span>
+                    </a>
+                  </li>
+                  <li class="item-footer">
+                    <a href="#">全部表为已读</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="hidden-xs">
+                <a class="btn">
+                  <i class="fa fa-cog"></i>
+                </a>
+              </li>
+              <li class="dropdown profile-dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <img src="img/samples/scarlet-159.png" alt=""/>
+                  <span class="hidden-xs">系统管理员  泽涛</span> <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="Settings.html">
+                      <i class="fa fa-cog"></i>
+                      账号设置
+                    </a>
+                  </li>
+                  <li>
+                    <a href="login.html">
+                      <i class="fa fa-power-off"></i>
+                      退出登录
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="hidden-xxs">
+                <a class="btn">
+                  <i class="fa fa-power-off"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div id="page-wrapper" class="container">
+      <div class="row">
+        <div id="nav-col">
+          <section id="col-left" class="col-left-nano">
+            <div id="col-left-inner" class="col-left-nano-content">
+              <div id="user-left-box" class="clearfix hidden-sm hidden-xs">
+                <img alt="" src="img/samples/scarlet-159.png"/>
+                <div class="user-box">
+                  <span class="name">
+                    Welcome
+                    <br/>
+                    泽涛
+                  </span>
+                  <span class="status">
+                    <i class="fa fa-circle"></i>
+                    在线
+                  </span>
+                </div>
+              </div>
+              <div class="collapse navbar-collapse navbar-ex1-collapse" id="sidebar-nav">
+                <ul class="nav nav-pills nav-stacked">
+                  <li>
+                    <a href="index.html">
+                      <i class="fa fa-dashboard"></i>
+                      <span>控制台</span>
+                      <span class="label label-info label-circle pull-right">28</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown-toggle">
+                      <i class="fa fa-cog"></i>
+                      <span>系统设置</span>
+                      <i class="fa fa-chevron-circle-right drop-icon"></i>
+                    </a>
+                    <ul class="submenu">
+                      <li>
+                        <a href="system-sites.html">网站参数设置</a>
+                      </li>
+                      <li>
+                        <a href="system-commodity.html">商品参数设置</a>
+                      </li>
+                      <li>
+                        <a href="system-pay.html">支付参数设置</a>
+                      </li>
+                      <li>
+                        <a href="system-permission.html">动态权限配置</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li  class="active">
+                    <a href="#" class="dropdown-toggle">
+                      <i class="fa fa-cubes"></i>
+                      <span>商品管理</span>
+                      <i class="fa fa-chevron-circle-right drop-icon"></i>
+                    </a>
+                    <ul class="submenu">
+                      <li>
+                        <a class="active" href="shop-added.html">上架商品</a>
+                      </li>
+                      <li>
+                        <a href="shop-out.html">下架商品</a>
+                      </li>
+                      <li>
+                        <a href="shop-sell-out.html">售罄商品</a>
+                      </li>
+                      <li>
+                        <a href="shop-brand.html">商品品牌</a>
+                      </li>
+                      <li>
+                        <a href="shop-comment.html">评论管理</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown-toggle">
+                      <i class="fa fa-users"></i>
+                      <span>用户管理</span>
+                      <i class="fa fa-chevron-circle-right drop-icon"></i>
+                    </a>
+                    <ul class="submenu">
+                      <li>
+                        <a href="user-group.html">用户组管理</a>
+                      </li>
+                      <li>
+                        <a href="user-system.html">系统管理员</a>
+                      </li>
+                      <li>
+                        <a href="user-shop.html">商品管理员</a>
+                      </li>
+                      <li>
+                        <a href="user-service.html">客服人员</a>
+                      </li>
+                      <li>
+                        <a href="user-area.html">区域合伙人</a>
+                      </li>
+                      <li>
+                        <a href="user-city.html">城市联盟</a>
+                      </li>
+                      <li>
+                        <a href="user-member.html">会员用户</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown-toggle">
+                      <i class="fa fa-shopping-cart"></i>
+                      <span>订单管理</span>
+                      <i class="fa fa-chevron-circle-right drop-icon"></i>
+                    </a>
+                    <ul class="submenu">
+                      <li>
+                        <a href="order-today.html">今日订单</a>
+                      </li>
+                      <li>
+                        <a href="order-all.html">全部订单</a>
+                      </li>
+                      <li>
+                        <a href="order-no-pay.html">未付款</a>
+                      </li>
+                      <li>
+                        <a href="order-no-shipments.html">未发货</a>
+                      </li>
+                      <li>
+                        <a href="order-shipments.html">已发货</a>
+                      </li>
+                      <li>
+                        <a href="order-deal-finish.html">交易完成</a>
+                      </li>
+                      <li>
+                        <a href="order-deal-cancel.html">交易取消</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown-toggle">
+                      <i class="fa fa-undo"></i>
+                      <span>退货订单</span>
+                      <i class="fa fa-chevron-circle-right drop-icon"></i>
+                    </a>
+                    <ul class="submenu">
+                      <li>
+                        <a href="return-apply.html">退货申请</a>
+                      </li>
+                      <li>
+                        <a href="return-going.html">退货中</a>
+                      </li>
+                      <li>
+                        <a href="return-finish.html">退货完成</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown-toggle">
+                      <i class="fa fa-money"></i>
+                      <span>财务管理</span>
+                      <i class="fa fa-chevron-circle-right drop-icon"></i>
+                    </a>
+                    <ul class="submenu">
+                      <li>
+                        <a href="finance-member.html">会员充值</a>
+                      </li>
+                      <li>
+                        <a href="finance-area.html">区域合伙人收入</a>
+                      </li>
+                      <li>
+                        <a href="finance-city.html">城市联盟收入</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown-toggle">
+                      <i class="fa fa-truck"></i>
+                      <span>物流管理</span>
+                      <i class="fa fa-chevron-circle-right drop-icon"></i>
+                    </a>
+                    <ul class="submenu">
+                      <li>
+                        <a href="logistics-template.html">物流模板</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown-toggle">
+                      <i class="fa fa-calendar-o"></i>
+                      <span>文章管理</span>
+                      <i class="fa fa-chevron-circle-right drop-icon"></i>
+                    </a>
+                    <ul class="submenu">
+                      <li>
+                        <a href="article-class.html">文章分类</a>
+                      </li>
+                      <li>
+                        <a href="article-list.html">文章列表</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown-toggle">
+                      <i class="fa fa-desktop"></i>
+                      <span>广告管理</span>
+                      <i class="fa fa-chevron-circle-right drop-icon"></i>
+                    </a>
+                    <ul class="submenu">
+                      <li>
+                        <a href="ad-class.html">广告分类</a>
+                      </li>
+                      <li>
+                        <a href="ad-list.html">广告列表</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown-toggle">
+                      <i class="fa fa-file"></i>
+                      <span>文件管理</span>
+                      <i class="fa fa-chevron-circle-right drop-icon"></i>
+                    </a>
+                    <ul class="submenu">
+                      <li>
+                        <a href="file-picture.html">图片管理</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div id="content-wrapper">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="row">
+                <div class="col-lg-12">
+                  <h1>商品页面</h1>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="main-box">
+                    <header class="main-box-header clearfix">
+                      <h2 class="pull-left">基本信息</h2>
+                      <div class="pull-right">
+                        <a href="#" class="btn btn-primary">
+                            <i class="fa fa-save"></i>
+                            保存全部/更新全部
+                        </a>
+                        <a href="#" class="btn btn-primary">
+                            <i class="fa fa-level-down"></i>
+                            下架
+                        </a>
+                        <a href="#" class="btn btn-danger">
+                            <i class="fa fa-trash-o"></i>
+                            删除
+                        </a>
+                      </div>
+                    </header>
+                    <div class="main-box-body clearfix">
+                      <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                          <label for="inputText1" class="col-lg-2 control-label">商品名称：</label>
+                          <div class="col-lg-10">
+                            <input type="text" class="form-control" id="inputText1" placeholder="填写你的商品名称（必填项）"></div>
+                        </div>
+                        <div class="form-group">
+                          <label for="inputText2" class="col-lg-2 control-label">商品单位：</label>
+                          <div class="col-lg-10">
+                            <input type="text" class="form-control" id="inputText2" placeholder="如: 个/件/包"></div>
+                        </div>
+                        <div class="form-group">
+                          <label for="inputText2" class="col-lg-2 control-label">商品质量：</label>
+                          <div class="col-lg-10">
+                            <input type="text" class="form-control" id="inputText2" placeholder="单位是千克"></div>
+                        </div>
+                        <div class="form-group">
+                          <label for="inputText2" class="col-lg-2 control-label">市场价格：</label>
+                          <div class="col-lg-10">
+                            <input type="text" class="form-control" id="inputText2" placeholder="商品的市场售价"></div>
+                        </div>
+                        <div class="form-group">
+                          <label for="inputText2" class="col-lg-2 control-label">商品属性：</label>
+                          <div class="col-lg-10">
+                            <div class="checkbox-nice checkbox-inline">
+                            <input type="checkbox" id="checkbox-inl-1">
+                            <label for="checkbox-inl-1">首页推荐</label>
+                          </div>
+                          <div class="checkbox-nice checkbox-inline">
+                            <input type="checkbox" id="checkbox-inl-2">
+                            <label for="checkbox-inl-2">新品推荐</label>
+                          </div>
+                          <div class="checkbox-nice checkbox-inline">
+                            <input type="checkbox" id="checkbox-inl-3">
+                            <label for="checkbox-inl-3">热卖推荐  </label>
+                          </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="inputText2" class="col-lg-2 control-label">支持物流：</label>
+                          <div class="col-lg-10">
+                            <div class="checkbox-nice checkbox-inline">
+                            <input type="checkbox" id="checkbox-inl-4">
+                            <label for="checkbox-inl-4">中通</label>
+                          </div>
+                          <div class="checkbox-nice checkbox-inline">
+                            <input type="checkbox" id="checkbox-inl-5">
+                            <label for="checkbox-inl-5">顺丰</label>
+                          </div>
+                          <div class="checkbox-nice checkbox-inline">
+                            <input type="checkbox" id="checkbox-inl-6">
+                            <label for="checkbox-inl-6">天天  </label>
+                          </div>
+                          <div class="checkbox-nice checkbox-inline">
+                            <input type="checkbox" id="checkbox-inl-7">
+                            <label for="checkbox-inl-7">润达</label>
+                          </div>
+                          <div class="checkbox-nice checkbox-inline">
+                            <input type="checkbox" id="checkbox-inl-8">
+                            <label for="checkbox-inl-8">圆通</label>
+                          </div>
+                          <div class="checkbox-nice checkbox-inline">
+                            <input type="checkbox" id="checkbox-inl-9">
+                            <label for="checkbox-inl-9">德邦  </label>
+                          </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="inputText3" class="col-lg-2 control-label">商品类别：</label>
+                          <div class="col-lg-5">
+                            <div class="form-group" style="margin:0">
+                              <select class="form-control">
+                                <option>商品大类</option>
+                                <option>日用百货</option>
+                                <option>电子产品</option>
+                                <option>食品饮料</option>
+                                <option>粮油副食</option>
+                                <option>美容洗护</option>
+                                <option>家居家电</option>
+                                <option>进口商品</option>
+                                <option>母婴用品</option>
+                                <option>生鲜水果</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-lg-5">
+                            <div class="form-group" style="margin:0">
+                              <select class="form-control">
+                                <option>商品小类</option>
+                                <option>水杯</option>
+                                <option>保温杯</option>
+                                <option>酒类</option>
+                                <option>茶类</option>
+                                <option>乳品</option>
+                                <option>零食</option>
+                                <option>面食</option>
+                                <option>家电</option>
+                                <option>清洁</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputText3" class="col-lg-2 control-label">开售时间：</label>
+                            <div class="col-lg-2">
+                                <div class="radio">
+                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+                                    <label for="optionsRadios1">立即上架
+                                    </label>
+                                </div>
+                            </div>
+                        <div class="col-lg-7">
+                            <div class="form-group" style="margin:0">
+                                <div class="radio pull-left">
+                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                    <label for="optionsRadios2">
+                                        定时上架
+                                    </label>
+                                </div>
+                                <div class="input-group date form_datetime col-md-8" data-date="1979-09-16T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
+                                  <input class="form-control" size="16" type="text" value="" readonly>
+                                  <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                  </span>
+                                  <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-th"></span>
+                                  </span>
+                                </div>
+                                <input type="hidden" id="dtp_input1" value="" />
+                              </div>
+                        </div>
+                        </div>
+                        <div class="form-group">
+                          <div class="col-lg-offset-2 col-lg-10">
+                            <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> 保存/更新</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="main-box">
+                    <header class="main-box-header clearfix">
+                      <h2>自定义属性</h2>
+                    </header>
+                    <div class="main-box-body clearfix">
+                        <div class="row">
+                            <div class="form-group col-xs-6">
+                                属性名称</div>
+                            <div class="form-group col-xs-6">
+                                属性值</div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-xs-6">
+                                <input type="text" class="form-control" placeholder="属性名称"></div>
+                            <div class="form-group col-xs-6">
+                                <input type="text" class="form-control" placeholder="属性的参数值"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i> 增加属性</button>
+                                <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> 保存/更新</button>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="main-box">
+                    <header class="main-box-header clearfix">
+                      <h2>商品规格</h2>
+                    </header>
+                    <div class="main-box-body clearfix">
+                        <div class="row">
+                            <div class="form-group col-xs-3">
+                                规格名</div>
+                            <div class="form-group col-xs-3">
+                                规格值</div>
+                            <div class="form-group col-xs-3">
+                                价格</div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-xs-3">
+                                <input type="text" class="form-control" placeholder="属性名称" value="颜色"></div>
+                            <div class="form-group col-xs-3">
+                                <input type="text" class="form-control" placeholder="规格值" value="红色"></div>
+                            <div class="form-group col-xs-3">
+                                <input type="text" class="form-control" placeholder="商品价格" value="￥100"></div>
+                            <div class="col-xs-3">
+                                <a href="##" class="btn btn-primary pull-right">
+                                    <i class="fa fa-plus-circle fa-lg"></i>  新增规格值
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-xs-3">
+                                </div>
+                            <div class="form-group col-xs-3">
+                                <input type="text" class="form-control" placeholder="规格值" value="黄色"></div>
+                            <div class="form-group col-xs-3">
+                                <input type="text" class="form-control" placeholder="商品价格" value="￥99"></div>
+                            <div class="col-xs-3">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i> 增加规格</button>
+                                <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> 保存/更新</button>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="main-box">
+                    <header class="main-box-header clearfix">
+                      <h2>商品库存<span class="label label-primary">总库存：2000</span></h2>
+                    </header>
+                    <div class="main-box-body clearfix">
+                        <div class="row">
+                            <div class="form-group col-xs-3">
+                                仓库名</div>
+                            <div class="form-group col-xs-3">
+                                规格名</div>
+                            <div class="form-group col-xs-3">
+                                规格值</div>
+                            <div class="form-group col-xs-3">
+                                库存数</div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-xs-3">
+                                <select class="form-control">
+                                  <option>中山港1+1</option>
+                                  <option>太阳城沃尔玛</option>
+                                  <option>深圳易华百货</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-xs-3">
+                                <select class="form-control">
+                                  <option>颜色</option>
+                                  <option>大小</option>
+                                  <option>长度</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-xs-3">
+                                <select class="form-control">
+                                  <option>红色</option>
+                                  <option>黄色</option>
+                                  <option>绿色</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-xs-3">
+                                <form class="form-inline" role="form">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="对应规格的库存数">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i> 增加库存</button>
+                                <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> 保存/更新</button>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="main-box">
+                    <header class="main-box-header">
+                      <h2>商品图片(最多上传6张，第一张为封面)：</h2>
+                    </header>
+                    <div class="main-box-body">
+                      <div id="dropzone">
+                        <form id="demo-upload" class="dropzone dz-clickable" action="#">
+                          <div class="dz-default dz-message">
+                            <span>上传你的商品图片(最多上传6张，第一张为封面)</span>
+                          </div>
+                        </form>
+                      </div>
+                        <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> 保存/更新</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="main-box">
+                    <header class="main-box-header clearfix">
+                      <h2>商品描述</h2>
+                    </header>
+                    <div class="main-box-body clearfix">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                  <div id="alerts"></div>
+                                  <div class="btn-toolbar editor-toolbar" data-role="editor-toolbar" data-target="#editor">
+                                    <div class="btn-group">
+                                      <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="字体">
+                                        <i class="fa fa-font"></i> <b class="caret"></b>
+                                      </a>
+                                      <ul class="dropdown-menu"></ul>
+                                    </div>
+                                    <div class="btn-group">
+                                      <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="字体大小">
+                                        <i class="fa fa-text-height"></i>
+                                        &nbsp;
+                                        <b class="caret"></b>
+                                      </a>
+                                      <ul class="dropdown-menu">
+                                        <li>
+                                          <a data-edit="fontSize 5"> <font size="5">Huge</font>
+                                          </a>
+                                        </li>
+                                        <li>
+                                          <a data-edit="fontSize 3"> <font size="3">Normal</font>
+                                          </a>
+                                        </li>
+                                        <li>
+                                          <a data-edit="fontSize 1">
+                                            <font size="1">Small</font>
+                                          </a>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                    <div class="btn-group">
+                                      <a class="btn btn-default" data-edit="bold" title="加粗 (Ctrl/Cmd+B)">
+                                        <i class="fa fa-bold"></i>
+                                      </a>
+                                      <a class="btn btn-default" data-edit="italic" title="斜体 (Ctrl/Cmd+I)">
+                                        <i class="fa fa-italic"></i>
+                                      </a>
+                                      <a class="btn btn-default" data-edit="strikethrough" title="中划线">
+                                        <i class="fa fa-strikethrough"></i>
+                                      </a>
+                                      <a class="btn btn-default" data-edit="underline" title="下划线 (Ctrl/Cmd+U)">
+                                        <i class="fa fa-underline"></i>
+                                      </a>
+                                    </div>
+                                    <div class="btn-group">
+                                      <a class="btn btn-default" data-edit="insertunorderedlist" title="无序列表">
+                                        <i class="fa fa-list-ul"></i>
+                                      </a>
+                                      <a class="btn btn-default" data-edit="insertorderedlist" title="有序列表">
+                                        <i class="fa fa-list-ol"></i>
+                                      </a>
+                                      <a class="btn btn-default" data-edit="outdent" title="字体缩进 (Shift+Tab)">
+                                        <i class="fa fa-dedent"></i>
+                                      </a>
+                                      <a class="btn btn-default" data-edit="indent" title="字体退格 (Tab)">
+                                        <i class="fa fa-indent"></i>
+                                      </a>
+                                    </div>
+                                    <div class="btn-group">
+                                      <a class="btn btn-default" data-edit="justifyleft" title="左对齐 (Ctrl/Cmd+L)">
+                                        <i class="fa fa-align-left"></i>
+                                      </a>
+                                      <a class="btn btn-default" data-edit="justifycenter" title="居中对其 (Ctrl/Cmd+E)">
+                                        <i class="fa fa-align-center"></i>
+                                      </a>
+                                      <a class="btn btn-default" data-edit="justifyright" title="右对齐 (Ctrl/Cmd+R)">
+                                        <i class="fa fa-align-right"></i>
+                                      </a>
+                                      <a class="btn btn-default" data-edit="justifyfull" title="两端对其 (Ctrl/Cmd+J)">
+                                        <i class="fa fa-align-justify"></i>
+                                      </a>
+                                    </div>
+                                    <div class="btn-group">
+                                      <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="插入连接">
+                                        <i class="fa fa-link"></i>
+                                      </a>
+                                      <div class="dropdown-menu input-append">
+                                        <input class="span2" placeholder="URL" type="text" data-edit="createLink"/>
+                                        <button class="btn" type="button">Add</button>
+                                      </div>
+                                      <a class="btn btn-default" data-edit="unlink" title="清除连接">
+                                        <i class="fa fa-cut"></i>
+                                      </a>
+                                    </div>
+                                    <div class="btn-group">
+                                      <a class="btn btn-default" title="Insert picture (or just drag & drop)" id="pictureBtn">
+                                        <i class="fa fa-picture-o"></i>
+                                      </a>
+                                      <input type="file" data-role="magic-overlay" data-target="#pictureBtn" data-edit="insertImage"/>
+                                    </div>
+                                    <div class="btn-group">
+                                      <a class="btn btn-default" data-edit="undo" title="退后 (Ctrl/Cmd+Z)">
+                                        <i class="fa fa-undo"></i>
+                                      </a>
+                                      <a class="btn btn-default" data-edit="redo" title="前进 (Ctrl/Cmd+Y)">
+                                        <i class="fa fa-repeat"></i>
+                                      </a>
+                                    </div>
+                                    <input type="text" data-edit="inserttext" id="voiceBtn" x-webkit-speech=""></div>
+                                    <div id="editor" class="wysiwyg-editor">输入你的产品详细描述&hellip;</div>
+                            </div>
+                        </div>
+                        <br>
+                        <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> 保存/更新</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                  <div class="col-lg-12">
+                      <div class="main-box">
+                            <header class="main-box-header clearfix">
+                                <h2>记得最后一步哟...</h2>
+                            </header>
+                          <div class="main-box-body clearfix">
+                                <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> 保存全部/更新全部</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+            </div>
+          </div>
+          <footer id="footer-bar" class="row">
+            <p id="footer-copyright" class="col-xs-12">
+              &copy; 2016
+              . 版权所属：同转商城.
+            </p>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="config-tool" class="closed">
+    <a id="config-tool-cog">
+      <i class="fa fa-cog"></i>
+    </a>
+    <div id="config-tool-options">
+      <h4>界面风格设置</h4>
+      <ul>
+        <li>
+          <div class="checkbox-nice">
+            <input type="checkbox" id="config-fixed-header"/>
+            <label for="config-fixed-header">固定头部</label>
+          </div>
+        </li>
+        <li>
+          <div class="checkbox-nice">
+            <input type="checkbox" id="config-fixed-sidebar"/>
+            <label for="config-fixed-sidebar">固定菜单</label>
+          </div>
+        </li>
+        <li>
+          <div class="checkbox-nice">
+            <input type="checkbox" id="config-fixed-footer"/>
+            <label for="config-fixed-footer">固定底部</label>
+          </div>
+        </li>
+        <li>
+          <div class="checkbox-nice">
+            <input type="checkbox" id="config-boxed-layout"/>
+            <label for="config-boxed-layout">固定宽度</label>
+          </div>
+        </li>
+        <li>
+          <div class="checkbox-nice">
+            <input type="checkbox" id="config-rtl-layout"/>
+            <label for="config-rtl-layout">反向模式</label>
+          </div>
+        </li>
+      </ul>
+      <br/>
+      <h4>皮肤颜色</h4>
+      <ul id="skin-colors" class="clearfix">
+        <li>
+          <a class="skin-changer" data-skin="" data-toggle="tooltip" title="默认" style="background-color: #34495e;"></a>
+        </li>
+        <li>
+          <a class="skin-changer" data-skin="theme-white" data-toggle="tooltip" title="白绿" style="background-color: #2ecc71;"></a>
+        </li>
+        <li>
+          <a class="skin-changer blue-gradient" data-skin="theme-blue-gradient" data-toggle="tooltip" title="蓝黑"></a>
+        </li>
+        <li>
+          <a class="skin-changer" data-skin="theme-turquoise" data-toggle="tooltip" title="绿灰" style="background-color: #1abc9c;"></a>
+        </li>
+        <li>
+          <a class="skin-changer" data-skin="theme-amethyst" data-toggle="tooltip" title="紫色" style="background-color: #9b59b6;"></a>
+        </li>
+        <li>
+          <a class="skin-changer" data-skin="theme-blue" data-toggle="tooltip" title="蓝色" style="background-color: #2980b9;"></a>
+        </li>
+        <li>
+          <a class="skin-changer" data-skin="theme-red" data-toggle="tooltip" title="红色" style="background-color: #e74c3c;"></a>
+        </li>
+        <li>
+          <a class="skin-changer" data-skin="theme-whbl" data-toggle="tooltip" title="蓝白" style="background-color: #3498db;"></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+    <script src="js/demo-skin-changer.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery.nanoscroller.min.js"></script>
+    <script src="js/demo.js"></script>
+
+    <script src="js/jquery.hotkeys.js"></script>
+    <script src="js/bootstrap-wysiwyg.js"></script>
+
+    <script src="js/jquery-ui.custom.min.js"></script>
+    <script src="js/dropzone.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+
+    <script src="js/bootstrap-datetimepicker.js"></script>
+
+    <script src="js/scripts.js"></script>
+    <script src="js/pace.min.js"></script>
+    <script type="text/javascript">
+    $('.form_datetime').datetimepicker({
+        //language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        forceParse: 0,
+        showMeridian: 1,
+    });
+    </script>
+    <!-- 编辑器 -->
+    <script>
+  $(function(){
+    function initToolbarBootstrapBindings() {
+      var fonts = ['Serif', 'Sans', 'Arial', 'Arial Black', 'Courier',
+            'Courier New', 'Comic Sans MS', 'Helvetica', 'Impact', 'Lucida Grande', 'Lucida Sans', 'Tahoma', 'Times',
+            'Times New Roman', 'Verdana'],
+        fontTarget = $('[title=Font]').siblings('.dropdown-menu');
+
+      $.each(fonts, function (idx, fontName) {
+        fontTarget.append($('<li><a data-edit="fontName ' + fontName +'" style="font-family:\''+ fontName +'\'">'+fontName + '</a></li>'));
+      });
+      $('a[title]').tooltip({container:'body'});
+      $('.dropdown-menu input').click(function() {return false;})
+        .change(function () {$(this).parent('.dropdown-menu').siblings('.dropdown-toggle').dropdown('toggle');})
+        .keydown('esc', function () {this.value='';$(this).change();});
+
+      $('[data-role=magic-overlay]').each(function () {
+        var overlay = $(this), target = $(overlay.data('target'));
+        overlay.css('opacity', 0).css('position', 'absolute').offset(target.offset()).width(target.outerWidth()).height(target.outerHeight());
+      });
+      if ("onwebkitspeechchange"  in document.createElement("input")) {
+        var editorOffset = $('#editor').offset();
+        $('#voiceBtn').css('position','absolute').offset({top: editorOffset.top, left: editorOffset.left+$('#editor').innerWidth()-35});
+      } else {
+        $('#voiceBtn').hide();
+      }
+    };
+    function showErrorAlert (reason, detail) {
+      var msg='';
+      if (reason==='unsupported-file-type') { msg = "Unsupported format " +detail; }
+      else {
+        console.log("error uploading file", reason, detail);
+      }
+      $('<div class="alert"> <button type="button" class="close" data-dismiss="alert">&times;</button>'+
+       '<strong>File upload error</strong> '+msg+' </div>').prependTo('#alerts');
+    };
+      initToolbarBootstrapBindings();
+    $('#editor').wysiwyg({ fileUploadError: showErrorAlert} );
+  });
+  </script>
+</body>
+</html>
