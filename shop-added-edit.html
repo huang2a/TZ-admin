@@ -10,6 +10,8 @@
   <link rel="stylesheet" type="text/css" href="css/libs/font-awesome.css"/>
   <link rel="stylesheet" type="text/css" href="css/libs/nanoscroller.css"/>
   <link rel="stylesheet" type="text/css" href="css/compiled/theme_styles.css"/>
+
+  <link rel="stylesheet" type="text/css" href="css/libs/bootstrap-datetimepicker.min.css"/>
   <!-- 上传图片 -->
   <link rel="stylesheet" type="text/css" href="css/libs/dropzone.css">
   <link rel="stylesheet" type="text/css" href="css/libs/magnific-popup.css">
@@ -841,7 +843,22 @@
     <script src="js/scripts.js"></script><!-- 左侧菜单导航 -->
     <script src="js/pace.min.js"></script><!-- 页面加载读条 -->
 
+    <script src="js/bootstrap-datetimepicker.js"></script><!-- 时间 -->
+    // 时间选择
+    <script type="text/javascript">
+    $('.form_datetime').datetimepicker({
+        //language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        forceParse: 0,
+            showMeridian: 1,
+        });
+    </script>
     <script src="js/fileinput.min.js"></script>
+    // 文件上传
     <script>
     $(document).on('ready', function() {
         $("#input-img01").fileinput({
@@ -856,7 +873,6 @@
     </script>
     <!-- 编辑器 -->
     <script type="text/javascript" charset="utf-8" src="js/lang/en/en.js"></script>
-    <!-- 配置文件 -->
     <script src="js/ueditor.config.js"></script>
     <script src="js/ueditor.all.min.js"></script>
     <!-- 实例化编辑器 -->
