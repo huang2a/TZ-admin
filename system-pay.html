@@ -7,15 +7,11 @@
   <title>同转商城总部后台</title>
 
      <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css"/>
-
-    <script src="js/demo-rtl.js"></script>
-
     <link rel="stylesheet" type="text/css" href="css/libs/font-awesome.css"/>
     <link rel="stylesheet" type="text/css" href="css/libs/nanoscroller.css"/>
 
     <link rel="stylesheet" type="text/css" href="css/compiled/theme_styles.css"/>
 
-    <link rel="stylesheet" type="text/css" href="css/libs/nifty-component.css"/>
   <link type="image/x-icon" href="favicon.png" rel="shortcut icon"/>
   <!--[if lt IE 9]>
   <script src="js/html5shiv.js"></script>
@@ -23,39 +19,6 @@
   <![endif]-->
 </head>
 <body>
-<!-- 弹出窗 -->
-<div class="md-modal md-effect-7" id="modal-7">
-    <div class="md-content">
-        <div class="modal-header">
-            <button class="md-close close">&times;</button>
-            <h4 class="modal-title">商品大类</h4>
-        </div>
-        <div class="modal-body">
-            <form role="form">
-                <div class="form-group">
-                    <label for="exampleInputEmail1">分类名称</label>
-                    <input type="text" class="form-control" id="exampleAutocompleteSimple" placeholder="大分类的名称" value="日用百货"></div>
-                <div class="form-group">
-                    <label for="exampleTextarea">分类说明</label>
-                    <textarea class="form-control" id="exampleTextarea" rows="2">日用百货类目、这里只能放日用百货的分类。</textarea>
-                </div>
-                <p><label for="exampleTextarea">分类状态</label></p>
-                <div class="btn-group" data-toggle="buttons">
-                  <label class="btn btn-primary active">
-                  <input type="radio" name="options" id="option1"> 不显示
-                  </label>
-                  <label class="btn btn-primary">
-                  <input type="radio" name="options" id="option2"> 显示
-                  </label>
-                </div>
-            </form>
-        </div>
-        <div class="modal-footer">
-            <a href="" class="btn btn-primary"><i class="fa fa-save"></i>  保存/更新</a>
-        </div>
-    </div>
-</div>
-<div class="md-overlay"></div>
 
   <div id="theme-wrapper">
     <header class="navbar" id="header-navbar">
@@ -540,12 +503,6 @@
             <label for="config-boxed-layout">固定宽度</label>
           </div>
         </li>
-        <li>
-          <div class="checkbox-nice">
-            <input type="checkbox" id="config-rtl-layout"/>
-            <label for="config-rtl-layout">反向模式</label>
-          </div>
-        </li>
       </ul>
       <br/>
       <h4>皮肤颜色</h4>
@@ -578,17 +535,13 @@
     </div>
   </div>
 
-    <script src="js/demo-skin-changer.js"></script>
+    <script src="js/demo-skin-changer.js"></script><!-- 主题皮肤 -->
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
-    <script src="js/jquery.nanoscroller.min.js"></script>
-    <script src="js/demo.js"></script>
+    <script src="js/jquery.nanoscroller.min.js"></script><!-- 滚动轴 -->
+    <script src="js/demo.js"></script><!-- 皮肤设置菜单 -->
 
-    <script src="js/modernizr.custom.js"></script>
-    <script src="js/classie.js"></script>
-    <script src="js/modalEffects.js"></script>
-
-    <script src="js/scripts.js"></script>
-    <script src="js/pace.min.js"></script>
+    <script src="js/scripts.js"></script><!-- 左侧菜单导航 -->
+    <script src="js/pace.min.js"></script><!-- 页面加载读条 -->
 </body>
 </html>
