@@ -9,6 +9,8 @@
     <link rel="stylesheet" type="text/css" href="css/libs/font-awesome.css"/>
     <link rel="stylesheet" type="text/css" href="css/libs/nanoscroller.css"/>
     <link rel="stylesheet" type="text/css" href="css/compiled/theme_styles.css"/>
+    <link rel="stylesheet" type="text/css" href="css/libs/nifty-component.css"/><!-- 弹出窗体 -->
+
   <link type="image/x-icon" href="favicon.png" rel="shortcut icon"/>
   <!--[if lt IE 9]>
   <script src="js/html5shiv.js"></script>
@@ -16,6 +18,50 @@
   <![endif]-->
 </head>
 <body>
+
+<!-- 弹出窗 -->
+<div class="md-modal md-effect-7" id="modal-7">
+    <div class="md-content">
+        <div class="modal-header">
+            <button class="md-close close">&times;</button>
+            <h4 class="modal-title">结算操作</h4>
+        </div>
+        <div class="modal-body clearfix">
+            <form role="form">
+                <div class="col-md-6">
+                    <div class="form-group">
+                    <label for="exampleInput1">收款人名称</label>
+                    <input type="text" class="form-control" id="exampleInput1" placeholder="填写收款人的姓名" value="黄先生" disabled></div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                    <label for="exampleInput6">联系电话</label>
+                    <input type="text" class="form-control" id="exampleInput6" placeholder="联系人的手机号码"  value="13412345678" disabled></div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                    <label for="exampleInput2">收款银行</label>
+                    <input type="text" class="form-control" id="exampleInput2" placeholder="开户银行名称" value="农业银行" disabled></div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                    <label for="exampleInput3">银行卡账号</label>
+                    <input type="text" class="form-control" id="exampleInput3" placeholder="银行卡账号" value="2983179213892" disabled></div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                    <label for="exampleInput4">结算金额</label>
+                    <input type="text" class="form-control" id="exampleInput4" placeholder="结算金额" value="32000" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="认真核对结算的金额"></div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <a href="" class="btn btn-primary"><i class="fa fa-save"></i>  保存/更新</a>
+        </div>
+    </div>
+</div>
+<div class="md-overlay"></div>
+
   <div id="theme-wrapper">
     <header class="navbar" id="header-navbar">
       <div class="container">
@@ -389,7 +435,7 @@
                     <header class="main-box-header clearfix">
                       <h2 class="pull-left">收入信息</h2>
                       <div class="pull-right">
-                        <a href="#" class="btn btn-primary">
+                        <a href="##" class="md-trigger btn btn-primary" data-modal="modal-7">
                             <i class="fa fa-cny"></i>
                             结算收入
                         </a>
@@ -1064,5 +1110,9 @@
 
     <script src="js/scripts.js"></script><!-- 左侧菜单导航 -->
     <script src="js/pace.min.js"></script><!-- 页面加载读条 -->
+
+    <script src="js/classie.js"></script><!-- 弹出窗口 -->
+    <script src="js/modalEffects.js"></script><!-- 弹出窗口 -->
+
 </body>
 </html>
