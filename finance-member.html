@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <title>同转商城总部后台</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/libs/font-awesome.css"/>
+    <link rel="stylesheet" type="text/css" href="css/libs/nanoscroller.css"/>
+    <link rel="stylesheet" type="text/css" href="css/compiled/theme_styles.css"/>
+  <link type="image/x-icon" href="favicon.png" rel="shortcut icon"/>
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.js"></script>
+  <script src="js/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div id="theme-wrapper">
+    <header class="navbar" id="header-navbar">
+      <div class="container">
+        <a href="index.html" id="logo" class="navbar-brand">
+          <img src="img/logo.png" alt="" class="normal-logo logo-white"/>
+          <img src="img/logo-black.png" alt="" class="normal-logo logo-black"/>
+          <img src="img/logo-small.png" alt="" class="small-logo hidden-xs hidden-sm hidden"/>
+        </a>
+        <div class="clearfix">
+          <button class="navbar-toggle" data-target=".navbar-ex1-collapse" data-toggle="collapse" type="button">
+            <span class="sr-only">导航触发</span>
+            <span class="fa fa-bars"></span>
+          </button>
+          <div class="nav-no-collapse navbar-left pull-left hidden-sm hidden-xs">
+            <ul class="nav navbar-nav pull-left">
+              <li>
+                <a class="btn" id="make-small-nav"> <i class="fa fa-bars"></i>
+                </a>
+              </li>
+              <li><a style="font-size: 1.3em;">总部后台管理系统</a></li>
+            </ul>
+          </div>
+          <div class="nav-no-collapse pull-right" id="header-nav">
+            <ul class="nav navbar-nav pull-right">
+              <li class="mobile-search">
+                <a class="btn"> <i class="fa fa-search"></i>
+                </a>
+                <div class="drowdown-search">
+                  <form role="search">
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="搜索...">
+                      <i class="fa fa-search nav-search-icon"></i>
+                    </div>
+                  </form>
+                </div>
+              </li>
+              <li class="dropdown hidden-xs">
+                <a class="btn dropdown-toggle" data-toggle="dropdown">
+                  <i class="fa fa-warning"></i>
+                  <span class="count">4</span>
+                </a>
+                <ul class="dropdown-menu notifications-list">
+                  <li class="pointer">
+                    <div class="pointer-inner">
+                      <div class="arrow"></div>
+                    </div>
+                  </li>
+                  <li class="item-header">你有4条新信息</li>
+                  <li class="item">
+                    <a href="#">
+                      <i class="fa fa-comment"></i>
+                      <span class="content">商品不错，下次我还买...</span>
+                      <span class="time">
+                        <i class="fa fa-clock-o"></i>
+                        13 分钟.
+                      </span>
+                    </a>
+                  </li>
+                  <li class="item">
+                    <a href="#">
+                      <i class="fa fa-plus"></i>
+                      <span class="content">新增5个区域合作商</span>
+                      <span class="time">
+                        <i class="fa fa-clock-o"></i>
+                        13 分钟.
+                      </span>
+                    </a>
+                  </li>
+                  <li class="item">
+                    <a href="#">
+                      <i class="fa fa-shopping-cart"></i>
+                      <span class="content">你有5个商品新增购物到购物车</span>
+                      <span class="time">
+                        <i class="fa fa-clock-o"></i>
+                        13 分钟.
+                      </span>
+                    </a>
+                  </li>
+                  <li class="item">
+                    <a href="#">
+                      <i class="fa fa-eye"></i>
+                      <span class="content">你有10个新的商品订单等待处理</span>
+                      <span class="time">
+                        <i class="fa fa-clock-o"></i>
+                        13 分钟.
+                      </span>
+                    </a>
+                  </li>
+                  <li class="item-footer">
+                    <a href="#">全部表为已读</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="hidden-xs">
+                <a class="btn">
+                  <i class="fa fa-cog"></i>
+                </a>
+              </li>
+              <li class="dropdown profile-dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <img src="img/samples/scarlet-159.png" alt=""/>
+                  <span class="hidden-xs">系统管理员  泽涛</span> <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="Settings.html">
+                      <i class="fa fa-cog"></i>
+                      账号设置
+                    </a>
+                  </li>
+                  <li>
+                    <a href="login.html">
+                      <i class="fa fa-power-off"></i>
+                      退出登录
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="hidden-xxs">
+                <a class="btn">
+                  <i class="fa fa-power-off"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div id="page-wrapper" class="container">
+      <div class="row">
+        <div id="nav-col">
+          <section id="col-left" class="col-left-nano">
+            <div id="col-left-inner" class="col-left-nano-content">
+              <div id="user-left-box" class="clearfix hidden-sm hidden-xs">
+                <img alt="" src="img/samples/scarlet-159.png"/>
+                <div class="user-box">
+                  <span class="name">
+                    Welcome
+                    <br/>
+                    泽涛
+                  </span>
+                  <span class="status">
+                    <i class="fa fa-circle"></i>
+                    在线
+                  </span>
+                </div>
+              </div>
+              <div class="collapse navbar-collapse navbar-ex1-collapse" id="sidebar-nav">
+                <ul class="nav nav-pills nav-stacked">
+                  <li>
+                    <a href="index.html">
+                      <i class="fa fa-dashboard"></i>
+                      <span>控制台</span>
+                      <span class="label label-info label-circle pull-right">28</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown-toggle">
+                      <i class="fa fa-cog"></i>
+                      <span>系统设置</span>
+                      <i class="fa fa-chevron-circle-right drop-icon"></i>
+                    </a>
+                    <ul class="submenu">
+                      <li>
+                        <a href="system-sites.html">网站参数设置</a>
+                      </li>
+                      <li>
+                        <a href="system-commodity.html">商品参数设置</a>
+                      </li>
+                      <li>
+                        <a href="system-pay.html">支付参数设置</a>
+                      </li>
+                      <li>
+                        <a href="system-permission.html">动态权限配置</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown-toggle">
+                      <i class="fa fa-cubes"></i>
+                      <span>商品管理</span>
+                      <i class="fa fa-chevron-circle-right drop-icon"></i>
+                    </a>
+                    <ul class="submenu">
+                      <li>
+                        <a href="shop-added.html">上架商品</a>
+                      </li>
+                      <li>
+                        <a href="shop-out.html">下架商品</a>
+                      </li>
+                      <li>
+                        <a href="shop-sell-out.html">售罄商品</a>
+                      </li>
+                      <li>
+                        <a href="shop-brand.html">商品品牌</a>
+                      </li>
+                      <li>
+                        <a href="shop-comment.html">评论管理</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown-toggle">
+                      <i class="fa fa-users"></i>
+                      <span>用户管理</span>
+                      <i class="fa fa-chevron-circle-right drop-icon"></i>
+                    </a>
+                    <ul class="submenu">
+                      <li>
+                        <a href="user-group.html">用户组管理</a>
+                      </li>
+                      <li>
+                        <a href="user-system.html">系统管理员</a>
+                      </li>
+                      <li>
+                        <a href="user-shop.html">商品管理员</a>
+                      </li>
+                      <li>
+                        <a href="user-service.html">客服人员</a>
+                      </li>
+                      <li>
+                        <a href="user-area.html">区域合伙人</a>
+                      </li>
+                      <li>
+                        <a href="user-city.html">城市联盟</a>
+                      </li>
+                      <li>
+                        <a href="user-member.html">会员用户</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown-toggle">
+                      <i class="fa fa-shopping-cart"></i>
+                      <span>订单管理</span>
+                      <i class="fa fa-chevron-circle-right drop-icon"></i>
+                    </a>
+                    <ul class="submenu">
+                      <li>
+                        <a href="order-today.html">今日订单</a>
+                      </li>
+                      <li>
+                        <a  href="order-all.html">全部订单</a>
+                      </li>
+                      <li>
+                        <a href="order-no-pay.html">未付款</a>
+                      </li>
+                      <li>
+                        <a href="order-no-shipments.html">未发货</a>
+                      </li>
+                      <li>
+                        <a href="order-shipments.html">已发货</a>
+                      </li>
+                      <li>
+                        <a href="order-deal-finish.html">交易完成</a>
+                      </li>
+                      <li>
+                        <a href="order-deal-cancel.html">交易取消</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown-toggle">
+                      <i class="fa fa-undo"></i>
+                      <span>退货订单</span>
+                      <i class="fa fa-chevron-circle-right drop-icon"></i>
+                    </a>
+                    <ul class="submenu">
+                      <li>
+                        <a href="return-apply.html">退货申请</a>
+                      </li>
+                      <li>
+                        <a href="return-going.html">退货中</a>
+                      </li>
+                      <li>
+                        <a href="return-finish.html">退货完成</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="active">
+                    <a href="#" class="dropdown-toggle">
+                      <i class="fa fa-money"></i>
+                      <span>财务管理</span>
+                      <i class="fa fa-chevron-circle-right drop-icon"></i>
+                    </a>
+                    <ul class="submenu">
+                      <li>
+                        <a class="active" href="finance-member.html">会员充值</a>
+                      </li>
+                      <li>
+                        <a href="finance-area.html">区域合伙人收入</a>
+                      </li>
+                      <li>
+                        <a href="finance-city.html">城市联盟收入</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown-toggle">
+                      <i class="fa fa-truck"></i>
+                      <span>物流管理</span>
+                      <i class="fa fa-chevron-circle-right drop-icon"></i>
+                    </a>
+                    <ul class="submenu">
+                      <li>
+                        <a href="logistics-template.html">物流模板</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown-toggle">
+                      <i class="fa fa-calendar-o"></i>
+                      <span>文章管理</span>
+                      <i class="fa fa-chevron-circle-right drop-icon"></i>
+                    </a>
+                    <ul class="submenu">
+                      <li>
+                        <a href="article-class.html">文章分类</a>
+                      </li>
+                      <li>
+                        <a href="article-list.html">文章列表</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown-toggle">
+                      <i class="fa fa-desktop"></i>
+                      <span>广告管理</span>
+                      <i class="fa fa-chevron-circle-right drop-icon"></i>
+                    </a>
+                    <ul class="submenu">
+                      <li>
+                        <a href="ad-class.html">广告分类</a>
+                      </li>
+                      <li>
+                        <a href="ad-list.html">广告列表</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown-toggle">
+                      <i class="fa fa-file"></i>
+                      <span>文件管理</span>
+                      <i class="fa fa-chevron-circle-right drop-icon"></i>
+                    </a>
+                    <ul class="submenu">
+                      <li>
+                        <a href="file-picture.html">图片管理</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div id="content-wrapper">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="row">
+                <div class="col-lg-12">
+                  <h1>会员充值管理</h1>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="main-box">
+                    <header class="main-box-header clearfix">
+                      <h2>订单搜索</h2>
+                    </header>
+                    <div class="main-box-body clearfix">
+                      <form class="form-horizontal" method="post">
+                      <div class="form-group">
+                          <label class="col-sm-1 control-label">充值订单ID</label>
+                          <div class="col-sm-3">
+                              <input class="form-control" name="" placeholder="" value="" type="text">
+                          </div>
+
+                          <label class="col-sm-1 control-label">交易号</label>
+
+                          <div class="col-sm-3">
+                              <input class="form-control" name="orderid" placeholder="" value="" type="text">
+                          </div>
+
+                          <label class="col-sm-1 control-label">用户ID</label>
+
+                          <div class="col-sm-3">
+                              <input class="form-control" name="user_id" placeholder="" value="" type="text">
+                          </div>
+                      </div>
+
+                      <div class="form-group">
+                          <label class="col-sm-1 control-label">支付方式</label>
+
+                          <div class="col-sm-3">
+                              <select name="payment" class="form-control">
+                                  <option value="-10">不选择支付方式</option>
+                                  <option value="0">账户支付</option>
+                                  <option value="1">微信支付</option>
+                                  <option value="2">支付宝支付</option>
+                                  <option value="3">货到付款</option>
+                              </select>
+                          </div>
+
+                          <label class="col-sm-1 control-label">支付状态</label>
+
+                          <div class="col-sm-3">
+                              <select name="" class="form-control">
+                                  <option value="-10">不选择支付状态</option>
+                                  <option value="0">未支付</option>
+                                  <option value="1">已支付</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="box-footer">
+                          <div class="col-sm-2">
+                              <button class="btn btn-primary"><i class="fa fa-search"></i>  开始搜索</button>
+                          </div>
+                      </div>
+                    </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="main-box">
+                    <header class="main-box-header clearfix">
+                      <h2>订单列表</h2>
+                    </header>
+                    <div class="main-box-body clearfix">
+                      <div class="table-responsive clearfix">
+                        <table class="table table-hover">
+                          <thead>
+                            <tr>
+                              <th width="40px;">
+                                  <span><div class="checkbox-nice checkbox-inline"><input type="checkbox" id="checkbox-inl-0"><label for="checkbox-inl-0"></label></div></span>
+                              </th>
+                              <th>
+                                  <span>充值订单ID</span>
+                              </th>
+                              <th width="23%">
+                                  <span>交易号</span>
+                              </th>
+                              <th>
+                                  <span>用户ID</span>
+                              </th>
+                              <th>
+                                  <span>支付方式</span>
+                              </th>
+                              <th class="text-center" width="80px">
+                                <span>价格</span>
+                              </th>
+                              <th class="text-center" width="80px">
+                                <span>积分</span>
+                              </th>
+                              <th class="text-center" width="80px">
+                                <span>支付状态</span>
+                              </th>
+                              <th class="text-center">
+                                <span>时间</span>
+                              </th>
+                              <th>&nbsp;</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>
+                                <div class="checkbox-nice checkbox-inline"><input type="checkbox" id="checkbox-inl-1"><label for="checkbox-inl-1"></label></div>
+                              </td>
+                              <td>
+                                HEH23918931
+                              </td>
+                              <td>
+                                HSD201607032398
+                              </td>
+                              <td>
+                                黄先生
+                                <br>
+                                13412345678
+                              </td>
+                              <td>
+                                微信支付
+                              </td>
+                              <td class="text-center">
+                                ￥200.00
+                              </td>
+                              <td class="text-center">
+                                210积分
+                              </td>
+                              <td class="text-center">
+                                <span class="label label-success">已付款</span>
+                              </td>
+
+                              <td class="text-center">2016-7-3 <br>   00:44:24</td>
+                              <td>
+                                  <a href="finance-member-edit.html" class="table-link">
+                                      <span class="fa-stack">
+                                          <i class="fa fa-square fa-stack-2x"></i>
+                                          <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
+                                      </span>
+                                  </a>
+                                  <a href="#" class="table-link danger">
+                                      <span class="fa-stack">
+                                          <i class="fa fa-square fa-stack-2x"></i>
+                                          <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
+                                      </span>
+                                  </a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class="checkbox-nice checkbox-inline"><input type="checkbox" id="checkbox-inl-2"><label for="checkbox-inl-2"></label></div>
+                              </td>
+                              <td>
+                                HEH23918931
+                              </td>
+                              <td>
+                                HSD201607032398
+                              </td>
+                              <td>
+                                黄先生
+                                <br>
+                                13412345678
+                              </td>
+                              <td>
+                                微信支付
+                              </td>
+                              <td class="text-center">
+                                ￥200.00
+                              </td>
+                              <td class="text-center">
+                                210积分
+                              </td>
+                              <td class="text-center">
+                                <span class="label label-success">已付款</span>
+                              </td>
+
+                              <td class="text-center">2016-7-3 <br>   00:44:24</td>
+                              <td>
+                                  <a href="finance-member-edit.html" class="table-link">
+                                      <span class="fa-stack">
+                                          <i class="fa fa-square fa-stack-2x"></i>
+                                          <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
+                                      </span>
+                                  </a>
+                                  <a href="#" class="table-link danger">
+                                      <span class="fa-stack">
+                                          <i class="fa fa-square fa-stack-2x"></i>
+                                          <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
+                                      </span>
+                                  </a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class="checkbox-nice checkbox-inline"><input type="checkbox" id="checkbox-inl-3"><label for="checkbox-inl-3"></label></div>
+                              </td>
+                              <td>
+                                HEH23918931
+                              </td>
+                              <td>
+                                HSD201607032398
+                              </td>
+                              <td>
+                                黄先生
+                                <br>
+                                13412345678
+                              </td>
+                              <td>
+                                微信支付
+                              </td>
+                              <td class="text-center">
+                                ￥200.00
+                              </td>
+                              <td class="text-center">
+                                210积分
+                              </td>
+                              <td class="text-center">
+                                <span class="label label-success">已付款</span>
+                              </td>
+
+                              <td class="text-center">2016-7-3 <br>   00:44:24</td>
+                              <td>
+                                  <a href="finance-member-edit.html" class="table-link">
+                                      <span class="fa-stack">
+                                          <i class="fa fa-square fa-stack-2x"></i>
+                                          <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
+                                      </span>
+                                  </a>
+                                  <a href="#" class="table-link danger">
+                                      <span class="fa-stack">
+                                          <i class="fa fa-square fa-stack-2x"></i>
+                                          <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
+                                      </span>
+                                  </a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class="checkbox-nice checkbox-inline"><input type="checkbox" id="checkbox-inl-4"><label for="checkbox-inl-4"></label></div>
+                              </td>
+                              <td>
+                                HEH23918931
+                              </td>
+                              <td>
+                                HSD201607032398
+                              </td>
+                              <td>
+                                黄先生
+                                <br>
+                                13412345678
+                              </td>
+                              <td>
+                                微信支付
+                              </td>
+                              <td class="text-center">
+                                ￥200.00
+                              </td>
+                              <td class="text-center">
+                                210积分
+                              </td>
+                              <td class="text-center">
+                                <span class="label label-success">已付款</span>
+                              </td>
+
+                              <td class="text-center">2016-7-3 <br>   00:44:24</td>
+                              <td>
+                                  <a href="finance-member-edit.html" class="table-link">
+                                      <span class="fa-stack">
+                                          <i class="fa fa-square fa-stack-2x"></i>
+                                          <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
+                                      </span>
+                                  </a>
+                                  <a href="#" class="table-link danger">
+                                      <span class="fa-stack">
+                                          <i class="fa fa-square fa-stack-2x"></i>
+                                          <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
+                                      </span>
+                                  </a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class="checkbox-nice checkbox-inline"><input type="checkbox" id="checkbox-inl-5"><label for="checkbox-inl-5"></label></div>
+                              </td>
+                              <td>
+                                HEH23918931
+                              </td>
+                              <td>
+                                HSD201607032398
+                              </td>
+                              <td>
+                                黄先生
+                                <br>
+                                13412345678
+                              </td>
+                              <td>
+                                微信支付
+                              </td>
+                              <td class="text-center">
+                                ￥200.00
+                              </td>
+                              <td class="text-center">
+                                210积分
+                              </td>
+                              <td class="text-center">
+                                <span class="label label-default">未付款</span>
+                              </td>
+
+                              <td class="text-center">2016-7-3 <br>   00:44:24</td>
+                              <td>
+                                  <a href="finance-member-edit.html" class="table-link">
+                                      <span class="fa-stack">
+                                          <i class="fa fa-square fa-stack-2x"></i>
+                                          <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
+                                      </span>
+                                  </a>
+                                  <a href="#" class="table-link danger">
+                                      <span class="fa-stack">
+                                          <i class="fa fa-square fa-stack-2x"></i>
+                                          <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
+                                      </span>
+                                  </a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class="checkbox-nice checkbox-inline"><input type="checkbox" id="checkbox-inl-6"><label for="checkbox-inl-6"></label></div>
+                              </td>
+                              <td>
+                                HEH23918931
+                              </td>
+                              <td>
+                                HSD201607032398
+                              </td>
+                              <td>
+                                黄先生
+                                <br>
+                                13412345678
+                              </td>
+                              <td>
+                                微信支付
+                              </td>
+                              <td class="text-center">
+                                ￥200.00
+                              </td>
+                              <td class="text-center">
+                                210积分
+                              </td>
+                              <td class="text-center">
+                                <span class="label label-success">已付款</span>
+                              </td>
+
+                              <td class="text-center">2016-7-3 <br>   00:44:24</td>
+                              <td>
+                                  <a href="finance-member-edit.html" class="table-link">
+                                      <span class="fa-stack">
+                                          <i class="fa fa-square fa-stack-2x"></i>
+                                          <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
+                                      </span>
+                                  </a>
+                                  <a href="#" class="table-link danger">
+                                      <span class="fa-stack">
+                                          <i class="fa fa-square fa-stack-2x"></i>
+                                          <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
+                                      </span>
+                                  </a>
+                              </td>
+                            </tr>
+
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="clearfix">
+                            <div class="pull-left">
+                                <a href="#" class="btn btn-primary">
+                                    导出订单
+                                </a>
+                            </div>
+                            <ul class="pagination pull-right">
+                                <li><a href="#"><i class="fa fa-chevron-left"></i></a></li>
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
+                            </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <footer id="footer-bar" class="row">
+            <p id="footer-copyright" class="col-xs-12">
+              &copy; 2016
+              . 版权所属：同转商城.
+            </p>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="config-tool" class="closed">
+    <a id="config-tool-cog">
+      <i class="fa fa-cog"></i>
+    </a>
+    <div id="config-tool-options">
+      <h4>界面风格设置</h4>
+      <ul>
+        <li>
+          <div class="checkbox-nice">
+            <input type="checkbox" id="config-fixed-header"/>
+            <label for="config-fixed-header">固定头部</label>
+          </div>
+        </li>
+        <li>
+          <div class="checkbox-nice">
+            <input type="checkbox" id="config-fixed-sidebar"/>
+            <label for="config-fixed-sidebar">固定菜单</label>
+          </div>
+        </li>
+        <li>
+          <div class="checkbox-nice">
+            <input type="checkbox" id="config-fixed-footer"/>
+            <label for="config-fixed-footer">固定底部</label>
+          </div>
+        </li>
+        <li>
+          <div class="checkbox-nice">
+            <input type="checkbox" id="config-boxed-layout"/>
+            <label for="config-boxed-layout">固定宽度</label>
+          </div>
+        </li>
+      </ul>
+      <br/>
+      <h4>皮肤颜色</h4>
+      <ul id="skin-colors" class="clearfix">
+        <li>
+          <a class="skin-changer" data-skin="" data-toggle="tooltip" title="默认" style="background-color: #34495e;"></a>
+        </li>
+        <li>
+          <a class="skin-changer" data-skin="theme-white" data-toggle="tooltip" title="白绿" style="background-color: #2ecc71;"></a>
+        </li>
+        <li>
+          <a class="skin-changer blue-gradient" data-skin="theme-blue-gradient" data-toggle="tooltip" title="蓝黑"></a>
+        </li>
+        <li>
+          <a class="skin-changer" data-skin="theme-turquoise" data-toggle="tooltip" title="绿灰" style="background-color: #1abc9c;"></a>
+        </li>
+        <li>
+          <a class="skin-changer" data-skin="theme-amethyst" data-toggle="tooltip" title="紫色" style="background-color: #9b59b6;"></a>
+        </li>
+        <li>
+          <a class="skin-changer" data-skin="theme-blue" data-toggle="tooltip" title="蓝色" style="background-color: #2980b9;"></a>
+        </li>
+        <li>
+          <a class="skin-changer" data-skin="theme-red" data-toggle="tooltip" title="红色" style="background-color: #e74c3c;"></a>
+        </li>
+        <li>
+          <a class="skin-changer" data-skin="theme-whbl" data-toggle="tooltip" title="蓝白" style="background-color: #3498db;"></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+    <script src="js/demo-skin-changer.js"></script><!-- 主题皮肤 -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery.nanoscroller.min.js"></script><!-- 滚动轴 -->
+    <script src="js/demo.js"></script><!-- 皮肤设置菜单 -->
+
+    <script src="js/scripts.js"></script><!-- 左侧菜单导航 -->
+    <script src="js/pace.min.js"></script><!-- 页面加载读条 -->
+</body>
+</html>

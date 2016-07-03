@@ -5,80 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
   <title>同转商城总部后台</title>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css"/>
-    <link rel="stylesheet" type="text/css" href="css/libs/font-awesome.css"/>
-    <link rel="stylesheet" type="text/css" href="css/libs/nanoscroller.css"/>
-    <link rel="stylesheet" type="text/css" href="css/compiled/theme_styles.css"/>
-    <link rel="stylesheet" type="text/css" href="css/libs/nifty-component.css"/><!-- 弹出窗体 -->
+
+  <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css"/>
+  <link rel="stylesheet" type="text/css" href="css/libs/font-awesome.css"/>
+  <link rel="stylesheet" type="text/css" href="css/libs/nanoscroller.css"/>
+  <link rel="stylesheet" type="text/css" href="css/compiled/theme_styles.css"/>
+
+  <link rel="stylesheet" type="text/css" href="css/libs/bootstrap-datetimepicker.min.css"/>
+  <!-- 上传图片 -->
+  <link rel="stylesheet" type="text/css" href="css/libs/dropzone.css">
+  <link rel="stylesheet" type="text/css" href="css/libs/magnific-popup.css">
+
+  <link rel="stylesheet" type="text/css" href="css/libs/fileinput.min.css"/>
   <link type="image/x-icon" href="favicon.png" rel="shortcut icon"/>
   <!--[if lt IE 9]>
   <script src="js/html5shiv.js"></script>
   <script src="js/respond.min.js"></script>
   <![endif]-->
-    <style>
-    .file-actions{
-      display: none !important;
-    }
+  <style>
+  .modal-header{
+    display: none !important;
+  }
   </style>
 </head>
 <body>
-
-<!-- 弹出窗 -->
-<div class="md-modal md-effect-7" id="modal-7">
-    <div class="md-content">
-        <div class="modal-header">
-            <button class="md-close close">&times;</button>
-            <h4 class="modal-title">物流管理操作</h4>
-        </div>
-        <div class="modal-body">
-            <form role="form">
-                <div class="col-md-6">
-                    <div class="form-group">
-                    <label for="exampleInput1">物流名称</label>
-                    <input type="text" class="form-control" id="exampleInput1" placeholder="物流商名称" value="顺丰"></div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                    <label for="exampleInput6">价格上限</label>
-                    <input type="text" class="form-control" id="exampleInput6" placeholder="设置物流价格上限" value="30.00"  data-toggle="tooltip" data-placement="bottom" title="" data-original-title="只设置上限价格表示固定物流价格"></div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                    <label for="exampleInput2">首重重量</label>
-                    <input type="text" class="form-control" id="exampleInput2" placeholder="物流的首重重量" value="3kg"></div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                    <label for="exampleInput3">首重价格</label>
-                    <input type="text" class="form-control" id="exampleInput3" placeholder="首重价格" value="10.00"></div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                    <label for="exampleInput4">续重重量</label>
-                    <input type="text" class="form-control" id="exampleInput4" placeholder="单位为kg" value="1kg" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="留空则表示固定价格"></div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                    <label for="exampleInput5">续重价格</label>
-                    <input type="text" class="form-control" id="exampleInput5" placeholder="续重每单位价格" value="1.00"  data-toggle="tooltip" data-placement="bottom" title="" data-original-title="留空则表示固定价格"></div>
-                </div>
-                <p><label for="exampleTextarea">状态</label></p>
-                <div class="btn-group" data-toggle="buttons">
-                  <label class="btn btn-primary active">
-                  <input type="radio" name="options" id="option1"> 上架
-                  </label>
-                  <label class="btn btn-primary">
-                  <input type="radio" name="options" id="option2"> 下架
-                  </label>
-                </div>
-            </form>
-        </div>
-        <div class="modal-footer">
-            <a href="" class="btn btn-primary"><i class="fa fa-save"></i>  保存/更新</a>
-        </div>
-    </div>
-</div>
-<div class="md-overlay"></div>
   <div id="theme-wrapper">
     <header class="navbar" id="header-navbar">
       <div class="container">
@@ -376,7 +326,7 @@
                       </li>
                     </ul>
                   </li>
-                  <li  class="active">
+                  <li>
                     <a href="#" class="dropdown-toggle">
                       <i class="fa fa-truck"></i>
                       <span>物流管理</span>
@@ -384,11 +334,11 @@
                     </a>
                     <ul class="submenu">
                       <li>
-                        <a  class="active" href="logistics-template.html">物流模板</a>
+                        <a href="logistics-template.html">物流模板</a>
                       </li>
                     </ul>
                   </li>
-                  <li>
+                  <li class="active">
                     <a href="#" class="dropdown-toggle">
                       <i class="fa fa-calendar-o"></i>
                       <span>文章管理</span>
@@ -399,7 +349,7 @@
                         <a href="article-class.html">文章分类</a>
                       </li>
                       <li>
-                        <a href="article-list.html">文章列表</a>
+                        <a class="active" href="article-list.html">文章列表</a>
                       </li>
                     </ul>
                   </li>
@@ -440,237 +390,174 @@
             <div class="col-lg-12">
               <div class="row">
                 <div class="col-lg-12">
-                  <h1>物流管理</h1>
+                  <h1>商品页面</h1>
                 </div>
               </div>
               <div class="row">
                 <div class="col-lg-12">
-                  <div class="main-box clearfix">
+                  <div class="main-box">
                     <header class="main-box-header clearfix">
-                      <h2 class="pull-left">物流列表</h2>
-                      <div class="filter-block pull-right">
-                        <div class="form-group pull-left">
-                          <input type="text" class="form-control" placeholder="关键字">
-                        </div>
-                        <button class="md-trigger btn btn-primary mrg-b-lg pull-right" data-modal="modal-7"><i class="fa fa-plus-circle"></i>  新增物流</button>
-                        <a href="#" class="btn btn-primary pull-right">
-                          <i class="fa fa-search search-icon"></i>
-                          搜索
+                      <h2 class="pull-left">基本信息</h2>
+                      <div class="pull-right">
+                        <a href="#" class="btn btn-primary">
+                            <i class="fa fa-save"></i>
+                            保存全部/更新全部
+                        </a>
+                        <a href="#" class="btn btn-danger">
+                            <i class="fa fa-trash-o"></i>
+                            删除
                         </a>
                       </div>
                     </header>
                     <div class="main-box-body clearfix">
-                      <div class="table-responsive clearfix">
-                        <table class="table table-hover">
-                          <thead>
-                            <tr>
-                              <th>
-                                  <span>物流名称</span>
-                              </th>
-                              <th class="text-center">
-                                  <span>首重</span>
-                              </th>
-                              <th class="text-center">
-                                  <span>续重</span>
-                              </th>
-                              <th class="text-center">
-                                  <span>价格上限</span>
-                              </th>
-                              <th class="text-center">
-                                <span>状态</span>
-                              </th>
-                              <th>&nbsp;</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>
-                                  顺丰
-                              </td>
-                              <td class="text-center">
-                                3KG <br>
-                                ￥ 10.00
-                              </td>
-                              <td class="text-center">
-                                1KG <br>
-                                ￥ 1.00
-                              </td>
-                              <td class="text-center">
+                      <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                          <label for="inputText3" class="col-lg-2 control-label">文章类别：</label>
+                          <div class="col-lg-5">
+                            <div class="form-group" style="margin:0">
+                              <select class="form-control">
+                                <option>同转商场</option>
+                                <option>创业平台</option>
+                                <option>购物指南</option>
+                                <option>关于我们</option>
+                                <option>帮助中心</option>
+                                <option>通知公告</option>
+                                <option>新闻中心</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-lg-5">
+                            <div class="form-group" style="margin:0">
+                              <select class="form-control">
+                                <option>新手入门</option>
+                                <option>支付方式</option>
+                                <option>配送服务</option>
+                                <option>售后保障</option>
+                                <option>商家合作</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="inputText1" class="col-lg-2 control-label">文章名称：</label>
+                          <div class="col-lg-10">
+                            <input type="text" class="form-control" id="inputText1" placeholder="填写你的文章名称（必填项）"></div>
+                        </div>
+                        <div class="form-group">
+                          <label for="inputText2" class="col-lg-2 control-label">文章作者：</label>
+                          <div class="col-lg-10">
+                            <input type="text" class="form-control" id="inputText2" placeholder="文章作者"></div>
+                        </div>
+                        <div class="form-group">
+                          <label for="inputText2" class="col-lg-2 control-label">简介：</label>
+                          <div class="col-lg-10">
+                            <textarea class="form-control" id="exampleTextarea" rows="3"></textarea></div>
+                        </div>
+                        <div class="form-group">
+                          <label for="inputText2" class="col-lg-2 control-label">文章属性：</label>
+                          <div class="col-lg-10">
+                            <div class="checkbox-nice checkbox-inline">
+                            <input type="checkbox" id="checkbox-inl-1">
+                            <label for="checkbox-inl-1">首页推荐</label>
+                          </div>
+                          <div class="checkbox-nice checkbox-inline">
+                            <input type="checkbox" id="checkbox-inl-2">
+                            <label for="checkbox-inl-2">热门文章</label>
+                          </div>
+                          <div class="checkbox-nice checkbox-inline">
+                            <input type="checkbox" id="checkbox-inl-3">
+                            <label for="checkbox-inl-3">文章置顶</label>
+                          </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputText3" class="col-lg-2 control-label">发布时间：</label>
+                            <div class="col-lg-2">
+                                <div class="radio">
+                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+                                    <label for="optionsRadios1">立即上架
+                                    </label>
+                                </div>
+                            </div>
+                        <div class="col-lg-7">
+                            <div class="form-group" style="margin:0">
+                                <div class="radio pull-left">
+                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                    <label for="optionsRadios2">
+                                        定时上架
+                                    </label>
+                                </div>
+                                <div class="input-group date form_datetime col-md-8" data-date="1979-09-16T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
+                                  <input class="form-control" size="16" type="text" value="" readonly>
+                                  <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                  </span>
+                                  <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-th"></span>
+                                  </span>
+                                </div>
+                                <input type="hidden" id="dtp_input1" value="" />
+                              </div>
+                        </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-                                ￥ 30.00
-                              </td>
-                              <td class="text-center">
-                                <span class="label label-success">已上架</span>
-                              </td>
-                              <td class="text-right" style="width: 15%;">
-                                  <a href="##" class="md-trigger table-link" data-modal="modal-7">
-                                      <span class="fa-stack">
-                                          <i class="fa fa-square fa-stack-2x"></i>
-                                          <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
-                                      </span>
-                                  </a>
-                                  <a href="#" class="table-link danger">
-                                      <span class="fa-stack">
-                                          <i class="fa fa-square fa-stack-2x"></i>
-                                          <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
-                                      </span>
-                                  </a>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                  顺丰
-                              </td>
-                              <td class="text-center">
-                                3KG <br>
-                                ￥ 10.00
-                              </td>
-                              <td class="text-center">
-                                1KG <br>
-                                ￥ 1.00
-                              </td>
-                              <td class="text-center">
-
-                                ￥ 30.00
-                              </td>
-                              <td class="text-center">
-                                <span class="label label-success">已上架</span>
-                              </td>
-                              <td class="text-right" style="width: 15%;">
-                                  <a href="##" class="md-trigger table-link" data-modal="modal-7">
-                                      <span class="fa-stack">
-                                          <i class="fa fa-square fa-stack-2x"></i>
-                                          <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
-                                      </span>
-                                  </a>
-                                  <a href="#" class="table-link danger">
-                                      <span class="fa-stack">
-                                          <i class="fa fa-square fa-stack-2x"></i>
-                                          <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
-                                      </span>
-                                  </a>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                  顺丰
-                              </td>
-                              <td class="text-center">
-                                3KG <br>
-                                ￥ 10.00
-                              </td>
-                              <td class="text-center">
-                                1KG <br>
-                                ￥ 1.00
-                              </td>
-                              <td class="text-center">
-
-                                ￥ 30.00
-                              </td>
-                              <td class="text-center">
-                                <span class="label label-success">已上架</span>
-                              </td>
-                              <td class="text-right" style="width: 15%;">
-                                  <a href="##" class="md-trigger table-link" data-modal="modal-7">
-                                      <span class="fa-stack">
-                                          <i class="fa fa-square fa-stack-2x"></i>
-                                          <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
-                                      </span>
-                                  </a>
-                                  <a href="#" class="table-link danger">
-                                      <span class="fa-stack">
-                                          <i class="fa fa-square fa-stack-2x"></i>
-                                          <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
-                                      </span>
-                                  </a>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                  顺丰
-                              </td>
-                              <td class="text-center">
-                                3KG <br>
-                                ￥ 10.00
-                              </td>
-                              <td class="text-center">
-                                1KG <br>
-                                ￥ 1.00
-                              </td>
-                              <td class="text-center">
-
-                                ￥ 30.00
-                              </td>
-                              <td class="text-center">
-                                <span class="label label-success">已上架</span>
-                              </td>
-                              <td class="text-right" style="width: 15%;">
-                                  <a href="##" class="md-trigger table-link" data-modal="modal-7">
-                                      <span class="fa-stack">
-                                          <i class="fa fa-square fa-stack-2x"></i>
-                                          <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
-                                      </span>
-                                  </a>
-                                  <a href="#" class="table-link danger">
-                                      <span class="fa-stack">
-                                          <i class="fa fa-square fa-stack-2x"></i>
-                                          <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
-                                      </span>
-                                  </a>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                  顺丰
-                              </td>
-                              <td class="text-center">
-                                3KG <br>
-                                ￥ 10.00
-                              </td>
-                              <td class="text-center">
-                                1KG <br>
-                                ￥ 1.00
-                              </td>
-                              <td class="text-center">
-
-                                ￥ 30.00
-                              </td>
-                              <td class="text-center">
-                                <span class="label label-default">已下架</span>
-                              </td>
-                              <td class="text-right" style="width: 15%;">
-                                  <a href="##" class="md-trigger table-link" data-modal="modal-7">
-                                      <span class="fa-stack">
-                                          <i class="fa fa-square fa-stack-2x"></i>
-                                          <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
-                                      </span>
-                                  </a>
-                                  <a href="#" class="table-link danger">
-                                      <span class="fa-stack">
-                                          <i class="fa fa-square fa-stack-2x"></i>
-                                          <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
-                                      </span>
-                                  </a>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div class="clearfix">
-                            <ul class="pagination pull-right">
-                                <li><a href="#"><i class="fa fa-chevron-left"></i></a></li>
-                                <li><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                                <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
-                            </ul>
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="main-box">
+                    <header class="main-box-header">
+                      <h2>商品图片(最多上传1张)：</h2>
+                    </header>
+                    <div class="main-box-body">
+                      <div class="form-horizontal" role="form">
+                        <div class="form-group">
+                          <label for="inputText11" class="col-lg-2 control-label">文章封面：</label>
+                          <div class="col-lg-10">
+                            <form enctype="multipart/form-data">
+                             <input id="input-img02" name="input6[]" type="file" multiple class="file-loading">
+                            </form>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="main-box">
+                    <header class="main-box-header clearfix">
+                      <h2>文章内容</h2>
+                    </header>
+                    <div class="main-box-body clearfix">
+                        <div class="row">
+                            <div class="col-lg-12">
+                              <script id="ueditor-box" style="height:300px" name="content" type="text/plain">这里写你的初始化内容</script>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                  <div class="col-lg-12">
+                      <div class="main-box">
+                            <header class="main-box-header clearfix">
+                                <h2>记得最后一步哟...</h2>
+                            </header>
+                          <div class="main-box-body clearfix">
+                                <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> 保存全部/更新全部</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
             </div>
           </div>
           <footer id="footer-bar" class="row">
@@ -755,7 +642,37 @@
     <script src="js/scripts.js"></script><!-- 左侧菜单导航 -->
     <script src="js/pace.min.js"></script><!-- 页面加载读条 -->
 
-    <script src="js/classie.js"></script><!-- 弹出窗口 -->
-    <script src="js/modalEffects.js"></script><!-- 弹出窗口 -->
+    <script src="js/bootstrap-datetimepicker.js"></script><!-- 时间 -->
+    // 时间选择
+    <script type="text/javascript">
+    $('.form_datetime').datetimepicker({
+        //language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        forceParse: 0,
+            showMeridian: 1,
+        });
+    </script>
+    <script src="js/fileinput.min.js"></script>
+    // 文件上传
+    <script>
+    $(document).on('ready', function() {
+        $("#input-img02").fileinput({
+            showUpload: false,
+            maxFileCount: 1
+        });
+    });
+    </script>
+    <!-- 编辑器 -->
+    <script type="text/javascript" charset="utf-8" src="js/lang/en/en.js"></script>
+    <script src="js/ueditor.config.js"></script>
+    <script src="js/ueditor.all.min.js"></script>
+    <!-- 实例化编辑器 -->
+    <script type="text/javascript">
+        var ue = UE.getEditor('ueditor-box');
+    </script>
 </body>
 </html>

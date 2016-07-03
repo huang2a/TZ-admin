@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="css/libs/font-awesome.css"/>
     <link rel="stylesheet" type="text/css" href="css/libs/nanoscroller.css"/>
     <link rel="stylesheet" type="text/css" href="css/compiled/theme_styles.css"/>
+
   <link type="image/x-icon" href="favicon.png" rel="shortcut icon"/>
   <!--[if lt IE 9]>
   <script src="js/html5shiv.js"></script>
@@ -247,7 +248,7 @@
                       </li>
                     </ul>
                   </li>
-                  <li class="active">
+                  <li>
                     <a href="#" class="dropdown-toggle">
                       <i class="fa fa-shopping-cart"></i>
                       <span>订单管理</span>
@@ -258,7 +259,7 @@
                         <a href="order-today.html">今日订单</a>
                       </li>
                       <li>
-                        <a  href="order-all.html">全部订单</a>
+                        <a href="order-all.html">全部订单</a>
                       </li>
                       <li>
                         <a href="order-no-pay.html">未付款</a>
@@ -273,7 +274,7 @@
                         <a href="order-deal-finish.html">交易完成</a>
                       </li>
                       <li>
-                        <a class="active"  href="order-deal-cancel.html">交易取消</a>
+                        <a href="order-deal-cancel.html">交易取消</a>
                       </li>
                     </ul>
                   </li>
@@ -295,7 +296,7 @@
                       </li>
                     </ul>
                   </li>
-                  <li>
+                  <li class="active">
                     <a href="#" class="dropdown-toggle">
                       <i class="fa fa-money"></i>
                       <span>财务管理</span>
@@ -303,7 +304,7 @@
                     </a>
                     <ul class="submenu">
                       <li>
-                        <a href="finance-member.html">会员充值</a>
+                        <a class="active" href="finance-member.html">会员充值</a>
                       </li>
                       <li>
                         <a href="finance-area.html">区域合伙人收入</a>
@@ -377,7 +378,7 @@
             <div class="col-lg-12">
               <div class="row">
                 <div class="col-lg-12">
-                  <h1>交易取消订单</h1>
+                  <h1>财务详情</h1>
                 </div>
               </div>
 
@@ -385,82 +386,78 @@
                 <div class="col-lg-12">
                   <div class="main-box">
                     <header class="main-box-header clearfix">
-                      <h2>订单搜索</h2>
+                      <h2 class="pull-left">充值信息</h2>
+                      <div class="pull-right">
+                        <a href="#" class="btn btn-primary">
+                            <i class="fa fa-check-square-o"></i>
+                            完成
+                        </a>
+                        <a href="#" class="btn btn-primary">
+                            <i class="fa fa-share-square-o"></i>
+                            取消
+                        </a>
+                      </div>
                     </header>
                     <div class="main-box-body clearfix">
                       <form class="form-horizontal" method="post">
-                      <div class="form-group">
-                          <label class="col-sm-1 control-label">订单ID</label>
-                          <div class="col-sm-3">
-                              <input class="form-control" name="" placeholder="" value="" type="text">
-                          </div>
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">充值订单ID</label>
+                            <div class="col-sm-3">
+                                <input class="form-control" name="" placeholder="" value="TC20160701" type="text" disabled>
+                            </div>
+                            <label class="col-sm-1 control-label">交易号</label>
+                            <div class="col-sm-3">
+                                <input class="form-control" name="orderid" placeholder="" value="HEH23918931" type="text" disabled>
+                            </div>
+                            <label class="col-sm-1 control-label">支付状态</label>
 
-                          <label class="col-sm-1 control-label">订单编号</label>
+                            <div class="col-sm-3">
+                                <input class="form-control" name="user_id" placeholder="" value="已支付 " type="text" disabled>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">支付方式</label>
 
-                          <div class="col-sm-3">
-                              <input class="form-control" name="orderid" placeholder="" value="" type="text">
-                          </div>
-
-                          <label class="col-sm-1 control-label">用户ID</label>
-
-                          <div class="col-sm-3">
-                              <input class="form-control" name="user_id" placeholder="" value="" type="text">
-                          </div>
-                      </div>
-
-                      <div class="form-group">
-                          <label class="col-sm-1 control-label">支付方式</label>
-
-                          <div class="col-sm-3">
-                              <select name="payment" class="form-control">
-                                  <option value="-10">不选择支付方式</option>
-                                  <option value="0">账户支付</option>
-                                  <option value="1">微信支付</option>
-                                  <option value="2">支付宝支付</option>
-                                  <option value="3">货到付款</option>
-                              </select>
-                          </div>
-
-                          <label class="col-sm-1 control-label">支付状态</label>
-
-                          <div class="col-sm-3">
-                              <select name="" class="form-control">
-                                  <option value="-10">不选择支付状态</option>
-                                  <option value="0">未支付</option>
-                                  <option value="1">已支付</option>
-                              </select>
-                          </div>
-
-                          <label class="col-sm-1 control-label">订单状态</label>
-
-                          <div class="col-sm-3">
-                              <select name="status" class="form-control">
-                                  <option value="-10">不选择订单状态</option>
-                                  <option value="0">未处理</option>
-                                  <option value="1">已发货</option>
-                                  <option value="2">已完成</option>
-                                  <option value="-1">已取消</option>
-                                  <option value="-2">退货中</option>
-                                  <option value="-3">退货完成</option>
-                                  <option value="-4">申请退货</option>
-                              </select>
-                          </div>
-                      </div>
-                      <div class="box-footer">
-                          <div class="col-sm-2">
-                              <button class="btn btn-primary"><i class="fa fa-search"></i>  开始搜索</button>
-                          </div>
-                      </div>
-                    </form>
+                            <div class="col-sm-3">
+                              <input class="form-control" name="user_id" placeholder="" value="账户支付 " type="text" disabled>
+                            </div>
+                            <label class="col-sm-1 control-label">用户ID</label>
+                            <div class="col-sm-3">
+                                <input class="form-control" name="user_id" placeholder="" value="黄先生 " type="text" disabled>
+                            </div>
+                            <label class="col-sm-1 control-label">订单状态</label>
+                            <div class="col-sm-3">
+                                <input class="form-control" name="user_id" placeholder="" value=" 已到账" type="text" disabled>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">支付金额</label>
+                            <div class="col-sm-3">
+                                <input class="form-control" name="user_id" placeholder="" value="￥200.00 " type="text" >
+                            </div>
+                            <label class="col-sm-1 control-label">所获积分</label>
+                            <div class="col-sm-3">
+                                <input class="form-control" name="user_id" placeholder="" value="210 " type="text">
+                            </div>
+                            <label class="col-sm-1 control-label">联系地址</label>
+                            <div class="col-sm-3">
+                                <textarea class="form-control" id="exampleTextarea" rows="3">广东省中山市火炬开发区中山港大道60号</textarea>
+                            </div>
+                        </div>
+                      </form>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="row">
+
+            </div>
+          </div>
+
+          <div class="row">
                 <div class="col-lg-12">
                   <div class="main-box">
                     <header class="main-box-header clearfix">
-                      <h2>订单列表</h2>
+                      <h2>以往充值记录</h2>
                     </header>
                     <div class="main-box-body clearfix">
                       <div class="table-responsive clearfix">
@@ -471,25 +468,25 @@
                                   <span><div class="checkbox-nice checkbox-inline"><input type="checkbox" id="checkbox-inl-0"><label for="checkbox-inl-0"></label></div></span>
                               </th>
                               <th>
-                                  <span>订单编号</span>
+                                  <span>充值订单ID</span>
                               </th>
                               <th width="23%">
-                                  <span>订单详情</span>
+                                  <span>交易号</span>
                               </th>
                               <th>
-                                  <span>联系人</span>
+                                  <span>用户ID</span>
                               </th>
                               <th>
-                                  <span>地址</span>
+                                  <span>支付方式</span>
                               </th>
                               <th class="text-center" width="80px">
                                 <span>价格</span>
                               </th>
                               <th class="text-center" width="80px">
-                                <span>支付状态</span>
+                                <span>积分</span>
                               </th>
                               <th class="text-center" width="80px">
-                                <span>订单状态</span>
+                                <span>支付状态</span>
                               </th>
                               <th class="text-center">
                                 <span>时间</span>
@@ -506,14 +503,7 @@
                                 HEH23918931
                               </td>
                               <td>
-                                <div class="row">
-                                  <div class="col-lg-4">
-                                    <img src="img/samples/shop01.jpg" height="50" width="50" alt="">
-                                  </div>
-                                  <div class="col-lg-8">
-                                    <a href="">奶油饼干</a>
-                                  </div>
-                                </div>
+                                HSD201607032398
                               </td>
                               <td>
                                 黄先生
@@ -521,29 +511,24 @@
                                 13412345678
                               </td>
                               <td>
-                                广东省中山市火炬开发区中山港大道60号
+                                微信支付
                               </td>
                               <td class="text-center">
                                 ￥200.00
                               </td>
                               <td class="text-center">
-                                <span class="label label-default">交易取消</span>
+                                210积分
                               </td>
                               <td class="text-center">
-                                <span class="label label-primary">无物流</span>
+                                <span class="label label-success">已付款</span>
                               </td>
+
                               <td class="text-center">2016-7-3 <br>   00:44:24</td>
                               <td>
-                                  <a href="order-today-edit.html" class="table-link">
+                                  <a href="finance-member-edit.html" class="table-link">
                                       <span class="fa-stack">
                                           <i class="fa fa-square fa-stack-2x"></i>
-                                          <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
-                                      </span>
-                                  </a>
-                                  <a href="#" class="table-link danger">
-                                      <span class="fa-stack">
-                                          <i class="fa fa-square fa-stack-2x"></i>
-                                          <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
+                                          <i class="fa fa-eye fa-stack-1x fa-inverse"></i>
                                       </span>
                                   </a>
                               </td>
@@ -556,14 +541,7 @@
                                 HEH23918931
                               </td>
                               <td>
-                                <div class="row">
-                                  <div class="col-lg-4">
-                                    <img src="img/samples/shop01.jpg" height="50" width="50" alt="">
-                                  </div>
-                                  <div class="col-lg-8">
-                                    <a href="">奶油饼干</a>
-                                  </div>
-                                </div>
+                                HSD201607032398
                               </td>
                               <td>
                                 黄先生
@@ -571,29 +549,24 @@
                                 13412345678
                               </td>
                               <td>
-                                广东省中山市火炬开发区中山港大道60号
+                                微信支付
                               </td>
                               <td class="text-center">
                                 ￥200.00
                               </td>
                               <td class="text-center">
-                                <span class="label label-default">交易取消</span>
+                                210积分
                               </td>
                               <td class="text-center">
-                                <span class="label label-primary">无物流</span>
+                                <span class="label label-success">已付款</span>
                               </td>
+
                               <td class="text-center">2016-7-3 <br>   00:44:24</td>
                               <td>
-                                  <a href="order-today-edit.html" class="table-link">
+                                  <a href="finance-member-edit.html" class="table-link">
                                       <span class="fa-stack">
                                           <i class="fa fa-square fa-stack-2x"></i>
-                                          <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
-                                      </span>
-                                  </a>
-                                  <a href="#" class="table-link danger">
-                                      <span class="fa-stack">
-                                          <i class="fa fa-square fa-stack-2x"></i>
-                                          <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
+                                          <i class="fa fa-eye fa-stack-1x fa-inverse"></i>
                                       </span>
                                   </a>
                               </td>
@@ -606,14 +579,7 @@
                                 HEH23918931
                               </td>
                               <td>
-                                <div class="row">
-                                  <div class="col-lg-4">
-                                    <img src="img/samples/shop01.jpg" height="50" width="50" alt="">
-                                  </div>
-                                  <div class="col-lg-8">
-                                    <a href="">奶油饼干</a>
-                                  </div>
-                                </div>
+                                HSD201607032398
                               </td>
                               <td>
                                 黄先生
@@ -621,29 +587,24 @@
                                 13412345678
                               </td>
                               <td>
-                                广东省中山市火炬开发区中山港大道60号
+                                微信支付
                               </td>
                               <td class="text-center">
                                 ￥200.00
                               </td>
                               <td class="text-center">
-                                <span class="label label-default">交易取消</span>
+                                210积分
                               </td>
                               <td class="text-center">
-                                <span class="label label-primary">无物流</span>
+                                <span class="label label-success">已付款</span>
                               </td>
+
                               <td class="text-center">2016-7-3 <br>   00:44:24</td>
                               <td>
-                                  <a href="order-today-edit.html" class="table-link">
+                                  <a href="finance-member-edit.html" class="table-link">
                                       <span class="fa-stack">
                                           <i class="fa fa-square fa-stack-2x"></i>
-                                          <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
-                                      </span>
-                                  </a>
-                                  <a href="#" class="table-link danger">
-                                      <span class="fa-stack">
-                                          <i class="fa fa-square fa-stack-2x"></i>
-                                          <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
+                                          <i class="fa fa-eye fa-stack-1x fa-inverse"></i>
                                       </span>
                                   </a>
                               </td>
@@ -656,14 +617,7 @@
                                 HEH23918931
                               </td>
                               <td>
-                                <div class="row">
-                                  <div class="col-lg-4">
-                                    <img src="img/samples/shop01.jpg" height="50" width="50" alt="">
-                                  </div>
-                                  <div class="col-lg-8">
-                                    <a href="">奶油饼干</a>
-                                  </div>
-                                </div>
+                                HSD201607032398
                               </td>
                               <td>
                                 黄先生
@@ -671,29 +625,24 @@
                                 13412345678
                               </td>
                               <td>
-                                广东省中山市火炬开发区中山港大道60号
+                                微信支付
                               </td>
                               <td class="text-center">
                                 ￥200.00
                               </td>
                               <td class="text-center">
-                                <span class="label label-default">交易取消</span>
+                                210积分
                               </td>
                               <td class="text-center">
-                                <span class="label label-primary">无物流</span>
+                                <span class="label label-success">已付款</span>
                               </td>
+
                               <td class="text-center">2016-7-3 <br>   00:44:24</td>
                               <td>
-                                  <a href="order-today-edit.html" class="table-link">
+                                  <a href="finance-member-edit.html" class="table-link">
                                       <span class="fa-stack">
                                           <i class="fa fa-square fa-stack-2x"></i>
-                                          <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
-                                      </span>
-                                  </a>
-                                  <a href="#" class="table-link danger">
-                                      <span class="fa-stack">
-                                          <i class="fa fa-square fa-stack-2x"></i>
-                                          <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
+                                          <i class="fa fa-eye fa-stack-1x fa-inverse"></i>
                                       </span>
                                   </a>
                               </td>
@@ -706,14 +655,7 @@
                                 HEH23918931
                               </td>
                               <td>
-                                <div class="row">
-                                  <div class="col-lg-4">
-                                    <img src="img/samples/shop01.jpg" height="50" width="50" alt="">
-                                  </div>
-                                  <div class="col-lg-8">
-                                    <a href="">奶油饼干</a>
-                                  </div>
-                                </div>
+                                HSD201607032398
                               </td>
                               <td>
                                 黄先生
@@ -721,29 +663,24 @@
                                 13412345678
                               </td>
                               <td>
-                                广东省中山市火炬开发区中山港大道60号
+                                微信支付
                               </td>
                               <td class="text-center">
                                 ￥200.00
                               </td>
                               <td class="text-center">
-                                <span class="label label-default">交易取消</span>
+                                210积分
                               </td>
                               <td class="text-center">
-                                <span class="label label-primary">无物流</span>
+                                <span class="label label-default">未付款</span>
                               </td>
+
                               <td class="text-center">2016-7-3 <br>   00:44:24</td>
                               <td>
-                                  <a href="order-today-edit.html" class="table-link">
+                                  <a href="finance-member-edit.html" class="table-link">
                                       <span class="fa-stack">
                                           <i class="fa fa-square fa-stack-2x"></i>
-                                          <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
-                                      </span>
-                                  </a>
-                                  <a href="#" class="table-link danger">
-                                      <span class="fa-stack">
-                                          <i class="fa fa-square fa-stack-2x"></i>
-                                          <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
+                                          <i class="fa fa-eye fa-stack-1x fa-inverse"></i>
                                       </span>
                                   </a>
                               </td>
@@ -756,14 +693,7 @@
                                 HEH23918931
                               </td>
                               <td>
-                                <div class="row">
-                                  <div class="col-lg-4">
-                                    <img src="img/samples/shop01.jpg" height="50" width="50" alt="">
-                                  </div>
-                                  <div class="col-lg-8">
-                                    <a href="">奶油饼干</a>
-                                  </div>
-                                </div>
+                                HSD201607032398
                               </td>
                               <td>
                                 黄先生
@@ -771,29 +701,24 @@
                                 13412345678
                               </td>
                               <td>
-                                广东省中山市火炬开发区中山港大道60号
+                                微信支付
                               </td>
                               <td class="text-center">
                                 ￥200.00
                               </td>
                               <td class="text-center">
-                                <span class="label label-default">交易取消</span>
+                                210积分
                               </td>
                               <td class="text-center">
-                                <span class="label label-primary">无物流</span>
+                                <span class="label label-success">已付款</span>
                               </td>
+
                               <td class="text-center">2016-7-3 <br>   00:44:24</td>
                               <td>
-                                  <a href="order-today-edit.html" class="table-link">
+                                  <a href="finance-member-edit.html" class="table-link">
                                       <span class="fa-stack">
                                           <i class="fa fa-square fa-stack-2x"></i>
-                                          <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
-                                      </span>
-                                  </a>
-                                  <a href="#" class="table-link danger">
-                                      <span class="fa-stack">
-                                          <i class="fa fa-square fa-stack-2x"></i>
-                                          <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
+                                          <i class="fa fa-eye fa-stack-1x fa-inverse"></i>
                                       </span>
                                   </a>
                               </td>
@@ -805,24 +730,8 @@
                       <div class="clearfix">
                             <div class="pull-left">
                                 <a href="#" class="btn btn-primary">
-                                    发货
-                                </a>
-                                <a href="#" class="btn btn-primary">
-                                    已付款
-                                </a>
-                                <a href="#" class="btn btn-primary">
-                                    取消
-                                </a>
-                                <a href="#" class="btn btn-primary">
-                                    完成
-                                </a>
-                                <a href="#" class="btn btn-primary">
-                                    退货
-                                </a>
-                                <a href="#" class="btn btn-primary">
                                     导出订单
                                 </a>
-
                             </div>
                             <ul class="pagination pull-right">
                                 <li><a href="#"><i class="fa fa-chevron-left"></i></a></li>
@@ -838,8 +747,8 @@
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
+
+
           <footer id="footer-bar" class="row">
             <p id="footer-copyright" class="col-xs-12">
               &copy; 2016
@@ -921,5 +830,6 @@
 
     <script src="js/scripts.js"></script><!-- 左侧菜单导航 -->
     <script src="js/pace.min.js"></script><!-- 页面加载读条 -->
+
 </body>
 </html>

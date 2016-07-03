@@ -247,7 +247,7 @@
                       </li>
                     </ul>
                   </li>
-                  <li class="active">
+                  <li>
                     <a href="#" class="dropdown-toggle">
                       <i class="fa fa-shopping-cart"></i>
                       <span>订单管理</span>
@@ -258,7 +258,7 @@
                         <a href="order-today.html">今日订单</a>
                       </li>
                       <li>
-                        <a  href="order-all.html">全部订单</a>
+                        <a href="order-all.html">全部订单</a>
                       </li>
                       <li>
                         <a href="order-no-pay.html">未付款</a>
@@ -273,7 +273,7 @@
                         <a href="order-deal-finish.html">交易完成</a>
                       </li>
                       <li>
-                        <a class="active"  href="order-deal-cancel.html">交易取消</a>
+                        <a href="order-deal-cancel.html">交易取消</a>
                       </li>
                     </ul>
                   </li>
@@ -295,7 +295,7 @@
                       </li>
                     </ul>
                   </li>
-                  <li>
+                  <li class="active">
                     <a href="#" class="dropdown-toggle">
                       <i class="fa fa-money"></i>
                       <span>财务管理</span>
@@ -306,7 +306,7 @@
                         <a href="finance-member.html">会员充值</a>
                       </li>
                       <li>
-                        <a href="finance-area.html">区域合伙人收入</a>
+                        <a class="active" href="finance-area.html">区域合伙人收入</a>
                       </li>
                       <li>
                         <a href="finance-city.html">城市联盟收入</a>
@@ -377,90 +377,83 @@
             <div class="col-lg-12">
               <div class="row">
                 <div class="col-lg-12">
-                  <h1>交易取消订单</h1>
+                  <h1>收入详情页面</h1>
                 </div>
               </div>
-
               <div class="row">
                 <div class="col-lg-12">
                   <div class="main-box">
                     <header class="main-box-header clearfix">
-                      <h2>订单搜索</h2>
+                      <h2 class="pull-left">收入信息</h2>
+                      <div class="pull-right">
+                        <a href="#" class="btn btn-primary">
+                            <i class="fa fa-cny"></i>
+                            结算收入
+                        </a>
+                        <a href="#" class="btn btn-primary">
+                            <i class="fa fa-level-down"></i>
+                            导出清单
+                        </a>
+                      </div>
                     </header>
                     <div class="main-box-body clearfix">
-                      <form class="form-horizontal" method="post">
-                      <div class="form-group">
-                          <label class="col-sm-1 control-label">订单ID</label>
-                          <div class="col-sm-3">
-                              <input class="form-control" name="" placeholder="" value="" type="text">
+                      <div class="row">
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="main-box small-graph-box red-bg">
+                          <span class="value">￥ 562421.02</span>
+                          <span class="headline">总收入</span>
+                          <div class="progress">
+                            <div style="width: 100%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" role="progressbar" class="progress-bar">
+                              <span class="sr-only">100% Complete</span>
+                            </div>
                           </div>
-
-                          <label class="col-sm-1 control-label">订单编号</label>
-
-                          <div class="col-sm-3">
-                              <input class="form-control" name="orderid" placeholder="" value="" type="text">
+                          <span class="subinfo">
+                            <i class="fa fa-arrow-circle-o-up"></i>
+                            10% 同比上月增长
+                          </span>
+                        </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="main-box small-graph-box emerald-bg">
+                          <span class="value">￥ 23690.00</span>
+                          <span class="headline">已结算收入</span>
+                          <div class="progress">
+                            <div style="width: 84%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="84" role="progressbar" class="progress-bar">
+                              <span class="sr-only">84% Complete</span>
+                            </div>
                           </div>
-
-                          <label class="col-sm-1 control-label">用户ID</label>
-
-                          <div class="col-sm-3">
-                              <input class="form-control" name="user_id" placeholder="" value="" type="text">
+                          <span class="subinfo">
+                            <i class="fa fa-arrow-circle-o-down"></i>
+                            22% 同比上月下降
+                          </span>
+                        </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12 hidden-sm">
+                        <div class="main-box small-graph-box green-bg">
+                          <span class="value">￥ 8900.03</span>
+                          <span class="headline">未结算收入</span>
+                          <div class="progress">
+                            <div style="width: 42%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="42" role="progressbar" class="progress-bar">
+                              <span class="sr-only">42% Complete</span>
+                            </div>
                           </div>
-                      </div>
-
-                      <div class="form-group">
-                          <label class="col-sm-1 control-label">支付方式</label>
-
-                          <div class="col-sm-3">
-                              <select name="payment" class="form-control">
-                                  <option value="-10">不选择支付方式</option>
-                                  <option value="0">账户支付</option>
-                                  <option value="1">微信支付</option>
-                                  <option value="2">支付宝支付</option>
-                                  <option value="3">货到付款</option>
-                              </select>
-                          </div>
-
-                          <label class="col-sm-1 control-label">支付状态</label>
-
-                          <div class="col-sm-3">
-                              <select name="" class="form-control">
-                                  <option value="-10">不选择支付状态</option>
-                                  <option value="0">未支付</option>
-                                  <option value="1">已支付</option>
-                              </select>
-                          </div>
-
-                          <label class="col-sm-1 control-label">订单状态</label>
-
-                          <div class="col-sm-3">
-                              <select name="status" class="form-control">
-                                  <option value="-10">不选择订单状态</option>
-                                  <option value="0">未处理</option>
-                                  <option value="1">已发货</option>
-                                  <option value="2">已完成</option>
-                                  <option value="-1">已取消</option>
-                                  <option value="-2">退货中</option>
-                                  <option value="-3">退货完成</option>
-                                  <option value="-4">申请退货</option>
-                              </select>
-                          </div>
-                      </div>
-                      <div class="box-footer">
-                          <div class="col-sm-2">
-                              <button class="btn btn-primary"><i class="fa fa-search"></i>  开始搜索</button>
-                          </div>
-                      </div>
-                    </form>
+                          <span class="subinfo">
+                            <i class="fa fa-arrow-circle-o-up"></i>
+                            15% 同比上月增长
+                          </span>
+                        </div>
+                        </div>
+                    </div>
                     </div>
                   </div>
                 </div>
               </div>
+
               <div class="row">
                 <div class="col-lg-12">
                   <div class="main-box">
                     <header class="main-box-header clearfix">
-                      <h2>订单列表</h2>
+                      <h2>收入记录</h2>
                     </header>
                     <div class="main-box-body clearfix">
                       <div class="table-responsive clearfix">
@@ -477,7 +470,7 @@
                                   <span>订单详情</span>
                               </th>
                               <th>
-                                  <span>联系人</span>
+                                  <span>收货人</span>
                               </th>
                               <th>
                                   <span>地址</span>
@@ -487,9 +480,6 @@
                               </th>
                               <th class="text-center" width="80px">
                                 <span>支付状态</span>
-                              </th>
-                              <th class="text-center" width="80px">
-                                <span>订单状态</span>
                               </th>
                               <th class="text-center">
                                 <span>时间</span>
@@ -527,10 +517,7 @@
                                 ￥200.00
                               </td>
                               <td class="text-center">
-                                <span class="label label-default">交易取消</span>
-                              </td>
-                              <td class="text-center">
-                                <span class="label label-primary">无物流</span>
+                                <span class="label label-success">已到账</span>
                               </td>
                               <td class="text-center">2016-7-3 <br>   00:44:24</td>
                               <td>
@@ -538,12 +525,6 @@
                                       <span class="fa-stack">
                                           <i class="fa fa-square fa-stack-2x"></i>
                                           <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
-                                      </span>
-                                  </a>
-                                  <a href="#" class="table-link danger">
-                                      <span class="fa-stack">
-                                          <i class="fa fa-square fa-stack-2x"></i>
-                                          <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
                                       </span>
                                   </a>
                               </td>
@@ -577,10 +558,7 @@
                                 ￥200.00
                               </td>
                               <td class="text-center">
-                                <span class="label label-default">交易取消</span>
-                              </td>
-                              <td class="text-center">
-                                <span class="label label-primary">无物流</span>
+                                <span class="label label-success">已到账</span>
                               </td>
                               <td class="text-center">2016-7-3 <br>   00:44:24</td>
                               <td>
@@ -588,12 +566,6 @@
                                       <span class="fa-stack">
                                           <i class="fa fa-square fa-stack-2x"></i>
                                           <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
-                                      </span>
-                                  </a>
-                                  <a href="#" class="table-link danger">
-                                      <span class="fa-stack">
-                                          <i class="fa fa-square fa-stack-2x"></i>
-                                          <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
                                       </span>
                                   </a>
                               </td>
@@ -627,10 +599,7 @@
                                 ￥200.00
                               </td>
                               <td class="text-center">
-                                <span class="label label-default">交易取消</span>
-                              </td>
-                              <td class="text-center">
-                                <span class="label label-primary">无物流</span>
+                                <span class="label label-success">已到账</span>
                               </td>
                               <td class="text-center">2016-7-3 <br>   00:44:24</td>
                               <td>
@@ -638,12 +607,6 @@
                                       <span class="fa-stack">
                                           <i class="fa fa-square fa-stack-2x"></i>
                                           <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
-                                      </span>
-                                  </a>
-                                  <a href="#" class="table-link danger">
-                                      <span class="fa-stack">
-                                          <i class="fa fa-square fa-stack-2x"></i>
-                                          <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
                                       </span>
                                   </a>
                               </td>
@@ -677,10 +640,7 @@
                                 ￥200.00
                               </td>
                               <td class="text-center">
-                                <span class="label label-default">交易取消</span>
-                              </td>
-                              <td class="text-center">
-                                <span class="label label-primary">无物流</span>
+                                <span class="label label-success">已到账</span>
                               </td>
                               <td class="text-center">2016-7-3 <br>   00:44:24</td>
                               <td>
@@ -688,12 +648,6 @@
                                       <span class="fa-stack">
                                           <i class="fa fa-square fa-stack-2x"></i>
                                           <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
-                                      </span>
-                                  </a>
-                                  <a href="#" class="table-link danger">
-                                      <span class="fa-stack">
-                                          <i class="fa fa-square fa-stack-2x"></i>
-                                          <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
                                       </span>
                                   </a>
                               </td>
@@ -727,10 +681,7 @@
                                 ￥200.00
                               </td>
                               <td class="text-center">
-                                <span class="label label-default">交易取消</span>
-                              </td>
-                              <td class="text-center">
-                                <span class="label label-primary">无物流</span>
+                                <span class="label label-success">已到账</span>
                               </td>
                               <td class="text-center">2016-7-3 <br>   00:44:24</td>
                               <td>
@@ -738,12 +689,6 @@
                                       <span class="fa-stack">
                                           <i class="fa fa-square fa-stack-2x"></i>
                                           <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
-                                      </span>
-                                  </a>
-                                  <a href="#" class="table-link danger">
-                                      <span class="fa-stack">
-                                          <i class="fa fa-square fa-stack-2x"></i>
-                                          <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
                                       </span>
                                   </a>
                               </td>
@@ -777,10 +722,7 @@
                                 ￥200.00
                               </td>
                               <td class="text-center">
-                                <span class="label label-default">交易取消</span>
-                              </td>
-                              <td class="text-center">
-                                <span class="label label-primary">无物流</span>
+                                <span class="label label-default">已退款</span>
                               </td>
                               <td class="text-center">2016-7-3 <br>   00:44:24</td>
                               <td>
@@ -788,12 +730,6 @@
                                       <span class="fa-stack">
                                           <i class="fa fa-square fa-stack-2x"></i>
                                           <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
-                                      </span>
-                                  </a>
-                                  <a href="#" class="table-link danger">
-                                      <span class="fa-stack">
-                                          <i class="fa fa-square fa-stack-2x"></i>
-                                          <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
                                       </span>
                                   </a>
                               </td>
@@ -805,22 +741,7 @@
                       <div class="clearfix">
                             <div class="pull-left">
                                 <a href="#" class="btn btn-primary">
-                                    发货
-                                </a>
-                                <a href="#" class="btn btn-primary">
-                                    已付款
-                                </a>
-                                <a href="#" class="btn btn-primary">
-                                    取消
-                                </a>
-                                <a href="#" class="btn btn-primary">
-                                    完成
-                                </a>
-                                <a href="#" class="btn btn-primary">
-                                    退货
-                                </a>
-                                <a href="#" class="btn btn-primary">
-                                    导出订单
+                                    导出清单
                                 </a>
 
                             </div>
@@ -838,6 +759,225 @@
                   </div>
                 </div>
               </div>
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="main-box">
+                    <header class="main-box-header clearfix">
+                      <h2>结算记录</h2>
+                    </header>
+                    <div class="main-box-body clearfix">
+                      <div class="table-responsive clearfix">
+                        <table class="table table-hover">
+                          <thead>
+                            <tr>
+                              <th width="40px;">
+                                  <span><div class="checkbox-nice checkbox-inline"><input type="checkbox" id="checkbox-inl-0"><label for="checkbox-inl-0"></label></div></span>
+                              </th>
+                              <th>
+                                  <span>订单编号</span>
+                              </th>
+                              <th>
+                                  <span>操作人</span>
+                              </th>
+                              <th>
+                                  <span>收款人</span>
+                              </th>
+                              <th>
+                                  <span>收款账号</span>
+                              </th>
+                              <th class="text-center">
+                                <span>总金额</span>
+                              </th>
+                              <th class="text-center">
+                                <span>支付状态</span>
+                              </th>
+                              <th class="text-center">
+                                <span>结算时间</span>
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>
+                                <div class="checkbox-nice checkbox-inline"><input type="checkbox" id="checkbox-inl-1"><label for="checkbox-inl-1"></label></div>
+                              </td>
+                              <td>
+                                HEH23918931
+                              </td>
+                              <td>
+                                财务01号
+                              </td>
+                              <td>
+                                黄先生
+                              </td>
+                              <td>
+                                农业银行-中山港壹加壹
+                                <br>
+                                2312313412345678
+                              </td>
+                              <td class="text-center">
+                                ￥200.00
+                              </td>
+                              <td class="text-center">
+                                <span class="label label-success">已到账</span>
+                              </td>
+                              <td class="text-center">2016-7-3 <br>   00:44:24</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class="checkbox-nice checkbox-inline"><input type="checkbox" id="checkbox-inl-1"><label for="checkbox-inl-1"></label></div>
+                              </td>
+                              <td>
+                                HEH23918931
+                              </td>
+                              <td>
+                                财务01号
+                              </td>
+                              <td>
+                                黄先生
+                              </td>
+                              <td>
+                                农业银行-中山港壹加壹
+                                <br>
+                                2312313412345678
+                              </td>
+                              <td class="text-center">
+                                ￥200.00
+                              </td>
+                              <td class="text-center">
+                                <span class="label label-success">已到账</span>
+                              </td>
+                              <td class="text-center">2016-7-3 <br>   00:44:24</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class="checkbox-nice checkbox-inline"><input type="checkbox" id="checkbox-inl-1"><label for="checkbox-inl-1"></label></div>
+                              </td>
+                              <td>
+                                HEH23918931
+                              </td>
+                              <td>
+                                财务01号
+                              </td>
+                              <td>
+                                黄先生
+                              </td>
+                              <td>
+                                农业银行-中山港壹加壹
+                                <br>
+                                2312313412345678
+                              </td>
+                              <td class="text-center">
+                                ￥200.00
+                              </td>
+                              <td class="text-center">
+                                <span class="label label-success">已到账</span>
+                              </td>
+                              <td class="text-center">2016-7-3 <br>   00:44:24</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class="checkbox-nice checkbox-inline"><input type="checkbox" id="checkbox-inl-1"><label for="checkbox-inl-1"></label></div>
+                              </td>
+                              <td>
+                                HEH23918931
+                              </td>
+                              <td>
+                                财务01号
+                              </td>
+                              <td>
+                                黄先生
+                              </td>
+                              <td>
+                                农业银行-中山港壹加壹
+                                <br>
+                                2312313412345678
+                              </td>
+                              <td class="text-center">
+                                ￥200.00
+                              </td>
+                              <td class="text-center">
+                                <span class="label label-success">已到账</span>
+                              </td>
+                              <td class="text-center">2016-7-3 <br>   00:44:24</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class="checkbox-nice checkbox-inline"><input type="checkbox" id="checkbox-inl-1"><label for="checkbox-inl-1"></label></div>
+                              </td>
+                              <td>
+                                HEH23918931
+                              </td>
+                              <td>
+                                财务01号
+                              </td>
+                              <td>
+                                黄先生
+                              </td>
+                              <td>
+                                农业银行-中山港壹加壹
+                                <br>
+                                2312313412345678
+                              </td>
+                              <td class="text-center">
+                                ￥200.00
+                              </td>
+                              <td class="text-center">
+                                <span class="label label-success">已到账</span>
+                              </td>
+                              <td class="text-center">2016-7-3 <br>   00:44:24</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class="checkbox-nice checkbox-inline"><input type="checkbox" id="checkbox-inl-1"><label for="checkbox-inl-1"></label></div>
+                              </td>
+                              <td>
+                                HEH23918931
+                              </td>
+                              <td>
+                                财务01号
+                              </td>
+                              <td>
+                                黄先生
+                              </td>
+                              <td>
+                                农业银行-中山港壹加壹
+                                <br>
+                                2312313412345678
+                              </td>
+                              <td class="text-center">
+                                ￥200.00
+                              </td>
+                              <td class="text-center">
+                                <span class="label label-success">已到账</span>
+                              </td>
+                              <td class="text-center">2016-7-3 <br>   00:44:24</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="clearfix">
+                            <div class="pull-left">
+                                <a href="#" class="btn btn-primary">
+                                    导出清单
+                                </a>
+                            </div>
+                            <ul class="pagination pull-right">
+                                <li><a href="#"><i class="fa fa-chevron-left"></i></a></li>
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
+                            </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
             </div>
           </div>
           <footer id="footer-bar" class="row">
