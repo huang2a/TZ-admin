@@ -12,6 +12,7 @@
 
     <link rel="stylesheet" type="text/css" href="css/libs/nifty-component.css"/><!-- 弹出窗体 -->
     <link rel="stylesheet" type="text/css" href="css/libs/fileinput.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/libs/jquery.bigautocomplete.css"/> <!-- 自动下拉 -->
   <link type="image/x-icon" href="favicon.png" rel="shortcut icon"/>
   <!--[if lt IE 9]>
   <script src="js/html5shiv.js"></script>
@@ -37,8 +38,8 @@
                     <label for="exampleInput1">广告标题</label>
                     <input type="text" class="form-control" id="exampleInput1" placeholder="分类的名称" value="首页广告"></div>
                 <div class="form-group">
-                    <label for="exampleInput2">广告地址</label>
-                    <input type="text" class="form-control" id="exampleInput2" placeholder="广告的跳转地址" value="/shoplist.php?id=231"></div>
+                    <label for="ad-url">广告地址</label>
+                    <input type="text" class="form-control" id="ad-url" placeholder="广告的跳转地址" value="/shoplist.php?id=231"></div>
                 <div class="form-group">
                     <label for="exampleTextarea">广告图片</label>
                     <form enctype="multipart/form-data">
@@ -776,7 +777,7 @@
     <script src="js/modalEffects.js"></script><!-- 弹出窗口 -->
 
     <script src="js/fileinput.min.js"></script>
-    <script>
+    <script type="text/javascript">
       $(document).on('ready', function() {
           $("#file-0a").fileinput({
               showUpload: false,
@@ -784,5 +785,13 @@
           });
       });
     </script>
+    <script src="js/jquery.bigautocomplete.js"></script>
+    <script type="text/javascript">
+    $(function(){
+      $("#ad-url").bigAutocomplete({data:[{title:"泡面",result:{ff:"泡椒鸡爪"}},{title:"泡泡堂"},{title:"泡泡枪"},{title:"中国移动卡"},{title:"中国移动手机"},{title:"中国移动充值"},{title:"中国移动充值卡30元"}],callback:function(data){
+        alert(data.title);
+      }});
+    })
+  </script>
 </body>
 </html>

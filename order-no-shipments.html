@@ -9,6 +9,8 @@
     <link rel="stylesheet" type="text/css" href="css/libs/font-awesome.css"/>
     <link rel="stylesheet" type="text/css" href="css/libs/nanoscroller.css"/>
     <link rel="stylesheet" type="text/css" href="css/compiled/theme_styles.css"/>
+    <link rel="stylesheet" type="text/css" href="css/libs/nifty-component.css"/><!-- 弹出窗体 -->
+
   <link type="image/x-icon" href="favicon.png" rel="shortcut icon"/>
   <!--[if lt IE 9]>
   <script src="js/html5shiv.js"></script>
@@ -16,6 +18,51 @@
   <![endif]-->
 </head>
 <body>
+<!-- 弹出窗 -->
+<div class="md-modal md-effect-7" id="modal-7">
+    <div class="md-content">
+        <div class="modal-header">
+            <button class="md-close close">&times;</button>
+            <h4 class="modal-title">物流管理操作</h4>
+        </div>
+        <div class="modal-body">
+            <form role="form">
+                <div class="col-md-6">
+                    <div class="form-group">
+                    <label for="exampleInput1">发货地区</label>
+                    <input type="text" class="form-control" id="exampleInput1" placeholder="货物所在的地区" value="广东-中山" disabled=""></div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                    <label for="exampleInput6">货物仓库</label>
+                    <input type="text" class="form-control" id="exampleInput6" placeholder="货物所在的仓库名称" value="中山港壹加壹仓库" disabled=""></div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                    <label for="exampleInput2">所发物流</label>
+                    <select name="payment" class="form-control">
+                      <option value="-1">顺丰</option>
+                      <option value="0">中通</option>
+                      <option value="1">圆通</option>
+                      <option value="2">申通</option>
+                      <option value="3">天天</option>
+                    </select>
+                </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                    <label for="exampleInput3">物流单号</label>
+                    <input type="text" class="form-control" id="exampleInput3" placeholder="物流订单的单号" value="231241231" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="请认真核对单号，方便客户查询"></div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <a href="" class="btn btn-primary"><i class="fa fa-save"></i>  保存/更新</a>
+        </div>
+    </div>
+</div>
+<div class="md-overlay"></div>
+
   <div id="theme-wrapper">
     <header class="navbar" id="header-navbar">
       <div class="container">
@@ -476,7 +523,7 @@
                               <th>
                                   <span>订单编号</span>
                               </th>
-                              <th width="23%">
+                              <th width="20%">
                                   <span>订单详情</span>
                               </th>
                               <th>
@@ -497,7 +544,7 @@
                               <th class="text-center">
                                 <span>时间</span>
                               </th>
-                              <th>&nbsp;</th>
+                              <th width="15%">&nbsp;</th>
                             </tr>
                           </thead>
                           <tbody>
@@ -537,6 +584,12 @@
                               </td>
                               <td class="text-center">2016-7-3 <br>   00:44:24</td>
                               <td>
+                                  <a href="##" class="table-link md-trigger" data-modal="modal-7">
+                                      <span class="fa-stack">
+                                          <i class="fa fa-square fa-stack-2x"></i>
+                                          <i class="fa fa-truck fa-stack-1x fa-inverse"></i>
+                                      </span>
+                                  </a>
                                   <a href="order-today-edit.html" class="table-link">
                                       <span class="fa-stack">
                                           <i class="fa fa-square fa-stack-2x"></i>
@@ -587,6 +640,12 @@
                               </td>
                               <td class="text-center">2016-7-3 <br>   00:44:24</td>
                               <td>
+                                <a href="##" class="table-link md-trigger" data-modal="modal-7">
+                                      <span class="fa-stack">
+                                          <i class="fa fa-square fa-stack-2x"></i>
+                                          <i class="fa fa-truck fa-stack-1x fa-inverse"></i>
+                                      </span>
+                                  </a>
                                   <a href="order-today-edit.html" class="table-link">
                                       <span class="fa-stack">
                                           <i class="fa fa-square fa-stack-2x"></i>
@@ -637,6 +696,12 @@
                               </td>
                               <td class="text-center">2016-7-3 <br>   00:44:24</td>
                               <td>
+                                  <a href="##" class="table-link md-trigger" data-modal="modal-7">
+                                      <span class="fa-stack">
+                                          <i class="fa fa-square fa-stack-2x"></i>
+                                          <i class="fa fa-truck fa-stack-1x fa-inverse"></i>
+                                      </span>
+                                  </a>
                                   <a href="order-today-edit.html" class="table-link">
                                       <span class="fa-stack">
                                           <i class="fa fa-square fa-stack-2x"></i>
@@ -687,6 +752,12 @@
                               </td>
                               <td class="text-center">2016-7-3 <br>   00:44:24</td>
                               <td>
+                                  <a href="##" class="table-link md-trigger" data-modal="modal-7">
+                                      <span class="fa-stack">
+                                          <i class="fa fa-square fa-stack-2x"></i>
+                                          <i class="fa fa-truck fa-stack-1x fa-inverse"></i>
+                                      </span>
+                                  </a>
                                   <a href="order-today-edit.html" class="table-link">
                                       <span class="fa-stack">
                                           <i class="fa fa-square fa-stack-2x"></i>
@@ -737,6 +808,12 @@
                               </td>
                               <td class="text-center">2016-7-3 <br>   00:44:24</td>
                               <td>
+                                  <a href="##" class="table-link md-trigger" data-modal="modal-7">
+                                      <span class="fa-stack">
+                                          <i class="fa fa-square fa-stack-2x"></i>
+                                          <i class="fa fa-truck fa-stack-1x fa-inverse"></i>
+                                      </span>
+                                  </a>
                                   <a href="order-today-edit.html" class="table-link">
                                       <span class="fa-stack">
                                           <i class="fa fa-square fa-stack-2x"></i>
@@ -787,6 +864,12 @@
                               </td>
                               <td class="text-center">2016-7-3 <br>   00:44:24</td>
                               <td>
+                                  <a href="##" class="table-link md-trigger" data-modal="modal-7">
+                                      <span class="fa-stack">
+                                          <i class="fa fa-square fa-stack-2x"></i>
+                                          <i class="fa fa-truck fa-stack-1x fa-inverse"></i>
+                                      </span>
+                                  </a>
                                   <a href="order-today-edit.html" class="table-link">
                                       <span class="fa-stack">
                                           <i class="fa fa-square fa-stack-2x"></i>
@@ -924,5 +1007,8 @@
 
     <script src="js/scripts.js"></script><!-- 左侧菜单导航 -->
     <script src="js/pace.min.js"></script><!-- 页面加载读条 -->
+
+    <script src="js/classie.js"></script><!-- 弹出窗口 -->
+    <script src="js/modalEffects.js"></script><!-- 弹出窗口 -->
 </body>
 </html>

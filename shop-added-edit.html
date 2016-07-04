@@ -401,24 +401,6 @@
                   <div class="main-box">
                     <header class="main-box-header clearfix">
                       <h2 class="pull-left">基本信息</h2>
-                      <div class="pull-right">
-                        <a href="#" class="btn btn-primary">
-                            <i class="fa fa-save"></i>
-                            保存全部/更新全部
-                        </a>
-                        <a href="#" class="btn btn-primary">
-                            <i class="fa fa-level-up"></i>
-                            通过申请<!-- 商品新增申请的时候才显示 -->
-                        </a>
-                        <a href="#" class="btn btn-primary">
-                            <i class="fa fa-level-down"></i>
-                            下架
-                        </a>
-                        <a href="#" class="btn btn-danger">
-                            <i class="fa fa-trash-o"></i>
-                            删除
-                        </a>
-                      </div>
                     </header>
                     <div class="main-box-body clearfix">
                       <form class="form-horizontal" role="form">
@@ -490,7 +472,7 @@
                         </div>
                         <div class="form-group">
                           <label for="inputText3" class="col-lg-2 control-label">商品类别：</label>
-                          <div class="col-lg-5">
+                          <div class="col-lg-4">
                             <div class="form-group" style="margin:0">
                               <select class="form-control">
                                 <option>商品大类</option>
@@ -506,7 +488,7 @@
                               </select>
                             </div>
                           </div>
-                          <div class="col-lg-5">
+                          <div class="col-lg-4">
                             <div class="form-group" style="margin:0">
                               <select class="form-control">
                                 <option>商品小类</option>
@@ -521,6 +503,36 @@
                                 <option>清洁</option>
                               </select>
                             </div>
+                          </div>
+                          <div class="col-lg-2">
+                                <a href="##" class="btn btn-primary pull-right" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="最多可增加5个不同的小类">
+                                    <i class="fa fa-plus-circle fa-lg"></i>  新增小类
+                                </a>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="inputText3" class="col-lg-2 control-label"></label>
+                          <div class="col-lg-4">
+                            <div class="form-group" style="margin:0">
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="form-group" style="margin:0">
+                              <select class="form-control">
+                                <option>商品小类</option>
+                                <option>水杯</option>
+                                <option>保温杯</option>
+                                <option>酒类</option>
+                                <option>茶类</option>
+                                <option>乳品</option>
+                                <option>零食</option>
+                                <option>面食</option>
+                                <option>家电</option>
+                                <option>清洁</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-lg-2">
                           </div>
                         </div>
                         <div class="form-group">
@@ -759,8 +771,29 @@
                             <header class="main-box-header clearfix">
                                 <h2>记得最后一步哟...</h2>
                             </header>
-                          <div class="main-box-body clearfix">
-                                <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> 保存全部/更新全部</button>
+                            <div class="main-box-body clearfix">
+                              <div class="pull-left">
+                                <a href="#" class="btn btn-primary">
+                                    <i class="fa fa-save"></i>
+                                    保存全部/更新全部
+                                </a>
+                                <a href="#" class="btn btn-primary">
+                                    <i class="fa fa-external-link-square"></i>
+                                    通过申请<!-- 商品新增申请的时候才显示 -->
+                                </a>
+                                <a href="#" class="btn btn-primary">
+                                    <i class="fa fa-level-up"></i>
+                                    上架<!-- 商品新增申请的时候才显示 -->
+                                </a>
+                                <a href="#" class="btn btn-primary">
+                                    <i class="fa fa-level-down"></i>
+                                    下架
+                                </a>
+                                <a href="#" class="btn btn-danger">
+                                    <i class="fa fa-trash-o"></i>
+                                    删除
+                                </a>
+                              </div>
                           </div>
                       </div>
                   </div>
