@@ -48,6 +48,79 @@
         </div>
     </div>
 </div>
+<div class="md-modal md-effect-7" id="modal-8">
+    <div class="md-content">
+        <div class="modal-header">
+            <button class="md-close close">&times;</button>
+            <h4 class="modal-title">修改会员信息</h4>
+        </div>
+        <div class="modal-body">
+            <form class="form-horizontal" role="form">
+              <div class="form-group">
+                <label for="inputtext1" class="col-lg-2 control-label">用户账号</label>
+                <div class="col-lg-10">
+                  <input type="text" class="form-control" id="inputtext1" placeholder="用户账号" value="13412345678" disabled=""></div>
+              </div>
+              <div class="form-group">
+                <label for="inputtext2" class="col-lg-2 control-label">用户等级</label>
+                <div class="col-lg-10">
+                  <input type="text" class="form-control" id="inputtext2" placeholder="" value="消费商" disabled=""></div>
+              </div>
+              <div class="form-group">
+                <label for="inputtext2" class="col-lg-2 control-label">修改等级</label>
+                <div class="col-lg-10">
+                  <select class="form-control">
+                    <option>普通会员</option>
+                    <option>消费会员</option>
+                    <option>消费商</option>
+                    <option>VIP消费商</option>
+                    <option>城市经营商</option>
+                    <option>城市联盟商</option>
+                    <option>区域合伙人</option>
+                  </select>
+                </div>
+              </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <a href="user-member.html" class="btn btn-primary"><i class="fa fa-save"></i>  保存/更新</a>
+        </div>
+    </div>
+</div>
+<div class="md-modal md-effect-7" id="modal-9">
+    <div class="md-content">
+        <div class="modal-header">
+            <button class="md-close close">&times;</button>
+            <h4 class="modal-title">会员加入系统</h4>
+        </div>
+        <div class="modal-body">
+            <form class="form-horizontal" role="form">
+              <div class="form-group">
+                <label for="inputtext1" class="col-lg-2 control-label">用户账号</label>
+                <div class="col-lg-10">
+                  <input type="text" class="form-control" id="inputtext1" placeholder="用户账号" value="13412345678" disabled=""></div>
+              </div>
+              <div class="form-group">
+                <label for="inputtext2" class="col-lg-2 control-label">当前加入</label>
+                <div class="col-lg-10">
+                  <input type="text" class="form-control" id="inputtext2" placeholder="" value="无" disabled=""></div>
+              </div>
+              <div class="form-group">
+                <label for="inputtext2" class="col-lg-2 control-label">修改系统</label>
+                <div class="col-lg-10">
+                  <select class="form-control">
+                    <option>A系统</option>
+                    <option>B系统</option>
+                  </select>
+                </div>
+              </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <a href="user-member.html" class="btn btn-primary"><i class="fa fa-save"></i>  保存/更新</a>
+        </div>
+    </div>
+</div>
 <div class="md-overlay"></div>
 
   <div id="theme-wrapper">
@@ -478,313 +551,37 @@
                 </div>
               </div>
             </div>
-            <div class="main-box clearfix">
-                <div class="tabs-wrapper tabs-no-header">
-                    <ul class="nav nav-tabs">
-                      <li class="active">
-                        <a href="#tab-users" data-toggle="tab">已加入</a>
-                      </li>
-                      <li class="">
-                        <a href="#tab-products" data-toggle="tab">待审核<span class="badge label-danger">3</span></a>
 
-                      </li>
-                    </ul>
-                    <div class="tab-content tab-content-body clearfix">
-                      <div class="tab-pane fade active in" id="tab-users">
-                        <header class="clearfix">
-                            <h2 class="pull-left">用户列表</h2>
-                            <div class="filter-block pull-right">
-                            <div class="form-group pull-left">
-                                <select class="form-control">
-                                    <option>所有等级</option>
-                                    <option>普通会员</option>
-                                    <option>消费会员</option>
-                                    <option>消费商</option>
-                                    <option>VIP消费商</option>
-                                    <option>城市经营商</option>
-                                    <option>城市联盟商</option>
-                                    <option>区域合伙人</option>
-                                </select>
-                            </div>
-                            <div class="form-group pull-left">
-                              <input type="text" class="form-control" placeholder="关键字">
-                            </div>
-                            <a href="#" class="btn btn-primary pull-right">
-                              <i class="fa fa-search search-icon"></i>
-                              搜索
-                            </a>
-                          </div>
-                        </header>
-                        <div class="clearfix">
-                          <div class="table-responsive clearfix">
-                            <table class="table table-hover">
-                              <thead>
-                                <tr>
-                                  <th>
-                                      <span>账号</span>
-                                  </th>
-                                  <th class="text-center">
-                                      <span>用户名</span>
-                                  </th>
-                                  <th class="text-center">
-                                      <span>积分</span>
-                                  </th>
-                                  <th class="text-center">
-                                      <span>会员等级</span>
-                                  </th>
-                                  <th class="text-center">
-                                    <span>状态</span>
-                                  </th>
-                                  <th>&nbsp;</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <td>
-                                      13546757887
-                                  </td>
-                                  <td class="text-center">
-                                    何健
-                                  </td>
-                                  <td class="text-center">
-                                    12341
-                                  </td>
-                                  <td class="text-center">
-                                    普通会员
-                                  </td>
-                                  <td class="text-center">
-                                    <span class="label label-success">已启用</span>
-                                  </td>
-                                  <td class="text-right" style="width: 15%;">
-                                      <a href="##" class="md-trigger table-link" data-modal="modal-7">
-                                          <span class="fa-stack">
-                                              <i class="fa fa-money fa-stack-2x"></i>
-                                              <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
-                                          </span>
-                                      </a>
-                                      <a href="user-area-edit.html" class="md-trigger table-link" data-modal="modal-7">
-                                          <span class="fa-stack">
-                                              <i class="fa fa-square fa-stack-2x"></i>
-                                              <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
-                                          </span>
-                                      </a>
-                                      <a href="#" class="table-link danger">
-                                          <span class="fa-stack">
-                                              <i class="fa fa-square fa-stack-2x"></i>
-                                              <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
-                                          </span>
-                                      </a>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                      13546757887
-                                  </td>
-                                  <td class="text-center">
-                                    何健
-                                  </td>
-                                  <td class="text-center">
-                                    12341
-                                  </td>
-                                  <td class="text-center">
-                                    普通会员
-                                  </td>
-                                  <td class="text-center">
-                                    <span class="label label-default">已停用</span>
-                                  </td>
-                                  <td class="text-right" style="width: 15%;">
-                                      <a href="##" class="md-trigger table-link" data-modal="modal-7">
-                                          <span class="fa-stack">
-                                              <i class="fa fa-money fa-stack-2x"></i>
-                                              <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
-                                          </span>
-                                      </a>
-                                      <a href="user-area-edit.html" class="md-trigger table-link" data-modal="modal-7">
-                                          <span class="fa-stack">
-                                              <i class="fa fa-square fa-stack-2x"></i>
-                                              <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
-                                          </span>
-                                      </a>
-                                      <a href="#" class="table-link danger">
-                                          <span class="fa-stack">
-                                              <i class="fa fa-square fa-stack-2x"></i>
-                                              <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
-                                          </span>
-                                      </a>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                      13546757887
-                                  </td>
-                                  <td class="text-center">
-                                    何健
-                                  </td>
-                                  <td class="text-center">
-                                    12341
-                                  </td>
-                                  <td class="text-center">
-                                    普通会员
-                                  </td>
-                                  <td class="text-center">
-                                    <span class="label label-success">已启用</span>
-                                  </td>
-                                  <td class="text-right" style="width: 15%;">
-                                      <a href="##" class="md-trigger table-link" data-modal="modal-7">
-                                          <span class="fa-stack">
-                                              <i class="fa fa-money fa-stack-2x"></i>
-                                              <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
-                                          </span>
-                                      </a>
-                                      <a href="user-area-edit.html" class="md-trigger table-link" data-modal="modal-7">
-                                          <span class="fa-stack">
-                                              <i class="fa fa-square fa-stack-2x"></i>
-                                              <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
-                                          </span>
-                                      </a>
-                                      <a href="#" class="table-link danger">
-                                          <span class="fa-stack">
-                                              <i class="fa fa-square fa-stack-2x"></i>
-                                              <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
-                                          </span>
-                                      </a>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                      13546757887
-                                  </td>
-                                  <td class="text-center">
-                                    海华
-                                  </td>
-                                  <td class="text-center">
-                                    12341
-                                  </td>
-                                  <td class="text-center">
-                                    普通会员
-                                  </td>
-                                  <td class="text-center">
-                                    <span class="label label-default">已停用</span>
-                                  </td>
-                                  <td class="text-right" style="width: 15%;">
-                                      <a href="##" class="md-trigger table-link" data-modal="modal-7">
-                                          <span class="fa-stack">
-                                              <i class="fa fa-money fa-stack-2x"></i>
-                                              <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
-                                          </span>
-                                      </a>
-                                      <a href="user-area-edit.html" class="md-trigger table-link" data-modal="modal-7">
-                                          <span class="fa-stack">
-                                              <i class="fa fa-square fa-stack-2x"></i>
-                                              <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
-                                          </span>
-                                      </a>
-                                      <a href="#" class="table-link danger">
-                                          <span class="fa-stack">
-                                              <i class="fa fa-square fa-stack-2x"></i>
-                                              <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
-                                          </span>
-                                      </a>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                      13546757887
-                                  </td>
-                                  <td class="text-center">
-                                    何健
-                                  </td>
-                                  <td class="text-center">
-                                    12341
-                                  </td>
-                                  <td class="text-center">
-                                    普通会员
-                                  </td>
-                                  <td class="text-center">
-                                    <span class="label label-success">已启用</span>
-                                  </td>
-                                  <td class="text-right" style="width: 15%;">
-                                      <a href="##" class="md-trigger table-link" data-modal="modal-7">
-                                          <span class="fa-stack">
-                                              <i class="fa fa-money fa-stack-2x"></i>
-                                              <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
-                                          </span>
-                                      </a>
-                                      <a href="user-area-edit.html" class="md-trigger table-link" data-modal="modal-7">
-                                          <span class="fa-stack">
-                                              <i class="fa fa-square fa-stack-2x"></i>
-                                              <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
-                                          </span>
-                                      </a>
-                                      <a href="#" class="table-link danger">
-                                          <span class="fa-stack">
-                                              <i class="fa fa-square fa-stack-2x"></i>
-                                              <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
-                                          </span>
-                                      </a>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                      13546757887
-                                  </td>
-                                  <td class="text-center">
-                                    何健
-                                  </td>
-                                  <td class="text-center">
-                                    12341
-                                  </td>
-                                  <td class="text-center">
-                                    普通会员
-                                  </td>
-                                  <td class="text-center">
-                                    <span class="label label-default">已停用</span>
-                                  </td>
-                                  <td class="text-right" style="width: 15%;">
-                                      <a href="##" class="md-trigger table-link" data-modal="modal-7">
-                                          <span class="fa-stack">
-                                              <i class="fa fa-money fa-stack-2x"></i>
-                                              <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
-                                          </span>
-                                      </a>
-                                      <a href="user-area-edit.html" class="md-trigger table-link" data-modal="modal-7">
-                                          <span class="fa-stack">
-                                              <i class="fa fa-square fa-stack-2x"></i>
-                                              <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
-                                          </span>
-                                      </a>
-                                      <a href="#" class="table-link danger">
-                                          <span class="fa-stack">
-                                              <i class="fa fa-square fa-stack-2x"></i>
-                                              <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
-                                          </span>
-                                      </a>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>
-                          <div class="clearfix">
-                                <ul class="pagination pull-right">
-                                    <li><a href="#"><i class="fa fa-chevron-left"></i></a></li>
-                                    <li><a href="#">1</a></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li><a href="#">4</a></li>
-                                    <li><a href="#">5</a></li>
-                                    <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
-                                </ul>
-                          </div>
+            <div class="row">
+                <div class="col-lg-12">
+                  <div class="main-box clearfix">
+                    <header class="main-box-header clearfix">
+                      <h2 class="pull-left">用户列表</h2>
+                      <div class="filter-block pull-right">
+                        <div class="form-group pull-left">
+                            <select class="form-control">
+                                <option>所有等级</option>
+                                <option>普通会员</option>
+                                <option>消费会员</option>
+                                <option>消费商</option>
+                                <option>VIP消费商</option>
+                                <option>城市经营商</option>
+                                <option>城市联盟商</option>
+                                <option>区域合伙人</option>
+                            </select>
                         </div>
+                        <div class="form-group pull-left">
+                          <input type="text" class="form-control" placeholder="关键字">
+                        </div>
+                        <a href="#" class="btn btn-primary pull-right">
+                          <i class="fa fa-search search-icon"></i>
+                          搜索
+                        </a>
                       </div>
-                        <!-- 等待审核人员 -->
-                      <div class="tab-pane fade" id="tab-products">
-                        <header class="clearfix">
-                            <h2 class="pull-left">等待审核人员</h2>
-                        </header>
-                        <div class="clearfix">
-                          <div class="table-responsive clearfix">
-                            <table class="table table-hover">
+                    </header>
+                    <div class="main-box-body clearfix">
+                      <div class="table-responsive clearfix">
+                        <table class="table table-hover">
                               <thead>
                                 <tr>
                                   <th>
@@ -825,20 +622,20 @@
                                   <td class="text-right" style="width: 15%;">
                                       <a href="##" class="md-trigger table-link" data-modal="modal-7">
                                           <span class="fa-stack">
-                                              <i class="fa fa-money fa-stack-2x"></i>
-                                              <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
+                                              <i class="fa fa-square fa-stack-2x"></i>
+                                              <i class="fa fa-money fa-stack-1x fa-inverse"></i>
                                           </span>
                                       </a>
-                                      <a href="user-area-edit.html" class="md-trigger table-link" data-modal="modal-7">
+                                      <a href="##" class="md-trigger table-link" data-modal="modal-8">
                                           <span class="fa-stack">
                                               <i class="fa fa-square fa-stack-2x"></i>
                                               <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
                                           </span>
                                       </a>
-                                      <a href="#" class="table-link danger">
+                                      <a href="##" class="md-trigger table-link" data-modal="modal-9">
                                           <span class="fa-stack">
                                               <i class="fa fa-square fa-stack-2x"></i>
-                                              <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
+                                              <i class="fa fa-sitemap fa-stack-1x fa-inverse"></i>
                                           </span>
                                       </a>
                                   </td>
@@ -862,20 +659,20 @@
                                   <td class="text-right" style="width: 15%;">
                                       <a href="##" class="md-trigger table-link" data-modal="modal-7">
                                           <span class="fa-stack">
-                                              <i class="fa fa-money fa-stack-2x"></i>
-                                              <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
+                                              <i class="fa fa-square fa-stack-2x"></i>
+                                              <i class="fa fa-money fa-stack-1x fa-inverse"></i>
                                           </span>
                                       </a>
-                                      <a href="user-area-edit.html" class="md-trigger table-link" data-modal="modal-7">
+                                      <a href="##" class="md-trigger table-link" data-modal="modal-8">
                                           <span class="fa-stack">
                                               <i class="fa fa-square fa-stack-2x"></i>
                                               <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
                                           </span>
                                       </a>
-                                      <a href="#" class="table-link danger">
+                                      <a href="##" class="md-trigger table-link" data-modal="modal-9">
                                           <span class="fa-stack">
                                               <i class="fa fa-square fa-stack-2x"></i>
-                                              <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
+                                              <i class="fa fa-sitemap fa-stack-1x fa-inverse"></i>
                                           </span>
                                       </a>
                                   </td>
@@ -899,45 +696,42 @@
                                   <td class="text-right" style="width: 15%;">
                                       <a href="##" class="md-trigger table-link" data-modal="modal-7">
                                           <span class="fa-stack">
-                                              <i class="fa fa-money fa-stack-2x"></i>
-                                              <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
+                                              <i class="fa fa-square fa-stack-2x"></i>
+                                              <i class="fa fa-money fa-stack-1x fa-inverse"></i>
                                           </span>
                                       </a>
-                                      <a href="user-area-edit.html" class="md-trigger table-link" data-modal="modal-7">
+                                      <a href="##" class="md-trigger table-link" data-modal="modal-8">
                                           <span class="fa-stack">
                                               <i class="fa fa-square fa-stack-2x"></i>
                                               <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
                                           </span>
                                       </a>
-                                      <a href="#" class="table-link danger">
+                                      <a href="##" class="md-trigger table-link" data-modal="modal-9">
                                           <span class="fa-stack">
                                               <i class="fa fa-square fa-stack-2x"></i>
-                                              <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
+                                              <i class="fa fa-sitemap fa-stack-1x fa-inverse"></i>
                                           </span>
                                       </a>
                                   </td>
                                 </tr>
                               </tbody>
                             </table>
-                          </div>
-                          <div class="clearfix">
-                                <ul class="pagination pull-right">
-                                    <li><a href="#"><i class="fa fa-chevron-left"></i></a></li>
-                                    <li><a href="#">1</a></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li><a href="#">4</a></li>
-                                    <li><a href="#">5</a></li>
-                                    <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
-                                </ul>
-                          </div>
-                        </div>
+                      </div>
+                      <div class="clearfix">
+                            <ul class="pagination pull-right">
+                                <li><a href="#"><i class="fa fa-chevron-left"></i></a></li>
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
+                            </ul>
                       </div>
                     </div>
                   </div>
-            </div>
-
-
+                </div>
+              </div>
             </div>
           </div>
           <footer id="footer-bar" class="row">

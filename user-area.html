@@ -9,7 +9,6 @@
     <link rel="stylesheet" type="text/css" href="css/libs/font-awesome.css"/>
     <link rel="stylesheet" type="text/css" href="css/libs/nanoscroller.css"/>
     <link rel="stylesheet" type="text/css" href="css/compiled/theme_styles.css"/>
-
   <link type="image/x-icon" href="favicon.png" rel="shortcut icon"/>
   <!--[if lt IE 9]>
   <script src="js/html5shiv.js"></script>
@@ -385,35 +384,27 @@
                   <h1>区域合伙人管理</h1>
                 </div>
             </div>
-            <div class="main-box clearfix">
-                <div class="tabs-wrapper tabs-no-header">
-                    <ul class="nav nav-tabs">
-                      <li class="active">
-                        <a href="#tab-users" data-toggle="tab">已加入</a>
-                      </li>
-                      <li class="">
-                        <a href="#tab-products" data-toggle="tab">待审核<span class="badge label-danger">3</span></a>
 
-                      </li>
-                    </ul>
-                    <div class="tab-content tab-content-body clearfix">
-                      <div class="tab-pane fade active in" id="tab-users">
-                        <header class="clearfix">
-                            <h2 class="pull-left">用户列表</h2>
-                            <div class="filter-block pull-right">
+
+            <div class="row">
+                <div class="col-lg-12">
+                  <div class="main-box clearfix">
+                    <header class="main-box-header clearfix">
+                      <h2 class="pull-left">用户组列表</h2>
+                      <div class="filter-block pull-right">
                             <div class="form-group pull-left">
                               <input type="text" class="form-control" placeholder="关键字">
                             </div>
-                            <button class="md-trigger btn btn-primary mrg-b-lg pull-right" data-modal="modal-7"><i class="fa fa-plus-circle"></i>  新增人员</button>
+                            <a href="user-area-edit.html" class="btn btn-primary mrg-b-lg pull-right"><i class="fa fa-plus-circle"></i>  新增人员</a>
                             <a href="#" class="btn btn-primary pull-right">
                               <i class="fa fa-search search-icon"></i>
                               搜索
                             </a>
                           </div>
-                        </header>
-                        <div class="clearfix">
-                          <div class="table-responsive clearfix">
-                            <table class="table table-hover">
+                    </header>
+                    <div class="main-box-body clearfix">
+                      <div class="table-responsive clearfix">
+                        <table class="table table-hover">
                               <thead>
                                 <tr>
                                   <th>
@@ -623,163 +614,22 @@
                                 </tr>
                               </tbody>
                             </table>
-                          </div>
-                          <div class="clearfix">
-                                <ul class="pagination pull-right">
-                                    <li><a href="#"><i class="fa fa-chevron-left"></i></a></li>
-                                    <li><a href="#">1</a></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li><a href="#">4</a></li>
-                                    <li><a href="#">5</a></li>
-                                    <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
-                                </ul>
-                          </div>
-                        </div>
                       </div>
-                        <!-- 等待审核人员 -->
-                      <div class="tab-pane fade" id="tab-products">
-                        <header class="clearfix">
-                            <h2 class="pull-left">等待审核人员</h2>
-                        </header>
-                        <div class="clearfix">
-                          <div class="table-responsive clearfix">
-                            <table class="table table-hover">
-                              <thead>
-                                <tr>
-                                  <th>
-                                      <span>用户名</span>
-                                  </th>
-                                  <th class="text-center">
-                                      <span>地区</span>
-                                  </th>
-                                  <th class="text-center">
-                                      <span>仓库</span>
-                                  </th>
-                                  <th class="text-center">
-                                      <span>详细地址</span>
-                                  </th>
-                                  <th class="text-center">
-                                    <span>联系人</span>
-                                  </th>
-                                  <th>&nbsp;</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <td>
-                                      13546757887
-                                  </td>
-                                  <td class="text-center">
-                                    广东-广州
-                                  </td>
-                                  <td class="text-center">
-                                    广州仓库
-                                  </td>
-                                  <td class="text-center">
-                                    广东省广州市番禺区香港路293号
-                                  </td>
-                                  <td class="text-center">
-                                    <span class="label label-success">已启用</span>
-                                  </td>
-                                  <td class="text-right" style="width: 15%;">
-                                      <a href="user-area-edit.html" class="md-trigger table-link" data-modal="modal-7">
-                                          <span class="fa-stack">
-                                              <i class="fa fa-square fa-stack-2x"></i>
-                                              <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
-                                          </span>
-                                      </a>
-                                      <a href="#" class="table-link danger">
-                                          <span class="fa-stack">
-                                              <i class="fa fa-square fa-stack-2x"></i>
-                                              <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
-                                          </span>
-                                      </a>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                      13546757887
-                                  </td>
-                                  <td class="text-center">
-                                    广东-广州
-                                  </td>
-                                  <td class="text-center">
-                                    广州仓库
-                                  </td>
-                                  <td class="text-center">
-                                    广东省广州市番禺区香港路293号
-                                  </td>
-                                  <td class="text-center">
-                                    <span class="label label-success">已启用</span>
-                                  </td>
-                                  <td class="text-right" style="width: 15%;">
-                                      <a href="user-area-edit.html" class="md-trigger table-link" data-modal="modal-7">
-                                          <span class="fa-stack">
-                                              <i class="fa fa-square fa-stack-2x"></i>
-                                              <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
-                                          </span>
-                                      </a>
-                                      <a href="#" class="table-link danger">
-                                          <span class="fa-stack">
-                                              <i class="fa fa-square fa-stack-2x"></i>
-                                              <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
-                                          </span>
-                                      </a>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                      13546757887
-                                  </td>
-                                  <td class="text-center">
-                                    广东-广州
-                                  </td>
-                                  <td class="text-center">
-                                    广州仓库
-                                  </td>
-                                  <td class="text-center">
-                                    广东省广州市番禺区香港路293号
-                                  </td>
-                                  <td class="text-center">
-                                    <span class="label label-success">已启用</span>
-                                  </td>
-                                  <td class="text-right" style="width: 15%;">
-                                      <a href="user-area-edit.html" class="md-trigger table-link" data-modal="modal-7">
-                                          <span class="fa-stack">
-                                              <i class="fa fa-square fa-stack-2x"></i>
-                                              <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
-                                          </span>
-                                      </a>
-                                      <a href="#" class="table-link danger">
-                                          <span class="fa-stack">
-                                              <i class="fa fa-square fa-stack-2x"></i>
-                                              <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
-                                          </span>
-                                      </a>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>
-                          <div class="clearfix">
-                                <ul class="pagination pull-right">
-                                    <li><a href="#"><i class="fa fa-chevron-left"></i></a></li>
-                                    <li><a href="#">1</a></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li><a href="#">4</a></li>
-                                    <li><a href="#">5</a></li>
-                                    <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
-                                </ul>
-                          </div>
-                        </div>
+                      <div class="clearfix">
+                            <ul class="pagination pull-right">
+                                <li><a href="#"><i class="fa fa-chevron-left"></i></a></li>
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
+                            </ul>
                       </div>
                     </div>
                   </div>
-            </div>
-
-
+                </div>
+              </div>
             </div>
           </div>
           <footer id="footer-bar" class="row">

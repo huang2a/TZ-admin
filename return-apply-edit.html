@@ -5,10 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
   <title>同转商城总部后台</title>
-     <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/libs/font-awesome.css"/>
     <link rel="stylesheet" type="text/css" href="css/libs/nanoscroller.css"/>
     <link rel="stylesheet" type="text/css" href="css/compiled/theme_styles.css"/>
+    <link rel="stylesheet" type="text/css" href="css/libs/nifty-component.css"/><!-- 弹出窗体 -->
+
   <link type="image/x-icon" href="favicon.png" rel="shortcut icon"/>
   <!--[if lt IE 9]>
   <script src="js/html5shiv.js"></script>
@@ -16,6 +18,55 @@
   <![endif]-->
 </head>
 <body>
+<!-- 弹出窗 -->
+<div class="md-modal md-effect-7" id="modal-7">
+    <div class="md-content">
+        <div class="modal-header">
+            <button class="md-close close">&times;</button>
+            <h4 class="modal-title">填写退货收件地址</h4>
+        </div>
+        <div class="modal-body">
+            <form role="form">
+                <div class="form-group clearfix">
+                  <label for="inputText3" class="col-lg-12 control-label">退货地址：</label>
+                  <br>
+                  <div class="col-lg-6">
+                    <div class="form-group" style="margin:0">
+                      <select class="form-control">
+                        <option>广东省</option>
+                        <option>广西省</option>
+                        <option>福建省</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-group" style="margin:0">
+                      <select class="form-control">
+                        <option>广州</option>
+                        <option>中山</option>
+                        <option>深圳</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label for="inputText3" class="col-lg-12 control-label">详细地址：</label>
+                  <br>
+                  <div class="col-lg-12">
+                    <div class="form-group" style="margin:0">
+                      <input class="form-control" name="user_id" placeholder="" value="中山港大道60号 " type="text">
+                    </div>
+                  </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <a href="" class="btn btn-primary"><i class="fa fa-save"></i>  保存/更新</a>
+        </div>
+    </div>
+</div>
+<div class="md-overlay"></div>
+
   <div id="theme-wrapper">
     <header class="navbar" id="header-navbar">
       <div class="container">
@@ -280,7 +331,7 @@
                       </li>
                     </ul>
                   </li>
-                  <li>
+                  <li class="active" >
                     <a href="#" class="dropdown-toggle">
                       <i class="fa fa-undo"></i>
                       <span>退货订单</span>
@@ -288,7 +339,7 @@
                     </a>
                     <ul class="submenu">
                       <li>
-                        <a href="return-apply.html">退货申请</a>
+                        <a class="active"  href="return-apply.html">退货申请</a>
                       </li>
                       <li>
                         <a href="return-going.html">退货中</a>
@@ -328,7 +379,7 @@
                       </li>
                     </ul>
                   </li>
-                  <li class="active" >
+                  <li>
                     <a href="#" class="dropdown-toggle">
                       <i class="fa fa-calendar-o"></i>
                       <span>文章管理</span>
@@ -339,7 +390,7 @@
                         <a href="article-class.html">文章分类</a>
                       </li>
                       <li>
-                        <a class="active" href="article-list.html">文章列表</a>
+                        <a href="article-list.html">文章列表</a>
                       </li>
                     </ul>
                   </li>
@@ -380,155 +431,123 @@
             <div class="col-lg-12">
               <div class="row">
                 <div class="col-lg-12">
-                  <h1>文章管理</h1>
+                  <h1>退货申请订单详情</h1>
                 </div>
               </div>
+
               <div class="row">
                 <div class="col-lg-12">
-                  <div class="main-box clearfix">
+                  <div class="main-box">
                     <header class="main-box-header clearfix">
-                      <h2 class="pull-left">文章列表</h2>
-                      <div class="filter-block pull-right">
-                        <div class="form-group pull-left">
-                            <select class="form-control">
-                                <option>同转商场</option>
-                                <option>创业平台</option>
-                                <option>购物指南</option>
-                                <option>关于我们</option>
-                                <option>帮助中心</option>
-                                <option>通知公告</option>
-                                <option>新闻中心</option>
-                            </select>
-                        </div>
-                        <div class="form-group pull-left">
-                          <input type="text" class="form-control" placeholder="关键字">
-                        </div>
-                        <button class="btn btn-primary mrg-b-lg pull-right"><i class="fa fa-plus-circle"></i>  新增文章</button>
-                        <a href="#" class="btn btn-primary pull-right">
-                          <i class="fa fa-search search-icon"></i>
-                          搜索
+                      <h2 class="pull-left">订单信息</h2>
+                      <div class="pull-right">
+                        <a href="##" class="btn btn-primary md-trigger" data-modal="modal-7">
+                            <i class="fa fa-rotate-right"></i>
+                            同意退货
+                        </a>
+                        <a href="#" class="btn btn-primary">
+                            <i class="fa fa-share-square-o"></i>
+                            取消退货
                         </a>
                       </div>
                     </header>
                     <div class="main-box-body clearfix">
-                      <div class="table-responsive clearfix">
-                        <table class="table table-hover">
-                          <thead>
-                            <tr>
-                                <th>
-                                  <span>分类ID</span>
-                              </th>
-                              <th>
-                                  <span>分类</span>
-                              </th>
-                              <th>
-                                  <span>封面</span>
-                              </th>
-                              <th>
-                                  <span>标题</span>
-                              </th>
-                              <th class="text-center">
-                                  <span>作者</span>
-                              </th>
+                      <form class="form-horizontal" method="post">
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">订单ID</label>
+                            <div class="col-sm-3">
+                                <input class="form-control" name="" placeholder="" value="TC20160701" type="text" disabled>
+                            </div>
+                            <label class="col-sm-1 control-label">订单编号</label>
+                            <div class="col-sm-3">
+                                <input class="form-control" name="orderid" placeholder="" value="HEH23918931" type="text" disabled>
+                            </div>
+                            <label class="col-sm-1 control-label">支付状态</label>
 
-                              <th class="text-center">
-                                  <span>创建时间</span>
-                              </th>
-                              <th class="text-center">
-                                <span>状态</span>
-                              </th>
-                              <th>&nbsp;</th>
-                            </tr>
-                          </thead>
+                            <div class="col-sm-3">
+                                <input class="form-control" name="user_id" placeholder="" value="已支付 " type="text" disabled>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">支付方式</label>
+
+                            <div class="col-sm-3">
+                              <input class="form-control" name="user_id" placeholder="" value="账户支付 " type="text" disabled>
+                            </div>
+                            <label class="col-sm-1 control-label">支付金额</label>
+                            <div class="col-sm-3">
+                                <input class="form-control" name="user_id" placeholder="" value="￥200.00 " type="text" disabled>
+                            </div>
+                            <label class="col-sm-1 control-label">订单状态</label>
+                            <div class="col-sm-3">
+                                <input class="form-control" name="user_id" placeholder="" value=" 申请退货" type="text" disabled>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">联系人</label>
+                            <div class="col-sm-3">
+                                <input class="form-control" name="user_id" placeholder="" value="黄先生 " type="text">
+                            </div>
+                            <label class="col-sm-1 control-label">联系电话</label>
+                            <div class="col-sm-3">
+                                <input class="form-control" name="user_id" placeholder="" value="13412345678 " type="text">
+                            </div>
+                            <label class="col-sm-1 control-label">收货地址</label>
+                            <div class="col-sm-3">
+                                <textarea class="form-control" id="exampleTextarea" rows="3">广东省中山市火炬开发区中山港大道60号</textarea>
+                            </div>
+                        </div>
+                      </form>
+                      <div class="table-responsive">
+                        <table class="table table-products table-hover">
                           <tbody>
                             <tr>
-                                <td>
-                                  0
-                              </td>
-                              <td>同转商城</td>
                               <td>
-                                  <img src="img/samples/shop01.jpg" height="50" width="50" alt="">
-                              </td>
+                                <img src="img/samples/shop01.jpg" height="50" width="50" alt=""></td>
                               <td>
-                                  同转商城介绍
-                              </td>
-                              <td class="text-center">
-                                  admin
-                              </td>
-                              <td class="text-center">
-                                2016-7-2 14:46:56
-                              </td>
-                              <td class="text-center">
-                                <span class="label label-success">已上架</span>
-                              </td>
-                              <td class="text-right" style="width: 15%;">
-                                  <a href="article-list-edit.html" class="md-trigger table-link" data-modal="modal-7">
-                                      <span class="fa-stack">
-                                          <i class="fa fa-square fa-stack-2x"></i>
-                                          <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
-                                      </span>
-                                  </a>
-                                  <a href="#" class="table-link danger">
-                                      <span class="fa-stack">
-                                          <i class="fa fa-square fa-stack-2x"></i>
-                                          <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
-                                      </span>
-                                  </a>
+                                <span class="name">商品名称</span>
+                                <span class="price"> <i class="fa fa-money"></i>
+                                  ￥320,00
+                                </span>
+                                <span class="warranty"> <i class="fa fa-certificate"></i>
+                                 x2
+                                </span>
                               </td>
                             </tr>
                             <tr>
-                                <td>
-                                  1
-                              </td>
-                              <td>帮助中心</td>
                               <td>
-                                  <img src="img/samples/shop01.jpg" height="50" width="50" alt="">
-                              </td>
+                                <img src="img/samples/shop01.jpg" height="50" width="50" alt=""></td>
                               <td>
-                                  支付方式
+                                <span class="name">商品名称</span>
+                                <span class="price"> <i class="fa fa-money"></i>
+                                  ￥320,00
+                                </span>
+                                <span class="warranty"> <i class="fa fa-certificate"></i>
+                                 x2
+                                </span>
                               </td>
-                              <td class="text-center">
-                                  admin
-                              </td>
-                              <td class="text-center">
-                                2016-7-2 14:46:56
-                              </td>
-                              <td class="text-center">
-                                <span class="label label-success">已上架</span>
-                              </td>
-                              <td class="text-right" style="width: 15%;">
-                                  <a href="article-list-edit.html" class="md-trigger table-link" data-modal="modal-7">
-                                      <span class="fa-stack">
-                                          <i class="fa fa-square fa-stack-2x"></i>
-                                          <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
-                                      </span>
-                                  </a>
-                                  <a href="#" class="table-link danger">
-                                      <span class="fa-stack">
-                                          <i class="fa fa-square fa-stack-2x"></i>
-                                          <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
-                                      </span>
-                                  </a>
+                            </tr>
+                            <tr>
+                              <td>
+                                <img src="img/samples/shop01.jpg" height="50" width="50" alt=""></td>
+                              <td>
+                                <span class="name">商品名称</span>
+                                <span class="price"> <i class="fa fa-money"></i>
+                                  ￥320,00
+                                </span>
+                                <span class="warranty"> <i class="fa fa-certificate"></i>
+                                 x2
+                                </span>
                               </td>
                             </tr>
                           </tbody>
                         </table>
                       </div>
-                      <div class="clearfix">
-                            <ul class="pagination pull-right">
-                                <li><a href="#"><i class="fa fa-chevron-left"></i></a></li>
-                                <li><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                                <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
-                            </ul>
-                      </div>
                     </div>
                   </div>
                 </div>
               </div>
+
             </div>
           </div>
           <footer id="footer-bar" class="row">
@@ -612,6 +631,9 @@
 
     <script src="js/scripts.js"></script><!-- 左侧菜单导航 -->
     <script src="js/pace.min.js"></script><!-- 页面加载读条 -->
+
+    <script src="js/classie.js"></script><!-- 弹出窗口 -->
+    <script src="js/modalEffects.js"></script><!-- 弹出窗口 -->
 
 </body>
 </html>
