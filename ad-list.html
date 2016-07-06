@@ -34,17 +34,35 @@
         </div>
         <div class="modal-body">
             <form role="form">
-                <div class="form-group">
+                <div class="col-md-6">
+                    <div class="form-group">
+                    <label for="exampleInput1">广告分类</label>
+                    <select class="form-control">
+                      <option>首页广告</option>
+                      <option>轮播广告</option>
+                      <option>商品列表</option>
+                      <option>商品详情</option>
+                      <option>会员中心</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
                     <label for="exampleInput1">广告标题</label>
-                    <input type="text" class="form-control" id="exampleInput1" placeholder="分类的名称" value="首页广告"></div>
-                <div class="form-group">
+                    <input type="text" class="form-control" id="exampleInput1" placeholder="广告标题" value="首页广告"></div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
                     <label for="ad-url">广告地址</label>
                     <input type="text" class="form-control" id="ad-url" placeholder="广告的跳转地址" value="/shoplist.php?id=231"></div>
-                <div class="form-group">
-                    <label for="exampleTextarea">广告图片</label>
-                    <form enctype="multipart/form-data">
-                      <input id="file-0a" class="file" type="file" multiple data-min-file-count="1">
-                    </form>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                      <label for="exampleTextarea">广告图片</label>
+                      <form enctype="multipart/form-data">
+                        <input id="file-0a" class="file" type="file" multiple data-min-file-count="1">
+                      </form>
+                  </div>
                 </div>
                 <p><label for="exampleTextarea">状态</label></p>
                 <div class="btn-group" data-toggle="buttons">

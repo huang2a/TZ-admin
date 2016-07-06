@@ -432,7 +432,7 @@
                           <thead>
                             <tr>
                               <th width="40px;">
-                                  <span><div class="checkbox-nice checkbox-inline"><input type="checkbox" id="checkbox-inl-0"><label for="checkbox-inl-0"></label></div></span>
+                                  <span><div class="checkbox-nice checkbox-inline"><input type="checkbox" id="checkbox-inl-0" onclick="checkAll()"><label for="checkbox-inl-0"></label></div></span>
                               </th>
                               <th>
                                   <span>订单编号</span>
@@ -461,7 +461,7 @@
                           <tbody>
                             <tr>
                               <td>
-                                <div class="checkbox-nice checkbox-inline"><input type="checkbox" id="checkbox-inl-1"><label for="checkbox-inl-1"></label></div>
+                                <div class="checkbox-nice checkbox-inline"><input type="checkbox" id="checkbox-inl-1" class="check"><label for="checkbox-inl-1"></label></div>
                               </td>
                               <td>
                                 HEH23918931
@@ -494,7 +494,7 @@
                                           <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
                                       </span>
                                   </a>
-                                  <a href="#" class="table-link success">
+                                  <a href="#" class="table-link success" title="完成退货">
                                       <span class="fa-stack">
                                           <i class="fa fa-square fa-stack-2x"></i>
                                           <i class="fa fa-check-square-o fa-stack-1x fa-inverse"></i>
@@ -504,7 +504,7 @@
                             </tr>
                             <tr>
                               <td>
-                                <div class="checkbox-nice checkbox-inline"><input type="checkbox" id="checkbox-inl-2"><label for="checkbox-inl-2"></label></div>
+                                <div class="checkbox-nice checkbox-inline"><input type="checkbox" id="checkbox-inl-2" class="check"><label for="checkbox-inl-2"></label></div>
                               </td>
                               <td>
                                 HEH23918931
@@ -537,7 +537,7 @@
                                           <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
                                       </span>
                                   </a>
-                                  <a href="#" class="table-link success">
+                                  <a href="#" class="table-link success" title="完成退货">
                                       <span class="fa-stack">
                                           <i class="fa fa-square fa-stack-2x"></i>
                                           <i class="fa fa-check-square-o fa-stack-1x fa-inverse"></i>
@@ -547,7 +547,7 @@
                             </tr>
                             <tr>
                               <td>
-                                <div class="checkbox-nice checkbox-inline"><input type="checkbox" id="checkbox-inl-3"><label for="checkbox-inl-3"></label></div>
+                                <div class="checkbox-nice checkbox-inline"><input type="checkbox" id="checkbox-inl-3" class="check"><label for="checkbox-inl-3"></label></div>
                               </td>
                               <td>
                                 HEH23918931
@@ -580,7 +580,7 @@
                                           <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
                                       </span>
                                   </a>
-                                  <a href="#" class="table-link success">
+                                  <a href="#" class="table-link success" title="完成退货">
                                       <span class="fa-stack">
                                           <i class="fa fa-square fa-stack-2x"></i>
                                           <i class="fa fa-check-square-o fa-stack-1x fa-inverse"></i>
@@ -590,7 +590,7 @@
                             </tr>
                             <tr>
                               <td>
-                                <div class="checkbox-nice checkbox-inline"><input type="checkbox" id="checkbox-inl-4"><label for="checkbox-inl-4"></label></div>
+                                <div class="checkbox-nice checkbox-inline"><input type="checkbox" id="checkbox-inl-4" class="check"><label for="checkbox-inl-4"></label></div>
                               </td>
                               <td>
                                 HEH23918931
@@ -623,7 +623,7 @@
                                           <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
                                       </span>
                                   </a>
-                                  <a href="#" class="table-link success">
+                                  <a href="#" class="table-link success" title="完成退货">
                                       <span class="fa-stack">
                                           <i class="fa fa-square fa-stack-2x"></i>
                                           <i class="fa fa-check-square-o fa-stack-1x fa-inverse"></i>
@@ -633,7 +633,7 @@
                             </tr>
                             <tr>
                               <td>
-                                <div class="checkbox-nice checkbox-inline"><input type="checkbox" id="checkbox-inl-5"><label for="checkbox-inl-5"></label></div>
+                                <div class="checkbox-nice checkbox-inline"><input type="checkbox" id="checkbox-inl-5" class="check"><label for="checkbox-inl-5"></label></div>
                               </td>
                               <td>
                                 HEH23918931
@@ -666,7 +666,7 @@
                                           <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
                                       </span>
                                   </a>
-                                  <a href="#" class="table-link success">
+                                  <a href="#" class="table-link success" title="完成退货">
                                       <span class="fa-stack">
                                           <i class="fa fa-square fa-stack-2x"></i>
                                           <i class="fa fa-check-square-o fa-stack-1x fa-inverse"></i>
@@ -676,7 +676,7 @@
                             </tr>
                             <tr>
                               <td>
-                                <div class="checkbox-nice checkbox-inline"><input type="checkbox" id="checkbox-inl-6"><label for="checkbox-inl-6"></label></div>
+                                <div class="checkbox-nice checkbox-inline"><input type="checkbox" id="checkbox-inl-6" class="check"><label for="checkbox-inl-6"></label></div>
                               </td>
                               <td>
                                 HEH23918931
@@ -709,7 +709,7 @@
                                           <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
                                       </span>
                                   </a>
-                                  <a href="#" class="table-link success">
+                                  <a href="#" class="table-link success" title="完成退货">
                                       <span class="fa-stack">
                                           <i class="fa fa-square fa-stack-2x"></i>
                                           <i class="fa fa-check-square-o fa-stack-1x fa-inverse"></i>
@@ -827,5 +827,13 @@
 
     <script src="js/scripts.js"></script><!-- 左侧菜单导航 -->
     <script src="js/pace.min.js"></script><!-- 页面加载读条 -->
+
+    <script>
+      function checkAll() {
+          $("table .check").prop("checked", function (index, oldValue) {
+              return !oldValue;
+          });
+      }
+    </script>
 </body>
 </html>

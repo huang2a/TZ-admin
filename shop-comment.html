@@ -459,7 +459,7 @@
                           <tbody>
                             <tr>
                               <th>
-                                <div class="checkbox-nice checkbox-inline"><input type="checkbox" id="checkbox-inl-1"><label for="checkbox-inl-1"></label></div>
+                                <div class="checkbox-nice checkbox-inline"><input type="checkbox" id="checkbox-inl-1" onclick="checkAll()"><label for="checkbox-inl-1"></label></div>
                               </th>
                               <th>ID</th>
                               <th>商品名称</th>
@@ -471,7 +471,7 @@
 
                             <tr>
                               <td class="">
-                                <div class="checkbox-nice checkbox-inline"><input type="checkbox" id="checkbox-inl-2"><label for="checkbox-inl-2"></label></div>
+                                <div class="checkbox-nice checkbox-inline"><input type="checkbox" id="checkbox-inl-2" class="check"><label for="checkbox-inl-2"></label></div>
                               </td>
                               <td>4</td>
                               <td>奶油饼干</td>
@@ -495,7 +495,7 @@
                             </tr>
                             <tr>
                               <td>
-                                <div class="checkbox-nice checkbox-inline"><input type="checkbox" id="checkbox-inl-3"><label for="checkbox-inl-3"></label></div>
+                                <div class="checkbox-nice checkbox-inline"><input type="checkbox" id="checkbox-inl-3" class="check"><label for="checkbox-inl-3"></label></div>
                               </td>
                               <td>3</td>
                               <td>奶油饼干</td>
@@ -519,7 +519,7 @@
                             </tr>
                             <tr>
                               <td>
-                                <div class="checkbox-nice checkbox-inline"><input type="checkbox" id="checkbox-inl-4"><label for="checkbox-inl-4"></label></div>
+                                <div class="checkbox-nice checkbox-inline"><input type="checkbox" id="checkbox-inl-4" class="check"><label for="checkbox-inl-4"></label></div>
                               </td>
                               <td>2</td>
                               <td>奶油饼干</td>
@@ -543,7 +543,7 @@
                             </tr>
                             <tr>
                               <td>
-                                <div class="checkbox-nice checkbox-inline"><input type="checkbox" id="checkbox-inl-5"><label for="checkbox-inl-5"></label></div>
+                                <div class="checkbox-nice checkbox-inline"><input type="checkbox" id="checkbox-inl-5" class="check"><label for="checkbox-inl-5"></label></div>
                               </td>
                               <td>1</td>
                               <td>奶油饼干</td>
@@ -675,6 +675,14 @@
 
     <script src="js/classie.js"></script><!-- 弹出窗口 -->
     <script src="js/modalEffects.js"></script><!-- 弹出窗口 -->
+
+    <script>
+      function checkAll() {
+          $("table .check").prop("checked", function (index, oldValue) {
+              return !oldValue;
+          });
+      }
+    </script>
 
 </body>
 </html>
