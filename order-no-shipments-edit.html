@@ -25,17 +25,27 @@
             <button class="md-close close">&times;</button>
             <h4 class="modal-title">物流管理操作</h4>
         </div>
-        <div class="modal-body">
+        <div class="modal-body clearfix">
             <form role="form">
                 <div class="col-md-6">
                     <div class="form-group">
-                    <label for="exampleInput1">发货地区</label>
-                    <input type="text" class="form-control" id="exampleInput1" placeholder="货物所在的地区" value="广东-中山" disabled=""></div>
+                    <label for="exampleInput1">省份</label>
+                      <select name="" class="form-control">
+                          <option value="-10">广东</option>
+                          <option value="0">福建</option>
+                          <option value="1">厦门</option>
+                      </select>
+                    </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
-                    <label for="exampleInput6">货物仓库</label>
-                    <input type="text" class="form-control" id="exampleInput6" placeholder="货物所在的仓库名称" value="中山港壹加壹仓库" disabled=""></div>
+                        <label for="exampleInput6">地区</label>
+                        <select name="" class="form-control">
+                          <option value="-10">中山</option>
+                          <option value="0">广州</option>
+                          <option value="1">深圳</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
@@ -58,6 +68,31 @@
         </div>
         <div class="modal-footer">
             <a href="" class="btn btn-primary"><i class="fa fa-save"></i>  保存/更新</a>
+        </div>
+    </div>
+</div>
+<div class="md-modal md-effect-7" id="modal-8">
+    <div class="md-content">
+        <div class="modal-header">
+            <button class="md-close close">&times;</button>
+            <h4 class="modal-title">分配订单操作</h4>
+        </div>
+        <div class="modal-body clearfix">
+            <form role="form">
+                <div class="col-md-12">
+                    <div class="form-group">
+                    <label for="exampleInput1">区域合伙人</label>
+                      <select name="" class="form-control">
+                          <option value="-10">中山壹加壹仓库</option>
+                          <option value="0">福建壹加壹仓库</option>
+                          <option value="1">厦门壹加壹仓库</option>
+                      </select>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <a href="" class="btn btn-primary"><i class="fa fa-save"></i>  确定分配</a>
         </div>
     </div>
 </div>
@@ -437,6 +472,10 @@
                     <header class="main-box-header clearfix">
                       <h2 class="pull-left">订单信息</h2>
                       <div class="pull-right">
+                        <a href="#" class="btn btn-primary md-trigger" data-modal="modal-8">
+                            <i class="fa fa-share-alt"></i>
+                            分配订单
+                        </a>
                         <a href="#" class="btn btn-primary md-trigger" data-modal="modal-7">
                             <i class="fa fa-truck"></i>
                             发货
@@ -465,11 +504,6 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-1 control-label">支付方式</label>
-
-                            <div class="col-sm-3">
-                              <input class="form-control" name="user_id" placeholder="" value="账户支付 " type="text" disabled>
-                            </div>
                             <label class="col-sm-1 control-label">支付金额</label>
                             <div class="col-sm-3">
                                 <input class="form-control" name="user_id" placeholder="" value="￥200.00 " type="text" disabled>
@@ -478,12 +512,12 @@
                             <div class="col-sm-3">
                                 <input class="form-control" name="user_id" placeholder="" value=" 待发货" type="text" disabled>
                             </div>
-                        </div>
-                        <div class="form-group">
                             <label class="col-sm-1 control-label">联系人</label>
                             <div class="col-sm-3">
                                 <input class="form-control" name="user_id" placeholder="" value="黄先生 " type="text">
                             </div>
+                        </div>
+                        <div class="form-group">
                             <label class="col-sm-1 control-label">联系电话</label>
                             <div class="col-sm-3">
                                 <input class="form-control" name="user_id" placeholder="" value="13412345678 " type="text">

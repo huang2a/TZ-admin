@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <title>同转商城总部后台</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/libs/font-awesome.css"/>
+    <link rel="stylesheet" type="text/css" href="css/libs/nanoscroller.css"/>
+    <link rel="stylesheet" type="text/css" href="css/compiled/theme_styles.css"/>
+  <link type="image/x-icon" href="favicon.png" rel="shortcut icon"/>
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.js"></script>
+  <script src="js/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div id="theme-wrapper">
+
+    <div id="page-wrapper" class="container">
+      <div class="row">
+        <div id="content-wrapper">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="main-box">
+                    <header class="main-box-header clearfix">
+                      <h2>商品规格</h2>
+                    </header>
+                    <div class="main-box-body clearfix">
+                        <div class="row">
+                            <div class="form-group col-xs-2">
+                                规格名</div>
+                            <div class="form-group col-xs-2">
+                                规格值</div>
+                            <div class="form-group col-xs-2">
+                                价格</div>
+                            <div class="form-group col-xs-2">
+                                成本</div>
+                            <div class="form-group col-xs-2">
+                                质量</div>
+                        </div>
+                        <div id="abc">
+                          <div id="abc0">
+                            <div class="standard-box">
+                              <div class="row standardvalue-box">
+                                  <div class="form-group col-xs-2">
+                                      <input type="text" class="form-control" placeholder="属性名称" value=""></div>
+                                  <div class="form-group col-xs-2">
+                                      <input type="text" class="form-control" placeholder="规格值" value=""></div>
+                                  <div class="form-group col-xs-2">
+                                      <input type="text" class="form-control" placeholder="商品价格" value=""></div>
+                                  <div class="form-group col-xs-2">
+                                      <input type="text" class="form-control" placeholder="成本价格" value=""></div>
+                                  <div class="form-group col-xs-2">
+                                      <input type="text" class="form-control" placeholder="商品质量" value=""></div>
+                                  <div class="col-xs-2">
+                                      <a href="##" class="btn btn-primary pull-right add-standardvalue">
+                                          <i class="fa fa-plus-circle fa-lg"></i>
+                                      </a>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <button type="submit" class="btn btn-primary add-standard"><i class="fa fa-plus"></i> 增加规格</button>
+                                <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> 保存/更新</button>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <footer id="footer-bar" class="row">
+            <p id="footer-copyright" class="col-xs-12">
+              &copy; 2016
+              . 版权所属：同转商城.
+            </p>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <script src="js/demo-skin-changer.js"></script><!-- 主题皮肤 -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery.nanoscroller.min.js"></script><!-- 滚动轴 -->
+    <script src="js/demo.js"></script><!-- 皮肤设置菜单 -->
+
+    <script src="js/scripts.js"></script><!-- 左侧菜单导航 -->
+    <script src="js/pace.min.js"></script><!-- 页面加载读条 -->
+      <script type="text/javascript">
+      var i=1;
+      $(".add-standard").click(function(){
+        var txt1=$('<div id=abc'+i+'><div class="standard-box"><div class="row standardvalue-box"><div class="form-group col-xs-2"><input type="text" class="form-control" placeholder="属性名称" value=""></div><div class="form-group col-xs-2"><input type="text" class="form-control" placeholder="规格值" value=""></div><div class="form-group col-xs-2"><input type="text" class="form-control" placeholder="商品价格" value=""></div><div class="form-group col-xs-2"><input type="text" class="form-control" placeholder="成本价格" value=""></div><div class="form-group col-xs-2"><input type="text" class="form-control" placeholder="商品质量" value=""></div><div class="col-xs-2"><a href="##" class="btn btn-primary pull-right add-standardvalue"><i class="fa fa-plus-circle fa-lg"></i></a></div></div></div></div>');
+        $("#abc").append(txt1);
+        i++;
+      });
+      $("#abc .add-standardvalue").click(function(){
+        var txt2=$("<div class='row'><div class='form-group col-xs-2'></div><div class='form-group col-xs-2'><input type='text' class='form-control' placeholder='规格值' value=''></div><div class='form-group col-xs-2'><input type='text' class='form-control' placeholder='商品价格' value=''></div><div class='form-group col-xs-2'><input type='text' class='form-control' placeholder='成本价格' value=''></div><div class='form-group col-xs-2'><input type='text' class='form-control' placeholder='商品质量' value=''></div><div class='col-xs-2'><a href='##' class='btn btn-primary pull-right' onclick='deleteParam()'>删除<i class='fa fa-plus-circle fa-lg'></i></a></div></div>");
+        $(".standard-box").append(txt2);
+      });
+      </script>
+
+<script type="text/javascript">
+  function addParam() {
+    var url = "./index.php?c=site&a=entry&do=param&m=wdl_shopping";
+    $.ajax({
+      "url": url ,
+      success:function(data){
+        $('#param-items').append(data);
+      }
+    });
+    return;
+  }
+  function deleteParam(o) {
+    $(o).parent().parent().remove();
+  }
+</script>
+</body>
+</html>
