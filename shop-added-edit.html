@@ -124,11 +124,7 @@
                   </li>
                 </ul>
               </li>
-              <li class="hidden-xs">
-                <a class="btn">
-                  <i class="fa fa-cog"></i>
-                </a>
-              </li>
+
               <li class="dropdown profile-dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <img src="img/samples/scarlet-159.png" alt=""/>
@@ -395,7 +391,7 @@
             <div class="col-lg-12">
               <div class="row">
                 <div class="col-lg-12">
-                  <h1>商品页面</h1>
+                  <h1>上架商品详情页面</h1>
                 </div>
               </div>
               <div class="row">
@@ -411,7 +407,6 @@
                           <div class="col-lg-5">
                             <div class="form-group" style="margin:0">
                               <select class="form-control">
-                                <option>商品大类</option>
                                 <option>日用百货</option>
                                 <option>电子产品</option>
                                 <option>食品饮料</option>
@@ -426,7 +421,7 @@
                           </div>
                           <div class="col-lg-5">
                             <div class="form-group" style="margin:0">
-                              <select id="maxOption2" class="selectpicker show-menu-arrow form-control" multiple data-max-options="5">
+                              <select id="maxOption2" class="selectpicker show-menu-arrow form-control" multiple data-max-options="5" title="酒类, 茶类, 乳品, 零食, 面食">
                                 <option>水杯</option>
                                 <option>保温杯</option>
                                 <option>酒类</option>
@@ -443,22 +438,22 @@
                         <div class="form-group">
                           <label for="inputText1" class="col-lg-2 control-label">商品名称：</label>
                           <div class="col-lg-10">
-                            <input type="text" class="form-control" id="inputText1" placeholder="填写你的商品名称（必填项）"></div>
+                            <input type="text" class="form-control" id="inputText1" placeholder="填写你的商品名称（必填项）" value="奶油饼干"></div>
                         </div>
                         <div class="form-group">
                           <label for="inputText2" class="col-lg-2 control-label">商品质量：</label>
                           <div class="col-lg-10">
-                            <input type="text" class="form-control" id="inputText2" placeholder="单位是千克"></div>
+                            <input type="text" class="form-control" id="inputText2" placeholder="单位是千克" value="1kg"></div>
                         </div>
                         <div class="form-group">
                           <label for="inputText8" class="col-lg-2 control-label">成本价格：</label>
                           <div class="col-lg-10">
-                            <input type="text" class="form-control" id="inputText8" placeholder="商品的成本价格"></div>
+                            <input type="text" class="form-control" id="inputText8" placeholder="商品的成本价格" value="20"></div>
                         </div>
                         <div class="form-group">
                           <label for="inputText2" class="col-lg-2 control-label">市场价格：</label>
                           <div class="col-lg-10">
-                            <input type="text" class="form-control" id="inputText2" placeholder="商品的市场售价"></div>
+                            <input type="text" class="form-control" id="inputText2" placeholder="商品的市场售价" value="12.00"></div>
                         </div>
                         <div class="form-group">
                             <label for="inputText3" class="col-lg-2 control-label">开售时间：</label>
@@ -469,7 +464,7 @@
                                     </label>
                                 </div>
                             </div>
-                        <div class="col-lg-7">
+                            <div class="col-lg-7">
                             <div class="form-group" style="margin:0">
                                 <div class="radio pull-left">
                                     <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
@@ -488,7 +483,7 @@
                                 </div>
                                 <input type="hidden" id="dtp_input1" value="" />
                               </div>
-                        </div>
+                            </div>
                         </div>
                         <div class="form-group">
                           <div class="col-lg-offset-2 col-lg-10">
@@ -522,18 +517,21 @@
                         </div>
                         <div class="row">
                             <div class="form-group col-xs-2">
-                                <input type="text" class="form-control" placeholder="属性名称" value=""></div>
+                                <input type="text" class="form-control" placeholder="属性名称" value="颜色"></div>
                             <div class="form-group col-xs-2">
-                                <input type="text" class="form-control" placeholder="规格值" value=""></div>
+                                <input type="text" class="form-control" placeholder="规格值" value="红色"></div>
                             <div class="form-group col-xs-2">
-                                <input type="text" class="form-control" placeholder="商品价格" value=""></div>
+                                <input type="text" class="form-control" placeholder="商品价格" value="12"></div>
                             <div class="form-group col-xs-2">
-                                <input type="text" class="form-control" placeholder="成本价格" value=""></div>
+                                <input type="text" class="form-control" placeholder="成本价格" value="11"></div>
                             <div class="form-group col-xs-2">
-                                <input type="text" class="form-control" placeholder="商品质量" value=""></div>
+                                <input type="text" class="form-control" placeholder="商品质量" value="1kg"></div>
                             <div class="col-xs-2">
-                                <a href="##" class="btn btn-primary pull-right">
-                                    <i class="fa fa-plus-circle fa-lg"></i>  新增规格值
+                                <a href="##" class="btn btn-danger">
+                                    <i class="fa fa-trash-o fa-lg"></i>
+                                </a>&nbsp;
+                                <a href="##" class="btn btn-primary">
+                                    <i class="fa fa-plus-circle fa-lg"></i>
                                 </a>
                             </div>
                         </div>
@@ -541,14 +539,17 @@
                             <div class="form-group col-xs-2">
                                 </div>
                             <div class="form-group col-xs-2">
-                                <input type="text" class="form-control" placeholder="规格值" value=""></div>
+                                <input type="text" class="form-control" placeholder="规格值" value="黄色"></div>
                             <div class="form-group col-xs-2">
-                                <input type="text" class="form-control" placeholder="商品价格" value=""></div>
+                                <input type="text" class="form-control" placeholder="商品价格" value="11.5"></div>
                             <div class="form-group col-xs-2">
-                                <input type="text" class="form-control" placeholder="成本价格" value=""></div>
+                                <input type="text" class="form-control" placeholder="成本价格" value="12"></div>
                             <div class="form-group col-xs-2">
-                                <input type="text" class="form-control" placeholder="商品质量" value=""></div>
+                                <input type="text" class="form-control" placeholder="商品质量" value="1kg"></div>
                             <div class="col-xs-2">
+                                <a href="##" class="btn btn-danger">
+                                    <i class="fa fa-trash-o fa-lg"></i>
+                                </a>
                             </div>
                         </div>
                         <div class="row">
@@ -566,7 +567,7 @@
                 <div class="col-lg-12">
                   <div class="main-box">
                     <header class="main-box-header clearfix">
-                      <h2>商品库存<span class="label label-primary">总库存：2000</span></h2>
+                      <h2>商品库存<span class="label label-primary">总库存：1000</span></h2>
                     </header>
                     <div class="main-box-body clearfix">
                         <div class="row">
@@ -576,8 +577,10 @@
                                 一级规格的值</div>
                             <div class="form-group col-xs-3">
                                 二级规格的值</div>
-                            <div class="form-group col-xs-3">
+                            <div class="form-group col-xs-2">
                                 库存数</div>
+                            <div class="form-group col-xs-1">
+                                操作</div>
                         </div>
                         <div class="row">
                             <div class="form-group col-xs-3">
@@ -601,12 +604,17 @@
                                   <option>绿色</option>
                                 </select>
                             </div>
-                            <div class="form-group col-xs-3">
+                            <div class="form-group col-xs-2">
                                 <form class="form-inline" role="form">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="对应规格的库存数">
+                                        <input type="text" class="form-control" placeholder="对应规格的库存数" value="1000">
                                     </div>
                                 </form>
+                            </div>
+                            <div class="form-group col-xs-1">
+                                <a href="##" class="btn btn-danger">
+                                    <i class="fa fa-trash-o fa-lg"></i>
+                                </a>
                             </div>
                         </div>
                         <div class="row">
@@ -631,6 +639,11 @@
                         <div class="form-group">
                           <label for="inputText10" class="col-lg-2 control-label">商品封面：</label>
                           <div class="col-lg-10">
+                            <div class="row" style="margin-bottom:10px;">
+                                <div class="col-lg-12">
+                                  <img src="img/samples/scarlett-300.jpg" height="100" width="100" alt="">
+                                </div>
+                            </div>
                             <form enctype="multipart/form-data">
                               <input id="input-img01" name="input6[]" type="file" multiple class="file-loading">
                             </form>
@@ -641,6 +654,16 @@
                         <div class="form-group">
                           <label for="inputText11" class="col-lg-2 control-label">商品展示图：</label>
                           <div class="col-lg-10">
+                            <div class="row" style="margin-bottom:10px;">
+                                <div class="col-lg-12">
+                                  <img src="img/samples/scarlett-300.jpg" height="100" width="100" alt="">
+                                  <img src="img/samples/scarlett-300.jpg" height="100" width="100" alt="">
+                                  <img src="img/samples/scarlett-300.jpg" height="100" width="100" alt="">
+                                  <img src="img/samples/scarlett-300.jpg" height="100" width="100" alt="">
+                                  <img src="img/samples/scarlett-300.jpg" height="100" width="100" alt="">
+                                  <img src="img/samples/scarlett-300.jpg" height="100" width="100" alt="">
+                                </div>
+                            </div>
                             <form enctype="multipart/form-data">
                              <input id="input-img02" name="input6[]" type="file" multiple class="file-loading">
                             </form>
@@ -662,7 +685,7 @@
                     <div class="main-box-body clearfix">
                         <div class="row">
                             <div class="col-lg-12">
-                              <script id="ueditor-box" style="height:300px" name="content" type="text/plain">这是个百度编辑器</script>
+                              <script id="ueditor-box" style="height:300px" name="content" type="text/plain">商品描述</script>
                             </div>
                         </div>
                         <br>
@@ -682,19 +705,7 @@
                               <div class="pull-left">
                                 <a href="#" class="btn btn-primary">
                                     <i class="fa fa-save"></i>
-                                    保存全部/更新全部
-                                </a>
-                                <a href="#" class="btn btn-primary">
-                                    <i class="fa fa-external-link-square"></i>
-                                    通过申请<!-- 商品新增申请的时候才显示 -->
-                                </a>
-                                <a href="#" class="btn btn-primary">
-                                    <i class="fa fa-level-up"></i>
-                                    上架<!-- 商品新增申请的时候才显示 -->
-                                </a>
-                                <a href="#" class="btn btn-primary">
-                                    <i class="fa fa-level-down"></i>
-                                    下架
+                                    保存全部
                                 </a>
                                 <a href="#" class="btn btn-danger">
                                     <i class="fa fa-trash-o"></i>
