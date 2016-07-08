@@ -1,0 +1,15 @@
+目录结构
+
+- css/ 
+  + bootstrap   存放 .scss 源码 
+
+- css/
+   + frozen.css 
+- font/
+   + 存放 字体文件
+- img/
+   + 存放 图片文件
+- js/
+   + frozen.js
+- lib/
+   + 存放第三方依赖类库，如 zeptojs
