@@ -1,15 +1,118 @@
+1、技术选型： HTML5+CSS3+jQuery+bootstrap3.2.0
+2、其他应用到的技术：无
+
 目录结构
-
-- css/ 
-  + bootstrap   存放 .scss 源码 
-
 - css/
-   + frozen.css 
+  - bootstrap
+    + bootstrap.css                         源码
+  - compiled
+    + theme_styles.css                      主题样式
+  - libs
+    + bootstrap-datetimepicker.min.css      时间控件
+    + bootstrap-select.min.css              下拉选择框
+    + fileinput.min.css                     文件上传
+    + font-awesome.css                      字体库
+    + jquery.bigautocomplete.css            自动补全
+    + magnific-popup.css                    弹出窗体
+    + nifty-component.css                   弹出窗体
+    + nanoscroller.css                      左侧菜单滚动轴
+    + timeline.css                          垂直时间轴
 - font/
    + 存放 字体文件
 - img/
    + 存放 图片文件
 - js/
-   + frozen.js
-- lib/
-   + 存放第三方依赖类库，如 zeptojs
+    -ueditor 百度编辑器源码
+    + bootstrap-datetimepicker.js           时间控件
+    + bootstrap-select.js                   下拉选择框
+    + bootstrap.js                          bootstrap源件
+    + classie.js                            弹出窗口
+    + demo-skin-changer.js                  主题皮肤
+    + demo.js                               皮肤设置菜单
+    + fileinput.min.js                      图片上传
+    + html5shiv.js                          ie8支持html5
+    + jquery.bigautocomplete.js             输入框自动补全
+    + jquery.js                             jQuery库
+    + jquery.nanoscroller.min.js            左侧菜单滚动轴
+    + modalEffects.js                       弹出窗口
+    + pace.min.js                           页面加载读条
+    + respond.min.js                        ie8支持html5
+    + scripts.js                            左侧菜单导航
+
+页面功能模块
+
+    + ad-class.html                         广告分类管理
+    + ad-list.html                          广告列表管理
+    + article-class.html                    文章分类管理
+    + article-list-add.html                 新增文章
+    + article-list-edit.html                文章详情、文章编辑
+    + article-list.html                     文章列表管理
+    + dome.html                             页面空白模块
+    + feedback.html                         意见反馈模块
+    + file-picture.html                     图片文件管理模块
+    + finance-area-edit.html    		  区域合伙人收入详情页面、城市联盟商收入详情页面
+    + finance-area.html                     区域合伙人管理
+    + finance-city.html                     城市联盟商管理
+    + finance-member-edit.html              会员充值详情页面、
+    + finance-member.html                   会员充值管理
+    + forgot-password.html                  找回密码-验证手机
+    + index.html                            首页
+    + login.html                            登陆
+    + logistics-template.html               物流管理模块
+    + order-all.html                        全部订单管理
+    + order-deal-cancel-edit.html           交易取消订单详情
+    + order-deal-cancel.html                交易取消订单管理
+    + order-deal-finish-edit.html           完成订单详情
+    + order-deal-finish.html                完成订单管理
+    + order-no-pay-edit.html                未付款订单详情
+    + order-no-pay.html                     未付款订单管理
+    + order-no-shipments-edit.html          未发货订单详情
+    + order-no-shipments.html               未发货订单管理
+    + order-shipments-edit.html             已发货订单详情
+    + order-shipments.html                  已发货订单管理
+    + order-today-edit.html                 今日订单详情
+    + order-today.html                      今日订单管理
+    + registration-full.html                找回密码-输入新密码
+    + return-apply-edit.html                退货申请订单详情
+    + return-apply.html                     退回申请管理
+    + return-finish-edit.html               退货完成订单详情
+    + return-finish.html                    退货完成订单管理
+    + return-going-edit.html                退货中订单订单详情
+    + return-going.html                     退货中订单管理
+    + Settings.html                         账号设置
+    + shop-added-add.html                   新增商品页面
+    + shop-added-edit.html                  上架商品详情页面
+    + shop-added.html                       上架商品管理
+    + shop-apply-edit.html                  商品申请详情页面
+    + shop-apply.html                       商品申请管理
+    + shop-brand.html                       商品品牌管理
+    + shop-comment.html                     商品评论管理
+    + shop-out-edit.html                    下架商品详情页面
+    + shop-out.html                         下架商品管理
+    + shop-sell-out-edit.html               售罄商品商品详情页面
+    + shop-sell-out.html                    售罄商品管理
+    + system-commodity-list.html            商品小类分类管理
+    + system-commodity.html                 商品大类管理
+    + system-pay.html                       支付参数管理
+    + system-permission.html                动态权限管理
+    + system-sites.html                     网站参数设置
+    + user-area-add.html                    新增区域合伙人
+    + user-area-edit.html                   区域合伙人详情页面
+    + user-area.html                        区域合伙人管理
+    + user-city-add.html                    新增城市联盟商
+    + user-city-audit.html                  待审核城市联盟商详情页面
+    + user-city-edit.html                   已审核城市联盟商详情页面
+    + user-city.html                        城市联盟商管理
+    + user-group.html                       用户组管理
+    + user-member-audit.html                待审核会员用户详情页面
+    + user-member-deit.html                 已审核会员用户详情页面
+    + user-member.html                      会员用户管理
+    + user-service.html                     客服人员管理
+    + user-shop.html                        商品管理员管理
+    + user-system.html                      系统管理员管理
+
+
+
+
+
+
