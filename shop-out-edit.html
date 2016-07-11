@@ -193,9 +193,7 @@
                       <li>
                         <a href="system-sites.html">网站参数设置</a>
                       </li>
-                      <li>
-                        <a href="system-commodity.html">商品参数设置</a>
-                      </li>
+
                       <li>
                         <a href="system-pay.html">支付参数设置</a>
                       </li>
@@ -222,6 +220,9 @@
                       </li>
                       <li>
                         <a href="shop-brand.html">商品品牌</a>
+                      </li>
+                      <li>
+                        <a href="system-commodity.html">商品分类管理</a>
                       </li>
                       <li>
                         <a href="shop-comment.html">评论管理</a>
@@ -381,6 +382,18 @@
                       </li>
                     </ul>
                   </li>
+                  <li>
+                    <a href="#" class="dropdown-toggle">
+                      <i class="fa fa-comment"></i>
+                      <span>意见反馈</span>
+                      <i class="fa fa-chevron-circle-right drop-icon"></i>
+                    </a>
+                    <ul class="submenu">
+                      <li>
+                        <a href="feedback.html">意见反馈</a>
+                      </li>
+                    </ul>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -433,6 +446,21 @@
                                 <option>清洁</option>
                               </select>
                             </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="basic3" class="col-lg-2 control-label">选择品牌</label>
+                          <div class="col-lg-10">
+                            <select id="basic3" class="show-tick form-control" multiple title="华为">
+                              <option>苹果</option>
+                              <option>华为</option>
+                              <option>小米</option>
+                              <option>宏碁</option>
+                              <option>华硕</option>
+                              <option>戴尔</option>
+                              <option>康师傅</option>
+                              <option>茅台</option>
+                            </select>
                           </div>
                         </div>
                         <div class="form-group">
@@ -797,6 +825,10 @@
           liveSearch: true,
           maxOptions: 5
         });
+          $('#basic3').selectpicker({
+            liveSearch: true,
+            maxOptions: 1
+          });
       });
     </script>
     <script src="js/fileinput.min.js"></script>

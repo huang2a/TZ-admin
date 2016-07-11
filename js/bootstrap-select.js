@@ -240,8 +240,8 @@
 
   // part of this is duplicated in i18n/defaults-en_US.js. Make sure to update both.
   Selectpicker.DEFAULTS = {
-    noneSelectedText: '请选择小分类',
-    noneResultsText: 'No results matched {0}',
+    noneSelectedText: '请选择',
+    noneResultsText: '没有你输入的 {0} 分类',
     countSelectedText: function (numSelected, numTotal) {
       return (numSelected == 1) ? "{0} item selected" : "{0} items selected";
     },
